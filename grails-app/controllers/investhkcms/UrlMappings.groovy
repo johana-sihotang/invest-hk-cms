@@ -1,4 +1,4 @@
-package backend
+package investhkcms
 
 class UrlMappings {
     static mappings = {

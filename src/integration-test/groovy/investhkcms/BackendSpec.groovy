@@ -1,4 +1,4 @@
-package backend
+package investhkcms
 import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
 
