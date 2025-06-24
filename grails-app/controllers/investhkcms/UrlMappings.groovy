@@ -8,6 +8,10 @@ class UrlMappings {
             }
         }
 
+        "/cms/$controller/$action/$id?(.$format)?"{
+            namespace = 'cms'
+        }
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')

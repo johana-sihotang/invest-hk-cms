@@ -6,12 +6,21 @@
     <title>
         <g:layoutTitle default="Grails"/>
     </title>
+
+    %{--font--}%
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    %{--font awasome--}%
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
     <asset:stylesheet src="application.css"/>
 
     <g:layoutHead/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>

@@ -9,7 +9,7 @@ import geb.spock.*
  */
 @Integration
 @Rollback
-class BackendSpec extends GebSpec {
+class InvesthkcmsSpec extends GebSpec {
 
     void "test something"() {
         when:"The home page is visited"

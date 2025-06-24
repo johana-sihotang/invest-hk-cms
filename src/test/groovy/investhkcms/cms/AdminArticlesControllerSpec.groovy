@@ -1,9 +1,9 @@
-package backend
+package investhkcms.cms
 
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class ArticleControllerSpec extends Specification implements ControllerUnitTest<ArticleController> {
+class AdminArticlesControllerSpec extends Specification implements ControllerUnitTest<AdminArticlesController> {
 
      void "test index action"() {
         when:

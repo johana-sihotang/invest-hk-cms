@@ -9,6 +9,7 @@
 <html>
 <head>
     <title></title>
+    <asset:stylesheet src="footer.css"/>
 </head>
 
 <body>
@@ -144,37 +145,14 @@
             </div>
         </div>
         <div class="footer__container-section wide-2 no-hide social-media">
-            <li>
-                <div class="col-4 content-center flex-end">
-                    <a href="#">
-                        <div class="header__logo">
-                            <img src="images//linkedin_logo.png" alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="header__logo">
-                            <img src="images//youtube_logo.png" alt="">
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="header__logo">
-                            <img src="images//favicon/wechat.svg" alt="">
-                        </div>
-                    </a>
-                    <a href="#" class="elips">
-                        <div class="header__logo">
-                            <span class="two-dots">••</span>
-                        </div>
-                    </a>
-                </div>
-            </li>
+            <g:render template="/components/social_media"/>
         </div>
     </div>
 </footer>
 <div class="footer__white col-2">
     <div class="footer__image">
-        <img src="images//hongkong_logo.jpg">
-        <img src="images//hk2_logo.png">
+        <asset:image src="hongkong_logo.jpg" alt="hongkong logo"/>
+        <asset:image src="hk2_logo.png" alt=" hk logo" class="logo-hide"/>
     </div>
     <div>
         <ul class="footer__white-inline-links text-decoration-none">
@@ -189,5 +167,6 @@
     </div>
 </div>
 
+<asset:javascript src="footer.js"/>
 </body>
 </html>

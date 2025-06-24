@@ -58,7 +58,7 @@ grails:
         taglib: none
         staticparts: none
   codegen:
-    defaultPackage: backend
+    defaultPackage: investhkcms
   profile: web
   mime:
     disable:
