@@ -9435,6 +9435,14 @@ body.no-scroll {
 .col-4 {
     display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    gap: 10px;
+}
+.col-4-width {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 3fr 2fr 2fr 1fr;
     grid-template-columns: 3fr 2fr 2fr 1fr;
     max-width: 100%;

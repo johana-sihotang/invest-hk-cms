@@ -1,11 +1,3 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <asset:stylesheet src="social_media.css"/>
-    <title></title>
-</head>
-<body>
 <li>
     <div class="col-4 content-center">
         <a href="#">
@@ -30,6 +22,3 @@
         </a>
     </div>
 </li>
-
-</body>
-</html>

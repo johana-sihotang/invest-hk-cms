@@ -5,15 +5,7 @@
   Time: 09.24
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title></title>
-    <asset:stylesheet src="main.css"/>
-</head>
-
-<body>
-<div class="footer__image"><img src="images/logo-section.png"></div>
+<div class="footer__image"><asset:image src="logo-section.png"/></div>
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__container-section">
@@ -168,5 +160,3 @@
 </div>
 
 <asset:javascript src="footer.js"/>
-</body>
-</html>
