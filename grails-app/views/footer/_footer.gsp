@@ -9,7 +9,7 @@
 <html>
 <head>
     <title></title>
-    <asset:stylesheet src="footer.css"/>
+    <asset:stylesheet src="main.css"/>
 </head>
 
 <body>

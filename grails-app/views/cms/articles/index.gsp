@@ -280,18 +280,19 @@
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
             <!--begin::Brand Link-->
-            <a href="./index.html" class="brand-link">
+            <g:link controller="adminArticles" action="article" class="brand-link">
                 <!--begin::Brand Image-->
+                <span class="brand-text fw-light">Invest</span>
                 <asset:image
-                        src="/AdminLTELogo.png"
-                        alt="AdminLTE Logo"
+                        src="/invest_hk_logo_title.png"
+                        alt="Logo HK"
                         class="brand-image opacity-75 shadow"
                 />
                 <!--end::Brand Image-->
                 <!--begin::Brand Text-->
-                <span class="brand-text fw-light">Invest HK</span>
+
                 <!--end::Brand Text-->
-            </a>
+            </g:link>
             <!--end::Brand Link-->
         </div>
         <!--end::Sidebar Brand-->
@@ -318,7 +319,7 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <g:link controller="articles" action="article" namespace="cms" class="nav-link active">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-person-workspace"></i>
                                     <p>Admin</p>
                                 </g:link>
                             </li>
