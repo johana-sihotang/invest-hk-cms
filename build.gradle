@@ -23,7 +23,7 @@ plugins {
 apply plugin: "org.grails.grails-web"
 apply plugin: "org.grails.grails-gsp"
 
-group = "backend"
+group = "investhkcms"
 
 repositories {
     mavenCentral()
@@ -80,7 +80,7 @@ dependencies {
 }
 
 application {
-    mainClass = "backend.Application"
+    mainClass = "investhkcms.Application"
 }
 
 java {

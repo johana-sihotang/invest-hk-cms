@@ -67,7 +67,7 @@
     <g:message code="spinner.alt" default="Loading&hellip;"/>
 </div>
 
-<g:render template="views/footer/footer.gsp"/>
+<g:render template="/footer/footer"/>
 <asset:javascript src="application.js"/>
 
 </body>
