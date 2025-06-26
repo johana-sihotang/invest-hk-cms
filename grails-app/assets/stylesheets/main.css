@@ -9674,6 +9674,8 @@ body.no-scroll {
 }
 .humburger-menu__container-content__list-icon .logo-container a {
     text-decoration: none;
+    color: #fff;
+    font-size: 30px;
 }
 .humburger-menu__container-content__list-icon .logo-container .logo-humburger {
     background-color: #dc281e;

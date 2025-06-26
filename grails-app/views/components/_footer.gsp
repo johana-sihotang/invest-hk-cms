@@ -48,10 +48,12 @@
                     <h4>Our Client</h4>
                     <i class="fas fa-angle-up"></i>
                 </div>
+
                 <div class="footer__container-section-title">
                     <h4>Setting Up in Hong Kong</h4>
                     <i class="fas fa-angle-up"></i>
                 </div>
+
                 <div class="footer__container-section">
                     <div class="footer__container-section-title">
                         <h4>News &amp; Events</h4>
@@ -62,6 +64,7 @@
                         <li><a href="">Events</a></li>
                     </ul>
                 </div>
+
                 <div class="footer__container-section-title">
                     <h4>Contact Us</h4>
                     <i class="fas fa-angle-up"></i>
@@ -74,19 +77,24 @@
             <ul>
                 <li>
                     <i class="fa-solid fa-location-dot"></i>
+
                     <p>24/F, Fairmont House, 8 Cotton Tree Drive, Central, Hong Kong</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-phone-volume"></i>
+
                     <p>+852 3107 1000</p>
                 </li>
                 <li>
                     <i class="fa-regular fa-envelope"></i>
+
                     <p>enq@investhk.gov.hk</p>
                 </li>
                 <li>
                     <i class="fa-regular fa-clock"></i>
-                    <p>8:45 a.m. - 12:30 p.m.<br>1:30 p.m. - 6:00 p.m.<br>Monday to Friday (Closed on Saturday, Sunday and public holidays)</p>
+
+                    <p>8:45 a.m. - 12:30 p.m.<br>1:30 p.m. - 6:00 p.m.<br>Monday to Friday (Closed on Saturday, Sunday and public holidays)
+                    </p>
                 </li>
             </ul>
         </div>
@@ -96,6 +104,7 @@
                 <h4>Useful Links</h4>
                 <i class="fas fa-angle-up"></i>
             </div>
+
             <div class="footer__container-section-link-columns">
                 <ul class="link-column">
                     <li><a href="#">The Chief Executive&#x27;s 2024 Policy Address</a></li>
@@ -136,16 +145,23 @@
                 </ul>
             </div>
         </div>
+
         <div class="footer__container-section wide-2 no-hide social-media">
-            <g:render template="/components/social_media"/>
+            <li>
+                <div class="col-4 content-center">
+                    <g:render template="/components/social_media"/>
+                </div>
+            </li>
         </div>
     </div>
 </footer>
+
 <div class="footer__white col-2">
     <div class="footer__image">
         <asset:image src="hongkong_logo.jpg" alt="hongkong logo"/>
         <asset:image src="hk2_logo.png" alt=" hk logo" class="logo-hide"/>
     </div>
+
     <div>
         <ul class="footer__white-inline-links text-decoration-none">
             <li><a href="#">Tender / Quotation Notices</a></li>
@@ -155,6 +171,7 @@
             <li><a href="#">Copyright Notices &amp; Disclaimer</a></li>
             <li><a href="#">Sitemap</a></li>
         </ul>
+
         <p class="">Copyright © 2025 InvestHK. All rights reserved. Last modified on {{publishedDate}}</p>
     </div>
 </div>
