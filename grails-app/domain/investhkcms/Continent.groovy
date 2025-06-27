@@ -1,14 +1,13 @@
 package investhkcms
 
-class Location {
+class Continent {
     String name
-    Continent continent
+    static hasMany = [location: Location]
     static constraints = {
         name blank: false
     }
 
     String toString() {
         return name
-        continent nullable: false
     }
 }

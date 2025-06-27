@@ -9,7 +9,6 @@ class CmsNewsController {
     static layout = "navbar-sidebar"
 
     NewsService newsService
-    LocationService locationService
 
     def index() {
         List<News> news = newsService.getAllNews()
