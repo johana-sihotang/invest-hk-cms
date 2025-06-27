@@ -81,4 +81,31 @@ class NewsService {
 
         news.delete(flush: true)
     }
+
+    @Transactional
+    def handleNewsCreation(CreateNewsRequest request) {
+        def imageFile = request.imageFile
+
+        if (!imageFile || imageFile.empty) {
+            throw new IllegalArgumentException("Image file is required.")
+        }
+
+        if (!imageFile.contentType?.startsWith("image/")) {
+            throw new IllegalArgumentException("Uploaded file must be an image.")
+        }
+
+        if (imageFile.size > 2 * 1024 * 1024) {
+            throw new IllegalArgumentException("Image file is too large (max 2MB).")
+        }
+
+        def fileName = UUID.randomUUID().toString() + "_" + imageFile.originalFilename
+        def uploadDir = new File("${System.getProperty('user.dir')}/uploads/news")
+        if (!uploadDir.exists()) uploadDir.mkdirs()
+
+        def destination = new File(uploadDir, fileName)
+        imageFile.transferTo(destination)
+
+        def imagePath = "/uploads/news/${fileName}"
+        createNews(request, imagePath)
+    }
 }

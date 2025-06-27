@@ -39,46 +39,15 @@ class CmsNewsController {
             return
         }
 
-        def imageFile = request.imageFile
-        if (!imageFile || imageFile.empty) {
-            flash.error = "Image file is required."
-            respond request.errors, [view: 'createNews', model: [request: request]]
-            return
-        }
-
-        if (!imageFile.contentType?.startsWith("image/")) {
-            flash.error = "Uploaded file must be an image."
-            respond request.errors, [view: 'createNews', model: [request: request]]
-            return
-        }
-
-        if (imageFile.size > 2 * 1024 * 1024) {
-            flash.error = "Image file is too large (max 2MB)."
-            respond request.errors, [view: 'createNews', model: [request: request]]
-            return
-        }
-
         try {
-            def fileName = UUID.randomUUID().toString() + "_" + imageFile.originalFilename
-            def uploadDir = new File("${System.getProperty('user.dir')}/uploads/news")
-            if (!uploadDir.exists()) {
-                uploadDir.mkdirs()
-            }
-
-            def destination = new File(uploadDir, fileName)
-            imageFile.transferTo(destination)
-            def imagePath = "/uploads/news/${fileName}"
-
-            newsService.createNews(request, imagePath)
-
+            newsService.handleNewsCreation(request)
             flash.success = "News created successfully"
             redirect(action: 'index')
         } catch (Exception e) {
-            flash.error = "Error creating news: ${e.message}"
+            flash.error = e.message
             respond request.errors, view: 'createNews'
         }
     }
-
 
     def edit(Long id){
         News news = newsService.getNewsById(id)
