@@ -6,6 +6,10 @@ class ContactUs {
     String email
     String tel
     String city
+    String enquiry
+
+    Location location
+    Continent continent
 
     static constraints = {
     }
