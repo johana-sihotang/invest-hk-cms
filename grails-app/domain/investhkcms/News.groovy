@@ -6,7 +6,6 @@ class News {
     String imageCaption
     String subTitle
     String content
-    String visitedLink
     Date publicationDate
 
     Location location
@@ -18,8 +17,6 @@ class News {
         image nullable: true
         imageCaption nullable: true, maxSize: 2000
         subTitle nullable: true
-        content nullable: true
-        visitedLink nullable: true
         location nullable: true
         contentType nullable: true
         industry nullable: true

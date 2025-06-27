@@ -8,7 +8,6 @@ class CreateNewsRequest implements Validateable {
     String imageCaption
     String subTitle
     String content
-    String visitedLink
 
     Long locationId
     Long contentTypeId
@@ -21,7 +20,6 @@ class CreateNewsRequest implements Validateable {
         content blank: false
         imageCaption nullable: true
         subTitle nullable: true
-        visitedLink nullable: true
         locationId nullable: false
         contentTypeId nullable: false
         industryId nullable: false

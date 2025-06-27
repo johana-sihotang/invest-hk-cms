@@ -45,12 +45,6 @@
     </div>
 
     <div class="grid gap-6 mb-6 md:grid-cols-2">
-        <div>
-            <label for="visitedLink" class="block mb-2 text-sm font-medium text-gray-900">Visited Link</label>
-            <input name="visitedLink" type="text" id="visitedLink"
-                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                   placeholder="Visited Link" value="${request?.visitedLink ?:news?.visitedLink}" required/>
-        </div>
 
         <div>
             <g:render template="/components/input_selected" model="[
