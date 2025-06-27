@@ -18,6 +18,8 @@ class UrlMappings {
         "/article"(controller: "news", action: 'index')
         "/article/$id"(controller: "news", action: 'show')
 
+        "/contact_us"(controller: "contactUs", action: 'index')
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')

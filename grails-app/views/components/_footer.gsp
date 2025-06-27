@@ -66,8 +66,7 @@
                 </div>
 
                 <div class="footer__container-section-title">
-                    <h4>Contact Us</h4>
-                    <i class="fas fa-angle-up"></i>
+                    <g:link controller="contactUs" action="index"><h4>Contact Us</h4></g:link>
                 </div>
             </div>
         </div>

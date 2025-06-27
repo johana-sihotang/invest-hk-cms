@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
-        <g:layoutTitle default="Grails"/>
+    <g:layoutTitle default="Grails"/>
     </title>
 
     %{--font--}%
@@ -21,7 +21,6 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
     <asset:stylesheet src="main.css"/>
-
     <g:layoutHead/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -29,8 +28,9 @@
 <body>
 <g:render template="/components/humburger_menu"/>
 <g:render template="/components/header"/>
-
-<g:layoutBody/>
+<div class="mb-10">
+    <g:layoutBody/>
+</div>
 <g:render template="/components/card"/>
 <g:render template="/components/footer"/>
 <asset:javascript src="application.js"/>

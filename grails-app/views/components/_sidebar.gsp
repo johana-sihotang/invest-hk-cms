@@ -29,7 +29,7 @@
                         </g:link>
                     </li>
                     <li>
-                        <g:link uri="/admin/article/create" class="flex items-center w-full p-1 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 ">
+                        <g:link controller="cmsNews" action="createNews" class="flex items-center w-full p-1 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 ">
                             <i class="bi bi-folder-plus shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 text-2xl"></i>
                             <span class="ms-3">Add Article</span>
                         </g:link>
