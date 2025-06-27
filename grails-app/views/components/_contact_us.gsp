@@ -63,13 +63,13 @@
     </div>
     <div class="contactForm__checkbox">
         <label class="checkbox-control">I have read and agreed to the <a href="#">Privacy Policy</a>
-            <input type="checkbox" name="checkox_01" class="checkbox-control__input" checked="checked">
+            <input type="checkbox" name="checkox_01" class="checkbox-control__input">
             <span class="checkbox-control__checkmark"></span>
         </label>
     </div>
     <div class="contactForm__checkbox">
         <label class="checkbox-control">I agree to my data being stored and used to receive news and promotional materials, as well as to deliver service provided by InvestHK
-            <input type="checkbox" name="checkox_02" class="checkbox-control__input" checked="checked">
+            <input type="checkbox" name="checkox_02" class="checkbox-control__input">
             <span class="checkbox-control__checkmark"></span>
         </label>
     </div>

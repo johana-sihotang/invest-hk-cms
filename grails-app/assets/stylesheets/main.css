@@ -10475,6 +10475,20 @@ body.no-scroll {
     opacity: 0;
     cursor: pointer;
 }
+
+.checkbox-control__input:checked + .checkbox-control__checkmark::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 8px;
+    height: 14px;
+    border: solid rgb(220, 40, 30);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
 .contactForm__action {
     text-align: center;
 }
