@@ -4,21 +4,6 @@ class BootStrap {
 
     def init = { servletContext ->
 
-
-            ["Africa", "Asia Pacific", "Europe", "Middle East", "North & South America"].each { name ->
-                def continent = Continent.findByName(name)
-                if(continent) {
-                    if (continent.name != name) {
-                        continent.name != name
-                        continent.save(flush: true, failOnError: true)
-                        println("Updated existing continent: ${name}")
-                    }
-                } else {
-                    new Continent(name: name).save(flus: true, failOnError: true)
-                    println("Inserted new continent: ${name}")
-                }
-            }
-
         def continentMapping = [
                 'Africa': [
                         "Angola", "Republic of Côte d'Ivoire", "Gabon", "South Africa", "Mauritania",
@@ -60,6 +45,37 @@ class BootStrap {
                 ]
         ]
 
+        Continent.withTransaction {
+            ["Africa", "Asia Pacific", "Europe", "Middle East", "North & South America"].each { name ->
+                def continent = Continent.findByName(name)
+                if (continent) {
+                    if (continent.name != name) {
+                        continent.name = name
+                        continent.save(flush: true, failOnError: true)
+                        println("Updated existing continent: ${name}")
+                    }
+                } else {
+                    new Continent(name: name).save(flush: true, failOnError: true)
+                    println("Inserted new continent: ${name}")
+                }
+            }
+
+            if (Location.count() == 0) {
+                continentMapping.each { continentName, countries ->
+                    def continent = Continent.findByName(continentName)
+                    if (continent) {
+                        countries.each { countryName ->
+                            new Location(name: countryName, continent: continent).save(flush: true, failOnError: true)
+                            println("Inserted location: ${countryName} in continent: ${continentName}")
+                        }
+                    }
+                }
+                println("Inserted default locations with continent mapping")
+            } else {
+                println("Locations already exist, skipping insert")
+            }
+        }
+
         Location.withTransaction {
             continentMapping.each { continentName, countries ->
                 def continent = Continent.findByName(continentName)
@@ -76,29 +92,33 @@ class BootStrap {
             println("Updated locations with continent")
         }
 
-        if (ContentType.count() == 0) {
-            ["News", "Press Release", "Industry Insight"].each { name ->
-                new ContentType(name: name).save(flush: true, failOnError: true)
+        ContentType.withTransaction {
+            if (ContentType.count() == 0) {
+                ["News", "Press Release", "Industry Insight"].each { name ->
+                    new ContentType(name: name).save(flush: true, failOnError: true)
+                }
+                println("Inserted default content types")
+            } else {
+                println("ContentType already exist, skipping insert")
             }
-            println("Inserted default content types")
-        } else {
-            println("ContentType already exist, skipping insert")
         }
 
-        // --- Insert Industries ---
-        if (Industry.count() == 0) {
-            [
-                    "Business & Professional Services", "Consumer Products", "Financial Services",
-                    "Fintech", "Information & Communication Technology", "InvestHK news",
-                    "Tourism & Hospitality", "Transport, Logistics & Industrials"
-            ].each { name ->
-                new Industry(name: name).save(flush: true, failOnError: true)
+        Industry.withTransaction {
+            if (Industry.count() == 0) {
+                [
+                        "Business & Professional Services", "Consumer Products", "Financial Services",
+                        "Fintech", "Information & Communication Technology", "InvestHK news",
+                        "Tourism & Hospitality", "Transport, Logistics & Industrials"
+                ].each { name ->
+                    new Industry(name: name).save(flush: true, failOnError: true)
+                }
+                println("Inserted default industries")
+            } else {
+                println("Industry already exist, skipping insert")
             }
-            println("Inserted default industries")
-        } else {
-            println("Industry already exist, skipping insert")
         }
+
     }
-    def destroy = {
-    }
+
+    def destroy = {}
 }

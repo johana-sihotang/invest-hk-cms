@@ -28,6 +28,7 @@
 <body>
 <g:render template="/components/humburger_menu"/>
 <g:render template="/components/header"/>
+<g:render template="/components/alert"/>
 <div class="mb-10">
     <g:layoutBody/>
 </div>
@@ -36,5 +37,7 @@
 <asset:javascript src="application.js"/>
 <asset:javascript src="header.js"/>
 <asset:javascript src="humburger_menu.js"/>
+<asset:javascript src="alert.js"/>
+<asset:javascript src="continent_select.js"/>
 </body>
 </html>

@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: johan
+  Date: 28/06/2025
+  Time: 18:24
+--%>
+
 <html lang="en">
 <head>
     <asset:stylesheet src="main.css"/>

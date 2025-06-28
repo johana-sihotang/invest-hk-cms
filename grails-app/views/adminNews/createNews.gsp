@@ -5,47 +5,43 @@
   Time: 10:40
 --%>
 <div class="container">
-    <h1 class="text-3xl text-start md:text-center font-bold mb-5">Edit "${news.title}"</h1>
+    <h1 class="text-3xl text-start md:text-center font-bold mb-5">Create News</h1>
 
-<g:render template="/components/alert"/>
+    <g:hasErrors bean="${news}">
+        <div class="alert alert-danger">
+            <ul>
+                <g:eachError bean="${news}" var="error">
+                    <li><g:message error="${error}"/></li>
+                </g:eachError>
+            </ul>
+        </div>
+    </g:hasErrors>
 
-<g:hasErrors bean="${request}">
-    <div class="alert alert-danger">
-        <ul>
-            <g:eachError bean="${news}" var="error">
-                <li><g:message error="${error}"/></li>
-            </g:eachError>
-        </ul>
-    </div>
-</g:hasErrors>
-
-<g:form controller="cmsNews" action="update" method="POST" enctype="multipart/form-data">
-    <g:hiddenField name="id" value="${news?.id}" />
+<g:form controller="adminNews" action="save" method="POST" enctype="multipart/form-data">
     <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div>
             <label for="article_title" class="block mb-2 text-sm font-medium text-gray-900">Title</label>
             <input name="title" type="text" id="article_title"
                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                   placeholder="Title" value="${request?.title ?: news?.title}"
-                   required/>
+                   placeholder="Title" required/>
         </div>
 
         <div>
             <label for="subTitle" class="block mb-2 text-sm font-medium text-gray-900">Sub Title</label>
             <input name="subTitle" type="text" id="subTitle"
                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                   placeholder="Sub Title" value="${request?.subTitle ?: news?.subTitle}"
-                   required/>
+                   placeholder="Sub Title" required/>
         </div>
     </div>
 
     <div class="my-6">
         <label for="content" class="block mb-2 text-sm font-medium text-gray-900">Content</label>
-        <textarea name="content" id="content" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 min-h-42 w-full" placeholder="Content">${request?.content ?: news?.content}</textarea>
+        <textarea name="content" id="content" rows="4"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 min-h-42 w-full"
+                  placeholder="Content"></textarea>
     </div>
 
     <div class="grid gap-6 mb-6 md:grid-cols-2">
-
         <div>
             <g:render template="/components/input_selected" model="[
                     label        : 'Location',
@@ -53,7 +49,7 @@
                     options      : locations,
                     optionKey    : 'id',
                     optionValue  : 'name',
-                    selectedValue: request?.locationId ?: news?.location?.id
+                    selectedValue: news?.location?.id
             ]"/>
         </div>
 
@@ -64,7 +60,7 @@
                     options      : contentType,
                     optionKey    : 'id',
                     optionValue  : 'name',
-                    selectedValue: request?.contentTypeId ?: news?.contentType?.id
+                    selectedValue: news?.contentType?.id
             ]"/>
         </div>
 
@@ -75,19 +71,18 @@
                     options      : industries,
                     optionKey    : 'id',
                     optionValue  : 'name',
-                    selectedValue: request?.industryId ?: news?.industry?.id
+                    selectedValue: news?.industry?.id
             ]"/>
         </div>
     </div>
 
     <div class="flex gap-6 flex-col">
-        <g:render template="/components/dropzone" model="[imageUrl: request?.image ?: news?.image]" />
+        <g:render template="/components/dropzone"/>
         <div>
             <label for="imageCaption" class="block mb-2 text-sm font-medium text-gray-900">Image Caption</label>
             <input name="imageCaption" type="text" id="imageCaption"
                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                   placeholder="Image Caption" value="${request?.imageCaption ?: news?.imageCaption}"
-                   required/>
+                   placeholder="Image Caption" required/>
         </div>
     </div>
     </div>
@@ -95,7 +90,7 @@
         <button type="submit"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">Submit
         </button>
-        <g:link controller="cmsNews" action="index" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">
+        <g:link controller="adminNews" action="index" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">
             Cancel
         </g:link>
     </div>

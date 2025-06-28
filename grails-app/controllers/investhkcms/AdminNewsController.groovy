@@ -5,7 +5,7 @@ import models.request.CreateNewsRequest
 import models.request.UpdateNewsRequest
 
 
-class CmsNewsController {
+class AdminNewsController {
     static layout = "navbar-sidebar"
 
     NewsService newsService
