@@ -1,8 +1,7 @@
 package investhkcms
 
 import models.request.CreateContactUsRequest
-
-import javax.transaction.Transactional
+import grails.gorm.transactions.Transactional
 
 @Transactional
 class ContactUsService {

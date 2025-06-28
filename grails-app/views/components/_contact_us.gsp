@@ -39,7 +39,7 @@
                     <input type="text" name="city" id="city" class="input-control " placeholder="City"/>
                 </div>
             </div>
-            <div class="col-lg-6 contactForm__group">
+            <div class="col-lg-6 h-20 contactForm__group">
                 <g:render template="/components/input_selected" model="[
                         label        : 'Location',
                         name         : 'locationId',

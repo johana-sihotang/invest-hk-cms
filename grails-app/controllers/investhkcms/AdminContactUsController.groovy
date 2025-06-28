@@ -24,7 +24,7 @@ class AdminContactUsController {
     def delete(Long id){
         try{
             contactUsService.deleteContactUs(id)
-            flash.succsess = "Contact Us deleted successfully"
+            flash.success = "Contact Us deleted successfully"
         } catch (Exception e) {
             flash.error = "Error deleting Contact Us: ${e.message}"
         }
