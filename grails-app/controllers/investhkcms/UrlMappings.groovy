@@ -8,9 +8,17 @@ class UrlMappings {
             }
         }
 
-        "/cms/$controller/$action/$id?(.$format)?"{
-            namespace = 'cms'
-        }
+        "/admin/article/"(controller: 'cmsNews', action: 'index')
+        "/admin/article/create"(controller: 'cmsNews', action: 'createNews')
+        "/admin/article/$id"(controller: 'cmsNews', action: 'show')
+        "/admin/article/$id/edit"(controller: 'cmsNews', action: 'edit')
+        "/admin/article/$id/delete"(controller: 'cmsNews', action: 'delete')
+
+        //user view
+        "/article"(controller: "news", action: 'index')
+        "/article/$id"(controller: "news", action: 'show')
+
+        "/contact_us"(controller: "contactUs", action: 'index')
 
         "/"(view:"/index")
         "500"(view:'/error')

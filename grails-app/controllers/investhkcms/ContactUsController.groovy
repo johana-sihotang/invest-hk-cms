@@ -2,12 +2,16 @@ package investhkcms
 
 
 class ContactUsController {
+    static layout = 'navbar-sidebar'
 
     def index() {
-
-    }
-    def contactUs(){
-        render(view: 'contact_us.gsp')
+        render (view: "contact_us", layout: 'main')
     }
 
+    def createContactUs() {
+        def continent = Continent.list(sort: 'name', order: 'asc')
+        def location = Location.list(sort: 'name', order: "asc")
+        [contactUs: new ContactUs()]
+        render(view: 'contact_us')
+    }
 }
