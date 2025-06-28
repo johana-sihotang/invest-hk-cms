@@ -15,7 +15,7 @@
 
 <body>
 <!-- Contact US -->
-<section class="contact_us">
+<section class="contact_us font-[Outfit]">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-11">
