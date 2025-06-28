@@ -34,7 +34,8 @@
                         Edit
                     </g:link>
 
-                    <g:link controller="adminNews" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700">
+                    <g:link controller="adminNews" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
+                    onclick="return confirm('Are you sure you want delete this news?')">
                         <i class="bi bi-trash3-fill text-white"></i>
                     </g:link>
 

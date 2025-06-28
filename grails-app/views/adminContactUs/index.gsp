@@ -29,10 +29,14 @@
                         <g:formatDate date="${item.dateCreated}" format="dd MMM yyyy" />
                     </td>
                     <td class="px-6 py-4 text-right flex gap-3">
-                        <g:link controller="adminContactUs" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700">
+                        <button
+                                type="button"
+                                class="delete-btn inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
+                                data-url="${createLink(controller: 'adminContactUs', action: 'delete', id: item.id)}"
+                                data-message="Are you sure you want to delete this message?">
                             <i class="bi bi-trash3-fill text-white"></i>
-                        </g:link>
-
+                        </button>
+                        
                         <g:link controller="adminContactUs" action="show" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700">
                             <i class="bi bi-eye-fill mr-2 text-white"></i>
                             Detail
