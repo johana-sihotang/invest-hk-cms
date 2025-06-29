@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Home| Invest HK</title>
-    <asset:stylesheet src="home"/>
+    <title>Home Page| Invest HK</title>
+    <asset:stylesheet src="home_page.css"/>
 </head>
 
 <body>
