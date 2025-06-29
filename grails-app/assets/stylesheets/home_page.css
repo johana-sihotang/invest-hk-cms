@@ -248,6 +248,7 @@ index__up .index__section__image {
 .start__icons__text {
     height: 50px;
     font-size: 18px;
+    color: #2b2e34;
 }
 
 .start__icons__image {
@@ -263,7 +264,11 @@ index__up .index__section__image {
     vertical-align: top;
 }
 
-
+a.start__icons__section{
+    text-decoration: none;
+    font-family: RobotoSlab;
+    font-weight: 700;
+}
 
 
 
