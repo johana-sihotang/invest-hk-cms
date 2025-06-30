@@ -16,7 +16,41 @@
 
             <div class="slick-list draggable" style="height: 826px;">
                 <div class="slick-track" style="opacity: 1; width: 14460px; transform: translate3d(-1446px, 0px, 0px);">
-                    <div class="slider slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true"
+                    <!--Slide 1-->
+                    <div class="slider slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
+                         style="width: 1446px;" tabindex="0" role="tabpanel" id="slick-slide30"
+                         aria-describedby="slick-slide-control30">
+                        <div class="index__section__text">
+                            <div class="index__section__inner">
+                                <div class="index__section__textInner index__section__slide">
+                                    <div class="index__section__header">Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong</div>
+
+                                    <div class="index__section__paragraph"></div>
+                                    <nav class="link">
+                                        <a target="_self"
+                                           template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                           href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                           aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                           tabindex="0">Read More
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="index__section__image compat-object-fit"
+                             style="background-image: url(${assetPath(src: 'favicon/drone.jpg')});">
+                            <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                               data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                               data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">
+                                <asset:image src="favicon/drone.jpg.jpg" alt="Drone Tech Brings New Opportunities"/>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!--Slide 2-->
+                    <div class="slider slick-slide slick-cloned" data-slick-index="1" id="" aria-hidden="true"
                          style="width: 1446px;" tabindex="-1">
                         <div class="index__section__text">
                             <div class="index__section__inner">
@@ -25,8 +59,13 @@
 
                                     <div class="index__section__paragraph"></div>
                                     <nav class="link">
-                                        <a target="_self" template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/" href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/" aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                           tabindex="-1">Read More</a></nav>
+                                        <a target="_self"
+                                           template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                           href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                           aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                           tabindex="-1">Read More
+                                        </a>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
@@ -36,273 +75,53 @@
                             <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
                                data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
                                data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                                <img template-src="\images\favicon\people.jpg" src="\images\favicon\people.jpg"
-                                     alt="Drone Tech Brings New Opportunities">
+                                <asset:image src="favicon/people.jpg" alt="Drone Tech Brings New Opportunities"/>
                             </a>
-                        </div></div>
-
-                    <div class="slider slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
-                         style="width: 1446px;" tabindex="0" role="tabpanel" id="slick-slide30"
-                         aria-describedby="slick-slide-control30">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong</div>
-
-                                    <div class="index__section__paragraph"></div>
-                                    <nav class="link"><a target="_self"
-                                                         template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         tabindex="0">Read More</a></nav>
-                                </div>
-                            </div>
                         </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             style="background-image: url(${assetPath(src: 'favicon/drone.jpg')});">
-                        </div>
-
                     </div>
-
-                    <div class="slider slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1446px;"
-                         tabindex="-1" role="tabpanel" id="slick-slide31" aria-describedby="slick-slide-control31">
+                    <!--Slide 3-->
+                    <div class="slider slick-slide slick-cloned" data-slick-index="2" id="" aria-hidden="true"
+                         style="width: 1446px;" tabindex="-1">
                         <div class="index__section__text">
                             <div class="index__section__inner">
                                 <div class="index__section__textInner index__section__slide">
-
                                     <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
 
                                     <div class="index__section__paragraph"></div>
-
+                                    <nav class="link">
+                                        <a target="_self"
+                                           template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                           href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                           aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                           tabindex="-1">Read More
+                                        </a>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
 
                         <div class="index__section__image compat-object-fit"
-                             style="background-image: url(${assetPath(src: 'favicon/drone.jpg')});">
-                            <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                               data-video="https://www.youtube.com/embed/8qXveFyydEs"
-                               data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="slider slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1446px;"
-                         tabindex="-1" role="tabpanel" id="slick-slide32" aria-describedby="slick-slide-control32">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">Drone Tech Brings New Opportunities</div>
-
-                                    <div class="index__section__paragraph"></div>
-                                    <nav class="link"><a target="_self"
-                                                         template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         tabindex="-1">Read More</a></nav>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             style="background-image: url(&quot;/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000&quot;);">
+                             style="background-image: url(${assetPath(src: '/images/favicon/people.jpg')});">
                             <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
                                data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
                                data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                                <img template-src="/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000"
-                                     src="/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000"
-                                     alt="Drone Tech Brings New Opportunities">
+                                <asset:image src="favicon/people.jpg" alt="Drone Tech Brings New Opportunities"/>
                             </a>
                         </div>
-
                     </div>
 
-                    <div class="slider slick-slide slick-cloned" data-slick-index="3" id="" aria-hidden="true"
-                         style="width: 1446px;" tabindex="-1">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong</div>
-
-                                    <div class="index__section__paragraph"></div>
-                                    <nav class="link"><a target="_self"
-                                                         template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         tabindex="-1">Read More</a></nav>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             template-bg-src="/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000"
-                             style="background-image: url(&quot;/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000&quot;);"><img
-                                template-src="/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000"
-                                src="/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000"
-                                alt="Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong">
-                        </div>
-
-                    </div>
-
-                    <div class="slider slick-slide slick-cloned" data-slick-index="4" id="" aria-hidden="true"
-                         style="width: 1446px;" tabindex="-1">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
-
-                                    <div class="index__section__paragraph"></div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             style="background-image: url(&quot;/media/5o0d0x2n/v22-en.png?width=960&amp;height=794&amp;rnd=133953239000100000&quot;);">
-                            <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                               data-video="https://www.youtube.com/embed/8qXveFyydEs"
-                               data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                                <img template-src="/media/5o0d0x2n/v22-en.png?width=960&amp;height=794&amp;rnd=133953239000100000"
-                                     src="/media/5o0d0x2n/v22-en.png?width=960&amp;height=794&amp;rnd=133953239000100000"
-                                     alt="InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community">
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="slider slick-slide slick-cloned" data-slick-index="5" id="" aria-hidden="true"
-                         style="width: 1446px;" tabindex="-1">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">Drone Tech Brings New Opportunities</div>
-
-                                    <div class="index__section__paragraph"></div>
-                                    <nav class="link"><a target="_self"
-                                                         template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         tabindex="-1">Read More</a></nav>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             style="background-image: url(&quot;/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000&quot;);">
-                            <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                               data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                               data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                                <img template-src="/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000"
-                                     src="/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000"
-                                     alt="Drone Tech Brings New Opportunities">
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="slider slick-slide slick-cloned" data-slick-index="3" id="" aria-hidden="true"
-                         style="width: 1446px;" tabindex="-1">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong</div>
-
-                                    <div class="index__section__paragraph"></div>
-                                    <nav class="link"><a target="_self"
-                                                         template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                                         tabindex="-1">Read More</a></nav>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             template-bg-src="/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000"
-                             style="background-image: url(&quot;/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000&quot;);"><img
-                                template-src="/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000"
-                                src="/media/k5cnqzln/ce-reception-2025-carousel.jpg?width=960&amp;height=794&amp;rnd=133953239027130000"
-                                alt="Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong">
-                        </div>
-
-                    </div>
-
-                    <div class="slider slick-slide slick-cloned" data-slick-index="4" id="" aria-hidden="true"
-                         style="width: 1446px;" tabindex="-1">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
-
-                                    <div class="index__section__paragraph"></div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             style="background-image: url(&quot;/media/5o0d0x2n/v22-en.png?width=960&amp;height=794&amp;rnd=133953239000100000&quot;);">
-                            <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                               data-video="https://www.youtube.com/embed/8qXveFyydEs"
-                               data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                                <img template-src="/media/5o0d0x2n/v22-en.png?width=960&amp;height=794&amp;rnd=133953239000100000"
-                                     src="/media/5o0d0x2n/v22-en.png?width=960&amp;height=794&amp;rnd=133953239000100000"
-                                     alt="InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community">
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="slider slick-slide slick-cloned" data-slick-index="5" id="" aria-hidden="true"
-                         style="width: 1446px;" tabindex="-1">
-                        <div class="index__section__text">
-                            <div class="index__section__inner">
-                                <div class="index__section__textInner index__section__slide">
-
-                                    <div class="index__section__header">Drone Tech Brings New Opportunities</div>
-
-                                    <div class="index__section__paragraph"></div>
-                                    <nav class="link"><a target="_self"
-                                                         template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                                         tabindex="-1">Read More</a></nav>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="index__section__image compat-object-fit"
-                             style="background-image: url(&quot;/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000&quot;);">
-                            <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                               data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                               data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                                <img template-src="/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000"
-                                     src="/media/vagejtu5/lowaltitudeeconomy_carousel_v3.jpg?width=960&amp;height=794&amp;rnd=133922977216970000"
-                                     alt="Drone Tech Brings New Opportunities">
-                            </a>
-                        </div>
-
-                    </div></div></div>
-            <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button><ul
-                class="slick-dots" style="left: 48px; top: 729.625px; bottom: auto;" role="tablist"><li
-                    class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control30"
-                                                                     aria-controls="slick-slide30" aria-label="1 of 3"
-                                                                     tabindex="0" aria-selected="true">1</button>
-            </li><li role="presentation"><button type="button" role="tab" id="slick-slide-control31"
-                                                 aria-controls="slick-slide31" aria-label="2 of 3"
-                                                 tabindex="0">2</button></li><li role="presentation"><button
-                    type="button" role="tab" id="slick-slide-control32" aria-controls="slick-slide32"
-                    aria-label="3 of 3" tabindex="0">3</button></li></ul></div>
-    </div>
+                </div>
+            </div>
+        <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button><ul
+            class="slick-dots" style="left: 48px; top: 729.625px; bottom: auto;" role="tablist"><li
+                class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control30"
+                                                                 aria-controls="slick-slide30" aria-label="1 of 3"
+                                                                 tabindex="0" aria-selected="true">1</button>
+        </li><li role="presentation"><button type="button" role="tab" id="slick-slide-control31"
+                                             aria-controls="slick-slide31" aria-label="2 of 3"
+                                             tabindex="0">2</button></li><li role="presentation"><button
+                type="button" role="tab" id="slick-slide-control32" aria-controls="slick-slide32"
+                aria-label="3 of 3" tabindex="0">3</button></li></ul></div>
 </div>
 
 <div class="start">
@@ -604,7 +423,5 @@
 </div>
 
 <asset:javascript src="slick_slider.js"/>
-%{--<asset:javascript src="carouselSlider.js"/>--}%
-
-
+<asset:javascript src="carouselSlider.js"/>
 </body>

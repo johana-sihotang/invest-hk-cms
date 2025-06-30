@@ -1,3 +1,10 @@
+.indexCarousellTop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .index {
     position: relative;
     display: block;
@@ -186,8 +193,14 @@ Specificity {
     height: 80px;
     box-shadow: none;
     opacity: 1;
-    font-size: 12px;
-    text-indent: -99999px;
+}
+
+.slick-prev {
+    left: 0px;
+}
+
+.slick-next {
+    right: 0px;
 }
 
 .slick-next, .slick-prev {
@@ -212,6 +225,55 @@ Specificity {
     z-index: 3;
 }
 
+.slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
+    opacity: 1;
+    background-color: #d9242d;
+}
+
+.slick-prev::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    margin-top: -6px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(135deg);
+    transition: all 0.2s ease;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.slick-next::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    margin-top: -6px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    opacity: 1;
+}
+
+
+.slick-prev:hover:before,
+.slick-prev:focus:before {
+    opacity: 1;
+    border-color: #fff;
+}
+
+
 .slick-slide {
     float: left;
     height: 100%;
@@ -230,7 +292,7 @@ Specificity {
 
 .index__up .index__section__image {
     height: calc(100vh - 179px);
-}}
+}
 
 index__section__image {
     float: left;
