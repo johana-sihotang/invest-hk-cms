@@ -17,16 +17,55 @@
     overflow-y: hidden;
 }
 
+index__up {
+    min-height: 620px;
+    height: calc(100vh - 179px);
+    -o-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.index nav.link a {
+    transition: all .2s;
+    font-size: 18px;
+    height: 52px;
+    line-height: 52px;
+    padding-left: 26px;
+    padding-right: 26px;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+}
+
+.index nav.link a, .index__section__tags a:hover {
+    background-color: #d9242d;
+}
+
 @media (max-width: 580px) {
     .index__up {
         min-height: 0;
     }
+
+    .index nav.link a {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        padding: 0 15px;
+    }
 }
+
 @media screen and (max-width: 1023px) {
     .index__up {
         height: auto;
     }
 }
+
 @media screen and (max-width: 580px) {
     .index .slick-next, .index .slick-prev {
         width: 44px;
@@ -99,9 +138,44 @@
 }
 
 
+.index .slick-dots li button:focus, .index .slick-dots li button:hover, .index .slick-dots li.slick-active button {
+    border: 1px solid #d9242d;
+    background: #d9242d;
+}
+
+.index .slick-dots li button {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #a3a3a3;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.slick-dots li button {
+    border: 0;
+    background: 0 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
 .slick-list, .slick-slider, .slick-track
-Specificity
-{
+Specificity {
     position: relative;
     display: block;
 }
@@ -114,6 +188,28 @@ Specificity
     opacity: 1;
     font-size: 12px;
     text-indent: -99999px;
+}
+
+.slick-next, .slick-prev {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    /* background-color: rgba(51, 51, 51, .5); */
+    background: rgba(0, 0, 0, .6);
+    top: 50%;
+    transform: translate(0, -50%);
+    box-shadow: 0 0 1px #2b2e34;
+    padding: 0;
+    margin-top: 10px;
+    border: none;
+    outline: 0;
+    color: #d9242d;
+    opacity: .8;
+    z-index: 3;
 }
 
 .slick-slide {
@@ -131,6 +227,26 @@ Specificity
     float: left;
     width: 50%;
 }
+
+.index__up .index__section__image {
+    height: calc(100vh - 179px);
+}}
+
+index__section__image {
+    float: left;
+    width: 50%;
+    height: 620px;
+}
+
+.compat-object-fit {
+    background-size: cover !important;
+    background-position: top center !important;
+}
+
+.compat-object-fit, .loader {
+    background-repeat: no-repeat;
+}
+
 
 .index__up .index__section__inner {
     float: right;
@@ -154,8 +270,7 @@ Specificity
 }
 
 .about__header, .case-studies-page__facts__header, .case-studies__top__header, .client-profiles__top__header, .contact__header, .error__header, .events__top__header, .f-header, .faq__header, .index__section__header, .industries-page__fast__facts__header, .industries__header, .newsletter__header, .other-hk-news__header, .quote__header, .resources-page__facts__header, .setting-up-in-hk__header, .success__title, .text__header, .why__header
-Specificity
-{
+Specificity {
     font-family: RobotoSlab-Bold, serif;
     color: #d9242d;
     font-weight: 700;
@@ -176,8 +291,7 @@ Specificity
 }
 
 nav a, nav button
-Specificity
-{
+Specificity {
     position: relative;
     display: inline-block;
     margin: 0;
@@ -191,6 +305,7 @@ a {
 index__up .index__section__image {
     height: calc(100vh - 179px);
 }
+
 .index__section__image {
     float: left;
     width: 50%;
@@ -205,11 +320,11 @@ index__up .index__section__image {
 .index__up .index__section__inner {
     float: right;
 }
+
 .index__section__inner {
     width: 100%;
     max-width: 675px;
 }
-
 
 
 .start {
@@ -231,15 +346,14 @@ index__up .index__section__image {
 }
 
 .f-heading, .mainTitles__big {
-    font-family: RobotoSlab-Bold,serif;
+    font-family: RobotoSlab-Bold, serif;
     font-size: 36px;
     color: #2b2e34;
     font-weight: 700;
     letter-spacing: .3px;
 }
 
-.mainTitles__small
-{
+.mainTitles__small {
     font-family: Roboto-Regular, serif;
     font-size: 15px;
     color: #2b2e34;
@@ -264,12 +378,11 @@ index__up .index__section__image {
     vertical-align: top;
 }
 
-a.start__icons__section{
+a.start__icons__section {
     text-decoration: none;
     font-family: RobotoSlab;
     font-weight: 700;
 }
-
 
 
 .panel {
@@ -322,6 +435,7 @@ a.start__icons__section{
     color: #fff;
     overflow: hidden;
 }
+
 .panel__red a {
     position: absolute;
     width: 100%;
@@ -330,7 +444,6 @@ a.start__icons__section{
     left: 0;
     display: block;
 }
-
 
 
 .panel__section a {
@@ -379,10 +492,9 @@ a.start__icons__section{
     background-color: #d9242d;
 }
 
-.panel .slick-current>a {
+.panel .slick-current > a {
     z-index: 1;
 }
-
 
 
 .panel__section__text {
@@ -427,6 +539,31 @@ a.start__icons__section{
     padding: 0;
     margin: 0;
     width: 100%;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.index .slick-dots {
+    left: 60px;
+    width: auto;
+    bottom: 30px;
+}
+
+.index .slick-dots li {
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 44px;
+    height: 34px;
+    display: inline-flex;
+    align-items: flex-end;
 }
 
 .panel__section .slick-dots li {
@@ -490,8 +627,16 @@ slick-dots li {
     min-height: 150px;
     padding-top: 12px;
     font-size: 22px;
+    font-weight: 700;
+    font-family: RobotoSlab-Bold;
 }
 
 .panel__blue {
     background: #2b2e34;
+}
+
+@media screen and (max-width: 650px) {
+    .panel {
+        max-width: 365px;
+    }
 }
