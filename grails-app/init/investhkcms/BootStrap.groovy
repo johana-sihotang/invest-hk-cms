@@ -14,7 +14,7 @@ class BootStrap {
                         println("Updated existing continent: ${name}")
                     }
                 } else {
-                    new Continent(name: name).save(flus: true, failOnError: true)
+                    new Continent(name: name).save(flush: true, failOnError: true)
                     println("Inserted new continent: ${name}")
                 }
             }

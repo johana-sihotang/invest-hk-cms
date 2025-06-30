@@ -94,5 +94,5 @@ grails:
       - text/xml
       - application/xml
 server:
-  port: 8001
+  port: 8003
 

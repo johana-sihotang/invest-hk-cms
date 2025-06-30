@@ -13,6 +13,7 @@ class UrlMappings {
         "/admin/article/$id"(controller: 'cmsNews', action: 'show')
         "/admin/article/$id/edit"(controller: 'cmsNews', action: 'edit')
         "/admin/article/$id/delete"(controller: 'cmsNews', action: 'delete')
+        "/login"(controller: 'admin',action: 'index' )
 
         //user view
         "/article"(controller: "news", action: 'index')
