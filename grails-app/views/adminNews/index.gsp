@@ -1,11 +1,9 @@
 <h1 class="text-3xl font-bold text-start md:text-center mb-5">News</h1>
 
-<g:link controller="cmsNews" action="createNews"
+<g:link controller="adminNews" action="createNews"
         class="inline-block mb-5 px-5 py-2.5 text-sm font-medium text-white text-center bg-slate-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
     Add News
 </g:link>
-
-<g:render template="/components/alert"/>
 
 <g:if test="${news}">
 <div class="relative overflow-x-auto border border-gray-100 sm:rounded-lg">
@@ -31,12 +29,13 @@
                     <g:formatDate date="${item.publicationDate}" format="dd MMM yyyy" />
                 </td>
                 <td class="px-6 py-4 text-right flex gap-3">
-                    <g:link controller="cmsNews" action="edit" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+                    <g:link controller="adminNews" action="edit" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
                         <i class="bi bi-pencil-square mr-2 text-white"></i>
                         Edit
                     </g:link>
 
-                    <g:link controller="cmsNews" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700">
+                    <g:link controller="adminNews" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
+                    onclick="return confirm('Are you sure you want delete this news?')">
                         <i class="bi bi-trash3-fill text-white"></i>
                     </g:link>
 

@@ -14,6 +14,14 @@ class UrlMappings {
         "/admin/article/$id/edit"(controller: 'cmsNews', action: 'edit')
         "/admin/article/$id/delete"(controller: 'cmsNews', action: 'delete')
         "/login"(controller: 'admin',action: 'index' )
+        "/admin/article/"(controller: 'adminNews', action: 'index')
+        "/admin/article/create"(controller: 'adminNews', action: 'createNews')
+        "/admin/article/$id"(controller: 'adminNews', action: 'show')
+        "/admin/article/$id/edit"(controller: 'adminNews', action: 'edit')
+        "/admin/article/$id/delete"(controller: 'adminNews', action: 'delete')
+
+        "/admin/contactUs"(controller: 'adminContactUs', action: 'index')
+        "/admin/contactUs/$id"(controller: 'adminContactUs', action: 'show')
 
         //user view
         "/article"(controller: "news", action: 'index')

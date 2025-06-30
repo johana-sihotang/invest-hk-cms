@@ -94,7 +94,7 @@ class NewsService {
             throw new IllegalArgumentException("Uploaded file must be an image.")
         }
 
-        if (imageFile.size > 2 * 1024 * 1024) {
+        if (imageFile.size > 5 * 1024 * 1024) {
             throw new IllegalArgumentException("Image file is too large (max 2MB).")
         }
 
