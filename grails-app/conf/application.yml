@@ -93,6 +93,13 @@ grails:
       xml:
       - text/xml
       - application/xml
+  plugin:
+    springsecurity:
+      userlookup:
+        userDomainClassName: investhkcms.Admin
+        authorityJoinClassName: investhkcms.AdminRole
+      authority:
+        className: investhkcms.Role
 server:
   port: 8003
 
