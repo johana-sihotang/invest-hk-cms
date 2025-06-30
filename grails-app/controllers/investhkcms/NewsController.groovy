@@ -11,12 +11,21 @@ class NewsController {
     }
 
     def show(Long id) {
-        News news = newsService.getNewsById(id)
-        if (!news) {
-            flash.error = "News not found"
+        try {
+            News news = newsService.getNewsById(id)
+            if (!news) {
+                flash.error = "News not found"
+                redirect(action: 'index')
+                return
+            }
+
+            render view: "/news/show", model: [news: news]
+
+        } catch (Exception e) {
+            log.error("Error fetching news with ID ${id}: ${e.message}", e)
+            flash.error = "An error occurred while trying to display the news."
             redirect(action: 'index')
-            return
         }
-        render view: "/news/show", model: [news: news]
     }
+
 }
