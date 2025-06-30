@@ -21,7 +21,6 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow-y: hidden;
 }
 
 index__up {
@@ -54,84 +53,7 @@ nav a {
     background-color: #d9242d;
 }
 
-@media (max-width: 580px) {
-    .index__up {
-        min-height: 0;
-    }
-
-    .index nav.link a {
-        height: 30px;
-        line-height: 30px;
-        font-size: 12px;
-        padding: 0 15px;
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .index__up {
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .index .slick-next, .index .slick-prev {
-        width: 44px;
-        height: 58px;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .index__up .slick-next, .index__up .slick-prev {
-        bottom: 98px;
-        top: auto !important;
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .index__section__text {
-        float: none;
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .index__up .index__section__inner {
-        float: none;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .index__up .index__section__textInner {
-        margin: 0;
-        padding: 0 20px 50px;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .index__section__header {
-        font-size: 31px;
-        line-height: normal;
-        padding-top: 5px;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .index__section__paragraph {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .index nav.link a {
-        height: 30px;
-        line-height: 30px;
-        font-size: 12px;
-        padding: 0 15px;
-    }
-}
-
-.index__section__paragraph {
+index__section__paragraph {
     padding-top: 10px;
     padding-bottom: 20px;
     line-height: 26px;
@@ -142,6 +64,17 @@ nav a {
     color: #d9242d;
     height: 50px;
     width: 48px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 
@@ -298,6 +231,11 @@ index__section__image {
     float: left;
     width: 50%;
     height: 620px;
+}
+
+.compat-object-fit{
+    background-size: cover !important;
+    background-position: top center !important;
 }
 
 .compat-object-fit {
@@ -594,7 +532,6 @@ a.start__icons__section {
 
 .slick-dots {
     position: absolute;
-    bottom: -25px;
     list-style: none;
     display: block;
     text-align: center;
@@ -612,6 +549,11 @@ a.start__icons__section {
     padding: 0;
     cursor: pointer;
 }
+
+.slick-dots li button:before {
+    content: '';
+}
+
 
 .index .slick-dots {
     left: 60px;
@@ -697,6 +639,88 @@ slick-dots li {
     background: #2b2e34;
 }
 
+@media screen and (max-width: 1440px) {
+    .index__up .index__section__textInner {
+        margin: 60px 60px 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .index__up {
+        height: auto;
+    }
+    .index__up .index__section__image {
+        height: 500px;
+    }
+    .index__section__image {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .index__section__text {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .index__section__inner{
+        margin-left: 10px;
+    }
+
+    .index nav.link a {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        padding: 0 15px;
+    }
+
+    .index .slick-next, .index .slick-prev {
+        width: 44px;
+        height: 58px;
+    }
+    .index__up .slick-next, .index__up .slick-prev {
+        bottom: 98px;
+        top: auto !important;
+    }
+    .index__section__text {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .index__up .index__section__inner {
+        float: none;
+    }
+    .index__up .index__section__textInner {
+        margin: 0;
+        padding: 0 20px 50px;
+    }
+    .index__section__header {
+        font-size: 31px;
+        line-height: normal;
+        padding-top: 5px;
+    }
+    .index__section__paragraph {
+        font-size: 12px;
+    }
+    .index nav.link a {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 580px) {
+
+
+}
+
+.
 @media screen and (max-width: 650px) {
     .panel {
         max-width: 365px;
