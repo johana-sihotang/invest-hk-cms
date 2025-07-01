@@ -94,5 +94,13 @@ grails:
       - text/xml
       - application/xml
 server:
+  tomcat:
+    max-http-form-post-size: 5MB
   port: 8003
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
 

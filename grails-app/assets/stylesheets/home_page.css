@@ -607,6 +607,7 @@ slick-dots li {
     color: transparent;
     padding: 5px;
     cursor: pointer;
+
 }
 
 .panel__section .slick-dots li.slick-active button {

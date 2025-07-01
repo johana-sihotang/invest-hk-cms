@@ -4,152 +4,407 @@
   Date: 23/06/25
   Time: 21.44
 --%>
-    <div class="article">
-        <div class="article__container article__container--header">
-            <div class="col-2">
-                <div class="article__title">
-                    <div class="row-4">
-                        <div class="article__breadcrumb col-span-2">
-                            <div class="breadcrumb">
-                                <a href="https://ec2-13-213-205-176.ap-southeast-1.compute.amazonaws.com/en/"
-                                   target="_blank" class="hover-underline text-red icon-after">Home</a>
-                                <a href="https://ec2-13-213-205-176.ap-southeast-1.compute.amazonaws.com/en/case-studies/"
-                                   target="_blank" class="hover-underline text-red icon-after">Case Studies</a>
-                                <a href="" target="_blank"
-                                   class="hover-underline text-red icon-after">Driving Innovation, Optimising Investment Portfolios</a>
+<div class="mb-10">
+
+    <div class="index slider-wrapper" role="banner">
+        <div class="index__section index__up">
+            <div class="indexCarousellTop">
+                <!--Slide 1-->
+                <div class="slider">
+                    <div class="index__section__text">
+                        <div class="index__section__inner">
+                            <div class="index__section__textInner index__section__slide">
+                                <div class="index__section__header">Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong</div>
+
+                                <div class="index__section__paragraph"></div>
+                                <nav class="link">
+                                    <a target="_self"
+                                       template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                       href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                       aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                       tabindex="0">Read More
+                                    </a>
+                                </nav>
                             </div>
-
                         </div>
+                    </div>
 
-                        <h1>Driving Innovation, Optimising Investment Portfolios</h1>
+                    <div class="index__section__image compat-object-fit"
+                         style="background-image: url(/assets/favicon/drone.jpg);">
+                        <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                           data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                           data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">
+                        </a>
+                    </div>
 
-                        <div class="article__tags col-span-2">
-                            <button class="tag tag-red">
-                                <p>Financial Services</p>
-                            </button>
-                            <button class="tag tag-black">
-                                <p>From Mainland China</p>
-                            </button>
+                </div>
+
+                <!--Slide 2-->
+                <div class="slider">
+                    <div class="index__section__text">
+                        <div class="index__section__inner">
+                            <div class="index__section__textInner index__section__slide">
+                                <div class="index__section__header">Drone Tech Brings New Opportunities</div>
+
+                                <div class="index__section__paragraph"></div>
+                                <nav class="link">
+                                    <a target="_self"
+                                       template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       tabindex="-1">Read More
+                                    </a>
+                                </nav>
+                            </div>
                         </div>
-                        <i class="uil uil-share-alt icon-share"></i>
+                    </div>
+
+                    <div class="index__section__image compat-object-fit"
+                         style="background-image: url(/assets/favicon/people.jpg);">
+                        <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                           data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                           data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
+                        </a>
                     </div>
                 </div>
+                <!--Slide 3-->
+                <div class="slider">
+                    <div class="index__section__text">
+                        <div class="index__section__inner">
+                            <div class="index__section__textInner index__section__slide">
+                                <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
 
-                <div class="article__tags caption">
-                    <img src="images/content1.jpg">
+                                <div class="index__section__paragraph"></div>
+                                <nav class="link">
+                                    <a target="_self"
+                                       template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       tabindex="-1">Read More
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
 
-                    <p>Pasu Yip, Co-founder and CEO, Seeds Capital</p>
+                    <div class="index__section__image compat-object-fit"
+                         style="background-image: url(/assets/favicon/people.jpg);">
+                        <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                           data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                           data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="article__container article__container--content">
-            <div class="blockquote">
-                <blockquote>
-                    <span>Our proprietary systems integrate cutting-edge technology with strategic investments, capitalising on Hong Kong’s robust financial and technological infrastructure, rapid data flow, and its status as an international financial centre.</span>
-                </blockquote>
-            </div>
-
-            <p class="text-small">Pasu Yip Co-founder and CEO, Seeds Capital</p>
-
-            <h2 class="line-height-normal">Capitalising on Hong Kong’s status as a premier financial hub, Seeds Capital customises investment portfolios for high-net-worth clients through its self-developed systems.</h2>
-
-            <p class="text-medium line-height-normal">As an international metropolis and financial centre, the core of Hong Kong’s success lies in its diversity and spirit of innovation. Asset management firm Seeds Capital, with funding supported by Mainland Chinese investors, has actively developed its external asset management business and independently developed systems. By combining data, analysis, and forecasting models, Seeds Capital tailors investment portfolios for its clients, with a commitment to reducing investment risks and achieving stable asset growth.</p>
-
-            <div>
-                <h3 class="text-medium bold line-height-normal margin-20">Advanced Financial Infrastructure and Rich Talent Pool</h3>
-
-                <p class="text-medium line-height-normal">Established in Hong Kong in 2021, Seeds Capital leverages its extensive experience in financial services and FinTech to drive growth. Pasu Yip, Co-founder and CEO of Seeds Capital, stated, “Our proprietary systems integrate cutting-edge technology with strategic investments, capitalising on Hong Kong’s robust financial and technological infrastructure, rapid data flow, and its status as an international financial centre.”<br><br>“Hong Kong has a rich pool of professionals in finance, technology, and innovation, enabling us to hire individuals who not only possess technical expertise, but also understand the unique dynamics of the financial markets. With our innovative systems, we aim to manage our clients’ assets more effectively, thereby enhancing overall societal wealth,” he added.
-                </p>
-
-                <h3 class="text-medium bold line-height-normal margin-20">Capitalising on Hong Kong’s Role as a “Super-Connector”</h3>
-
-                <p class="text-medium line-height-normal">Seeds Capital is committed to serving high-net-worth clients in the Guangdong-Hong Kong-Macao Greater Bay Area (GBA) and across Asia, providing investment advice and investment management through external asset management models. Yip said, “As a Hong Kong-based external asset manager, we leverage Hong Kong’s strategic location and unique financial strengths to provide tailored investment solutions and attractive risk-return profiles to our clients in Hong Kong, the GBA, and the region.”<br><br>Recently, Seeds Capital has collaborated with Australian-listed private fund companies and alternative investment project managers to offer clients innovative assets and real estate private equity funds. “Hong Kong not only serves as a bridge connecting the world, but has also deepened its integration into the GBA in recent years, with various industries experiencing rapid growth,” Yip said. “This creates a large customer base and potential investors. We will continue to seize opportunities by introducing quality investment assets to high-net-worth clients, further reinforcing Hong Kong’s role as a financial ‘Super-Connector’.”<br><br>Yip appreciated the support from InvestHK, which is crucial for Seeds Capital’s expansion. “InvestHK has provided us with valuable networking opportunities and marketing support, both of which have contributed to our growth trajectory,” he concluded.
-                </p>
-            </div>
-
-            <div>
-                <h3 class="text-lg">Fast Facts</h3>
-                <ul>
-                    <li><p class="text-medium">It is licensed and regulated by Hong Kong Securities and Futures Commission for Type 4 (advising on securities) and Type 9 (asset management) activities</p>
-                    </li>
-                    <li><p class="text-medium">In October 2024, the company was awarded the Outstanding Innovation Award by the Hong Kong Australia Business Association (Queensland Chapter)</p>
-                    </li>
-                </ul>
-
-            </div>
-
-            <div class="article__visit-website">
-                <ul class="text-decoration-none">
-                    <li><a href="https://seedscapital.com.hk/en/" target="_blank"
-                           class="text-red text-medium hover-underline">
-                        <i class="uil uil-upload-alt"></i>
-                        Visit Website
-                    </a></li>
-                </ul>
-                <ul class="text-decoration-none">
-                    <li><a href="https://ec2-13-213-205-176.ap-southeast-1.compute.amazonaws.com/media/dddon4uy/202503-seeds_capital-en.pdf"
-                           target="_blank" class="text-red text-medium hover-underline">
-                        <i class="uil uil-import"></i>
-                        Download Case Study
-                    </a></li>
-                </ul>
             </div>
         </div>
     </div>
 
-    <div class="carousel">
-        <h3 class="text-lg text-red">YOU MIGHT ALSO BE INTERESTED IN</h3>
 
-        <div class="carousel__container">
-            <a href="https://ec2-13-213-205-176.ap-southeast-1.compute.amazonaws.com/en/client-profiles/google/"
-               target="_blank">
-                <div class="carousel__container__section">
-                    <div class="carousel__container__section_image">
-                        <img src="images/">
-                    </div>
-                    <h4 class="carousel-caption">Google</h4>
-                </div>
-            </a>
-            <a href="https://ec2-13-213-205-176.ap-southeast-1.compute.amazonaws.com/en/client-profiles/wavestone-hk-ltd/"
-               target="_blank">
-                <div class="carousel__container__section">
-                    <div class="carousel__container__section_image">
-                        <img src="images/wavestone.webp">
-                    </div>
-                    <h4 class="carousel-caption">Wavestone HK LTD.</h4>
-                </div>
-            </a>
-            <a href="https://ec2-13-213-205-176.ap-southeast-1.compute.amazonaws.com/en/client-profiles/food-with-benefits-limited/"
-               target="_blank">
-                <div class="carousel__container__section">
-                    <div class="carousel__container__section_image">
-                        <img src="images/foodwbenefit.jpg">
-                    </div>
-                    <h4 class="carousel-caption">Food With Benefits Limited</h4>
-                </div>
-            </a>
+    <div class="start">
+        <div class="mainTitles">
+            <div class="mainTitles__big">Setting Up in Hong Kong</div>
+
+            <div class="mainTitles__small">It is fast, and afforable to set up a business in Hong Kong.</div>
         </div>
 
-        <div class="carousel__scroll">
-            <div class="carousel__btn-scroll">
-                <div class="carousel__btn-scroll__dot"></div>
+        <div class="start__icons">
+            <a class="start__icons__section" aria-label="Set up A Company">
+                <div class="start__icons__image">
+                    <img src="/assets/favicon/set_up_logo.png" alt="Set up A Company"/>
+                </div>
 
-                <div class="carousel__btn-scroll__dot"></div>
+                <div class="start__icons__text">Set up A Company</div>
+            </a>
+            <a class="start__icons__section">
+                <div class="start__icons__image">
+                    <img src="/assets/favicon/tax_basics_logo.png" alt="Tax Basics"/>
+                </div>
 
-                <div class="carousel__btn-scroll__dot"></div>
-            </div>
+                <div class="start__icons__text">Tax Basics</div>
+            </a>
+            <a class="start__icons__section">
+                <div class="start__icons__image">
+                    <img src="/assets/favicon/government_policies_logo.png" alt="Government Policies"/>
+                </div>
 
-            <div class="carousel__btn-scroll">
-                <button class="humburger-menu__search-button">
-                    <i class="fas fas fa-arrow-left"></i>
-                </button>
-                <button class="humburger-menu__search-button">
-                    <i class="fas fas fa-arrow-right"></i>
-                </button>
+                <div class="start__icons__text">Government Policies</div>
+            </a>
+            <a class="start__icons__section">
+                <div class="start__icons__image">
+                    <img src="/assets/favicon/visas_logo.png" alt="Visas"/>
+                </div>
+
+                <div class="start__icons__text">Visas</div>
+            </a>
+            <a class="start__icons__section" aria-label="Bank Accounts">
+                <div class="start__icons__image">
+                    <img src="/assets/favicon/business_bank_logo.png" alt="Bank Accounts"/>
+                </div>
+
+                <div class="start__icons__text">Bank Accounts</div>
+            </a>
+            <a class="start__icons__section" aria-label="business locations">
+                <div class="start__icons__image">
+                    <img src="/assets/favicon/business_locations_logo.png" alt="Business Locations"/>
+                </div>
+
+                <div class="start__icons__text">Business Locations</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="panel">
+    <div class="panel__section link">
+        <div class="panel__section__inner panel__section__innerUp startUp">
+            <div class="panel__section__image compat-object-fit"
+                 style="background-image: url(/assets/favicon/img_1.png);">
+                <a template-href="/en/find-us-social-media/" href="https://www.investhk.gov.hk/en/find-us-social-media/"
+                   target="_self">
+                </a>
             </div>
         </div>
     </div>
-<button id="scrollToTopBtn" class="scroll-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-</button>
+
+    <div class="panel__section news">
+        <div class="panel__section__slider slick-initialized slick-slider slick-dotted">
+            <div class="slick-list draggable">
+                <div class="slick-track" style="opacity: 1; width: 1065px; transform: translate3d(0px, 0px, 0px);">
+                    <div class="panel__section__inner panel__red slick-slide slick-current slick-active panel__section__innerDown startDown"
+                         data-slick-index="0" aria-hidden="false" style="width: 355px;" tabindex="0" role="tabpanel"
+                         id="slick-slide00" aria-describedby="slick-slide-control00">
+                        <a template-href="/en/news/investhk-promotes-using-hong-kong-as-gateway-for-global-expansion-in-liaoning-province-to-enhance-cross-regional-collaboration/"
+                           href="https://www.investhk.gov.hk/en/news/investhk-promotes-using-hong-kong-as-gateway-for-global-expansion-in-liaoning-province-to-enhance-cross-regional-collaboration/"
+                           aria-label="InvestHK promotes using Hong Kong as gateway for global expansion in Liaoning Province to enhance cross-regional collaboration"
+                           tabindex="0"></a>
+
+                        <div class="panel__section__text">
+                            <div class="panel__section__header">News</div>
+
+                            <div class="panel__section__paragraph">InvestHK promotes using Hong Kong as gateway for global expansion in Liaoning Province to enhance cross-regional collaboration</div>
+
+                            <div class="panel__section__date">05.06.2025</div>
+                        </div>
+                    </div>
+
+                    <div class="panel__section__inner panel__red slick-slide panel__section__innerDown startDown"
+                         data-slick-index="1" aria-hidden="true" style="width: 355px;" tabindex="-1" role="tabpanel"
+                         id="slick-slide01" aria-describedby="slick-slide-control01">
+                        <a template-href="/en/news/japanese-medical-and-life-science-companies-join-business-mission-to-understand-hong-kongs-investment-environment-and-explore-business-opportunities/"
+                           href="/en/news/japanese-medical-and-life-science-companies-join-business-mission-to-understand-hong-kongs-investment-environment-and-explore-business-opportunities/"
+                           aria-label="Japanese medical and life science companies join business mission to understand Hong Kong's investment environment and explore business opportunities"
+                           tabindex="-1"></a>
+
+                        <div class="panel__section__text">
+                            <div class="panel__section__header">News</div>
+
+                            <div class="panel__section__paragraph">Japanese medical and life science companies join business mission to understand Hong Kong's investment environment and explore business opportunities</div>
+
+                            <div class="panel__section__date">30.05.2025</div>
+                        </div>
+                    </div>
+
+                    <div class="panel__section__inner panel__red slick-slide panel__section__innerDown startDown"
+                         data-slick-index="2" aria-hidden="true" style="width: 355px;" tabindex="-1" role="tabpanel"
+                         id="slick-slide02" aria-describedby="slick-slide-control02">
+                        <a template-href="/en/news/mainland-pizzeria-chain-opens-first-restaurant-in-hong-kong-and-sets-up-regional-headquarters-to-expand-overseas/"
+                           href="/en/news/mainland-pizzeria-chain-opens-first-restaurant-in-hong-kong-and-sets-up-regional-headquarters-to-expand-overseas/"
+                           aria-label="Mainland pizzeria chain opens first restaurant in Hong Kong and sets up regional headquarters to expand overseas"
+                           tabindex="-1"></a>
+
+                        <div class="panel__section__text">
+                            <div class="panel__section__header">News</div>
+
+                            <div class="panel__section__paragraph">Mainland pizzeria chain opens first restaurant in Hong Kong and sets up regional headquarters to expand overseas</div>
+
+                            <div class="panel__section__date">30.05.2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="slick-dots" style="" role="tablist">
+                <li class="slick-active" role="presentation">
+                    <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00"
+                            aria-label="1 of 3" tabindex="0" aria-selected="true">1</button>
+                </li>
+                <li role="presentation">
+                    <button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01"
+                            aria-label="2 of 3" tabindex="0">2</button>
+                </li>
+                <li role="presentation">
+                    <button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02"
+                            aria-label="3 of 3" tabindex="0">3</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel__section link">
+
+        <div class="panel__section__inner panel__blue panel__section__innerUp startUp"
+             style="background: rgb(43, 46, 52);">
+            <div class="panel__section__image compat-object-fit"
+                 style="background-image: url(/assets/favicon/aef_20.jpg);">
+                <a template-href="https://www.startmeup.hk/startup-resources/government-funding-scheme-and-support/"
+                   href="https://www.startmeup.hk/startup-resources/government-funding-scheme-and-support/"
+                   target="_self">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="panel__section resource_center">
+        <div class="panel__section__slider slick-initialized slick-slider slick-dotted">
+            <div class="slick-list draggable"><div class="slick-track"
+                                                   style="opacity: 1; width: 710px; transform: translate3d(0px, 0px, 0px);"><div
+                        class="panel__section__inner panel__red slick-slide slick-current slick-active panel__section__innerDown startDown"
+                        data-slick-index="0" aria-hidden="false" style="width: 355px;" tabindex="0" role="tabpanel"
+                        id="slick-slide10" aria-describedby="slick-slide-control10">
+                    <a target="_blank" template-href="/media/5cnn4q2t/202504-newsletter-en.pdf"
+                       href="/media/5cnn4q2t/202504-newsletter-en.pdf" aria-label="› pdf version" tabindex="0"></a>
+
+
+                    <div class="panel__section__text">
+                        <div class="panel__section__header">Resource Centre</div>
+
+                        <div class="panel__section__paragraph">The Heartbeat of Business, April 2025</div>
+
+                        <div class="panel__section__date"></div>
+                    </div>
+                </div>
+
+                <div class="panel__section__inner panel__red slick-slide panel__section__innerDown startDown"
+                     data-slick-index="1" aria-hidden="true" style="width: 355px;" tabindex="-1" role="tabpanel"
+                     id="slick-slide11" aria-describedby="slick-slide-control11">
+                    <a target="_blank" template-href="/media/ucnawdrv/cise-enewsletter-apr-jun-2025.pdf"
+                       href="/media/ucnawdrv/cise-enewsletter-apr-jun-2025.pdf" aria-label="› Read More"
+                       tabindex="-1"></a>
+
+
+                    <div class="panel__section__text">
+                        <div class="panel__section__header">Resource Centre</div>
+
+                        <div class="panel__section__paragraph">Creative Industries, Sports &amp; Entertainment News and Events Updates, Apr-Jun 2025</div>
+
+                        <div class="panel__section__date"></div>
+                    </div>
+                </div></div></div>
+            <ul class="slick-dots" style="" role="tablist"><li class="slick-active" role="presentation"><button
+                    type="button" role="tab" id="slick-slide-control10" aria-controls="slick-slide10"
+                    aria-label="1 of 2" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button
+                    type="button" role="tab" id="slick-slide-control11" aria-controls="slick-slide11"
+                    aria-label="2 of 2" tabindex="0">2</button></li></ul></div>
+    </div>
+
+    <div class="panel__section link">
+        <div class="panel__section__inner panel__section__innerUp startUp">
+            <div class="panel__section__image compat-object-fit"
+                 style="background-image: url(/assets/favicon/2019happening.jpeg);">
+                <a template-href="/en/why-hong-kong/whats-happening-hong-kong/"
+                   href="/en/why-hong-kong/whats-happening-hong-kong/" target="_self"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel__section events">
+        <div class="panel__section__slider slick-initialized slick-slider slick-dotted">
+            <div class="slick-list draggable"><div class="slick-track"
+                                                   style="opacity: 1; width: 1065px; transform: translate3d(0px, 0px, 0px);"><div
+                        class="panel__section__inner panel__red slick-slide slick-current slick-active panel__section__innerDown startDown"
+                        data-slick-index="0" aria-hidden="false" style="width: 355px;" tabindex="0" role="tabpanel"
+                        id="slick-slide20" aria-describedby="slick-slide-control20">
+                    <a template-href="/en/events/the-26th-annual-corporate-and-regulatory-update-acru-2025/"
+                       href="/en/events/the-26th-annual-corporate-and-regulatory-update-acru-2025/" target="_self"
+                       aria-label="The 26th Annual Corporate and Regulatory Update (ACRU 2025)" tabindex="0"></a>
+
+
+                    <div class="panel__section__text">
+                        <div class="panel__section__header">Events</div>
+
+                        <div class="panel__section__paragraph">The 26th Annual Corporate and Regulatory Update (ACRU 2025)</div>
+
+                        <div class="panel__section__date">
+                            06.06.2025
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel__section__inner panel__red slick-slide panel__section__innerDown startDown"
+                     data-slick-index="1" aria-hidden="true" style="width: 355px;" tabindex="-1" role="tabpanel"
+                     id="slick-slide21" aria-describedby="slick-slide-control21">
+                    <a template-href="/en/events/start-up-express-2025/" href="/en/events/start-up-express-2025/"
+                       target="_self" aria-label="Start-up Express 2025" tabindex="-1"></a>
+
+
+                    <div class="panel__section__text">
+                        <div class="panel__section__header">Events</div>
+
+                        <div class="panel__section__paragraph">Start-up Express 2025</div>
+
+                        <div class="panel__section__date">
+                            11.06.2025
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel__section__inner panel__red slick-slide panel__section__innerDown startDown"
+                     data-slick-index="2" aria-hidden="true" style="width: 355px;" tabindex="-1" role="tabpanel"
+                     id="slick-slide22" aria-describedby="slick-slide-control22">
+                    <a template-href="/en/events/london-tech-week-2025/" href="/en/events/london-tech-week-2025/"
+                       target="_self" aria-label="London Tech Week 2025" tabindex="-1"></a>
+
+
+                    <div class="panel__section__text">
+                        <div class="panel__section__header">Events</div>
+
+                        <div class="panel__section__paragraph">London Tech Week 2025</div>
+
+                        <div class="panel__section__date">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <ul class="slick-dots" style="" role="tablist"><li class="slick-active" role="presentation"><button
+                    type="button" role="tab" id="slick-slide-control20" aria-controls="slick-slide20"
+                    aria-label="1 of 3" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button
+                    type="button" role="tab" id="slick-slide-control21" aria-controls="slick-slide21"
+                    aria-label="2 of 3" tabindex="0">2</button></li><li role="presentation"><button type="button"
+                    role="tab"
+                    id="slick-slide-control22"
+                                                                                                    aria-controls="slick-slide22"
+                                                                                                    aria-label="3 of 3"
+                                                                                                    tabindex="0">3</button>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="panel__section FAQ">
+        <div class="panel__section__inner panel__blue panel__section__innerUp startUp">
+            <div class="panel__section__text">
+                <div class="panel__section__header">FAQ</div>
+
+                <div class="panel__section__paragraph2">
+                    Q20. What are the advantages of setting up family offices in Hong Kong?
+                </div>
+                <a class="panel__section__button" target="_self" aria-label="/en/faq/?a=20"
+                   template-href="/en/faq/?a=20" href="/en/faq/?a=20">Get the Answer</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Slick JS -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="/assets/slick_slider.js?compile=false" ></script>
+
+<script type="text/javascript" src="/assets/carouselSlider.js?compile=false" ></script>

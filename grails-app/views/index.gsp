@@ -40,6 +40,7 @@
                        data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
                        data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">
                     </a>
+
                 </div>
 
             </div>
@@ -228,20 +229,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="slick-dots" style="" role="tablist">
-                <li class="slick-active" role="presentation">
-                    <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00"
-                            aria-label="1 of 3" tabindex="0" aria-selected="true">1</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01"
-                            aria-label="2 of 3" tabindex="0">2</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02"
-                            aria-label="3 of 3" tabindex="0">3</button>
-                </li>
-            </ul>
+
         </div>
     </div>
 
