@@ -41,7 +41,6 @@ class AdminNewsController {
         try {
             newsService.handleNewsCreation(request)
             flash.success = "News created successfully"
-            println request.getFile("file").inputStream.text
             redirect(action: 'index')
         } catch (Exception e) {
             flash.error = e.message
