@@ -27,6 +27,7 @@ class NewsService {
         news.industry = Industry.get(request.industryId)
         news.publicationDate = new Date()
 
+
         if (imagePath) {
             news.image = imagePath
         }

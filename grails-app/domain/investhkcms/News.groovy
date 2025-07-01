@@ -20,10 +20,15 @@ class News {
         location nullable: true
         contentType nullable: true
         industry nullable: true
+        content nullable: false, maxSize: 10000
+
+
+
     }
 
     static mapping = {
         table 'news'
+        content sqlType: 'text'
     }
 
     String toString(){
