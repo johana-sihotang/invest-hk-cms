@@ -1,3 +1,7 @@
+<head>
+    <asset:stylesheet src="main.css"/>
+</head>
+
 <h1 class="text-3xl font-bold text-start md:text-center mb-5">News</h1>
 
 <g:link controller="adminNews" action="createNews"
@@ -39,7 +43,7 @@
                         <i class="bi bi-trash3-fill text-white"></i>
                     </g:link>
 
-                    <g:link class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700">
+                    <g:link controller="adminNews" action="show" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700">
                         <i class="bi bi-eye-fill mr-2 text-white"></i>
                         Detail
                     </g:link>

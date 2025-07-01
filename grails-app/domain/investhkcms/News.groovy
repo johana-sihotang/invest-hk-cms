@@ -18,12 +18,13 @@ class News {
         imageCaption nullable: true, maxSize: 2000
         subTitle nullable: true
         location nullable: true
-        contentType nullable: true
+        contentType nullable: true, maxSize: 10485760
         industry nullable: true
     }
 
     static mapping = {
         table 'news'
+        content type: 'text'
     }
 
     String toString(){
