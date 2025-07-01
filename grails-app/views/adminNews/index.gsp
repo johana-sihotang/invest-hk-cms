@@ -1,7 +1,3 @@
-<head>
-    <asset:stylesheet src="main.css"/>
-</head>
-
 <h1 class="text-3xl font-bold text-start md:text-center mb-5">News</h1>
 
 <g:link controller="adminNews" action="createNews"

@@ -4,7 +4,15 @@
   Date: 26/06/2025
   Time: 11:54
 --%>
+<!doctype html>
+<html>
+<head>
+    <meta name="layout" content="main"/>
+    <title>Admin News| Invest HK</title>
+    <asset:stylesheet src="main.css"/>
 
+</head>
+<body>
 <div class="article">
     <div class="article__container article__container--header">
         <div class="col-2">
@@ -51,3 +59,4 @@
 <button id="scrollToTopBtn" class="scroll-to-top">
     <i class="fa-solid fa-arrow-up"></i>
 </button>
+</body>
