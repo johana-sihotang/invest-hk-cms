@@ -93,14 +93,31 @@ grails:
       xml:
       - text/xml
       - application/xml
-  controller:
+  urlmapping:
+    cache:
+        maxsize: 1000
+  controllers:
     defaultScope: singleton
     upload:
-      maxFileSize: 209715200 #200MB
-      maxRequestSize: 209715200 #200MB
+        maxFileSize: 209715200 #200MB
+        maxRequestSize: 209715200 #200MB
+    converters:
+        encoding: UTF-8
+  plugin:
+    springsecurity:
+      userlookup:
+        userDomainClassName: investhkcms.Admin
+        authorityJoinClassName: investhkcms.AdminRole
+      authority:
+        className: investhkcms.Role
+
+#spring:
+#  servlet:
+#    multipart:
+#      max-file-size: 10MB
+#      max-request-size: 10MB
 server:
-  tomcat:
-    max-http-form-post-size: 5MB
   port: 8003
+
 
 

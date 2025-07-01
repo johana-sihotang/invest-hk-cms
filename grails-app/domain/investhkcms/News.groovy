@@ -28,7 +28,7 @@ class News {
 
     static mapping = {
         table 'news'
-        content sqlType: 'text'
+        content type: 'text'
     }
 
     String toString(){
