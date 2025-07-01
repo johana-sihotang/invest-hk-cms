@@ -5,7 +5,7 @@ import ch.qos.logback.core.status.Status
 class Admin {
     String username
     String password
-    static hasMany = [roles: Role]
+    static hasMany = [roles: AdminRole]
 
 
 
