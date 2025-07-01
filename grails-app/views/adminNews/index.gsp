@@ -10,6 +10,7 @@
     <table class="w-full text-sm text-left text-gray-500">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
         <tr>
+            <th class="w-10 px-4 py-3">No</th>
             <th class="w-2/5 px-6 py-3">Title</th>
             <th class="w-1/5 px-6 py-3">Location</th>
             <th class="w-1/5 px-6 py-3">Content Type</th>
@@ -18,31 +19,34 @@
         </tr>
         </thead>
         <tbody>
-        <g:each in="${news}" var="item">
+        <g:each in="${news}" var="item" status="i">
             <tr class="bg-white border-b">
-                <td class="w-2/5 px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                <td class="w-10 px-6 py-4">${i + 1}</td>
+                <td class="px-6 py-4 font-medium text-gray-900 whitespace-normal break-words max-w-xs md:max-w-md">
                     ${item.title}
                 </td>
-                <td class="w-1/5 px-6 py-4">${item.location}</td>
+                <td class="w-1/5 px-4 py-4">${item.location}</td>
                 <td class="w-1/5 px-6 py-4">${item.contentType?.name}</td>
                 <td class="w-1/5 px-6 py-4">
                     <g:formatDate date="${item.publicationDate}" format="dd MMM yyyy" />
                 </td>
-                <td class="px-6 py-4 text-right flex gap-3">
-                    <g:link controller="adminNews" action="edit" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
-                        <i class="bi bi-pencil-square mr-2 text-white"></i>
-                        Edit
-                    </g:link>
+                <td class="px-6 py-4 align-middle">
+                    <div class="flex md:justify-end justify-start items-center gap-2">
+                        <g:link controller="adminNews" action="edit" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+                            <i class="bi bi-pencil-square mr-2 text-white"></i>
+                            Edit
+                        </g:link>
 
-                    <g:link controller="adminNews" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
-                    onclick="return confirm('Are you sure you want delete this news?')">
-                        <i class="bi bi-trash3-fill text-white"></i>
-                    </g:link>
+                        <g:link controller="adminNews" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
+                                onclick="return confirm('Are you sure you want delete this news?')">
+                            <i class="bi bi-trash3-fill text-white"></i>
+                        </g:link>
 
-                    <g:link controller="adminNews" action="show" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700">
-                        <i class="bi bi-eye-fill mr-2 text-white"></i>
-                        Detail
-                    </g:link>
+                        <g:link controller="adminNews" action="show" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700">
+                            <i class="bi bi-eye-fill mr-2 text-white"></i>
+                            Detail
+                        </g:link>
+                    </div>
                 </td>
             </tr>
         </g:each>
