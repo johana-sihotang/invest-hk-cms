@@ -249,7 +249,7 @@ button, select {
 }
 
 
-// ------------
+
 
    .formFilter.formFilter__white {
        background-color: #fff;
@@ -326,9 +326,7 @@ button:not(:disabled)
     cursor: pointer;
 }
 
-.formFilter__fieldButtom.collapse:not(.show) {
-    display: block;
-}
+
 
 .formFilter__fieldButtom--row {
     align-items: flex-end;
@@ -590,4 +588,5 @@ select {
 .text-center {
     text-align: center
 }
+
 
