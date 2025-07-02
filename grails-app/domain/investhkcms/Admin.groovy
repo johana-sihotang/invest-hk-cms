@@ -16,8 +16,13 @@ class Admin implements Serializable {
     String name
     String email
     String status
+
     String username
     String password
+    boolean enabled = true
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
 
     static hasMany = [adminRoles: AdminRole]
 

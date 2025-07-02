@@ -110,6 +110,15 @@ grails:
         bcrypt:
           logrounds: 10
       logout.postOnly: false
+      userLookup:
+        userDomainClassName: investhkcms.Admin
+        authorityJoinClassName: investhkcms.AdminRole
+      controllerAnnotations:
+        staticRules:
+          - pattern: '/admin/**'
+            access: [ 'ROLE_ADMIN' ]
+          - pattern: '/**'
+            access: [ 'permitAll']
 server:
   port: 8003
 

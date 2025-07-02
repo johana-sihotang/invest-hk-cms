@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+<g:render template="/components/alert"/>
 <body class="h-full font-[Outfit]">
 <section class="relative w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
          style="background-image: url('${assetPath(src: 'light-blue.jpg')}');">
@@ -22,10 +23,10 @@
         <h1 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 text-center md:text-4xl mb-4">
             Login
         </h1>
-        <g:form controller="admin" class="space-y-4 md:space-y-6" action="login">
+        <form class="space-y-4 md:space-y-6" id="loginForm" action="${postUrl ?: '/login/auth'}" method="POST">
             <div>
                 <label for="username" class="block mb-2 text-lg font-medium text-gray-900">Username</label>
-                <input type="email" name="username" id="username"
+                <input type="text" name="username" id="username"
                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                        placeholder="username" required>
             </div>
@@ -56,7 +57,7 @@
                 Don’t have an account yet? <a href="#"
                                               class="font-medium text-primary-600 hover:underline hover:text-blue-600">Sign up</a>
             </p>
-        </g:form>
+        </form>
     </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
