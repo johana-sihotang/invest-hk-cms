@@ -10,6 +10,7 @@ class UrlMappings {
 
         "/admin"(controller: 'admin',action: 'getAllAdmins' )
 
+
         "/admin/article/"(controller: 'adminNews', action: 'index')
         "/admin/article/create"(controller: 'adminNews', action: 'createNews')
         "/admin/article/$id"(controller: 'adminNews', action: 'show')
@@ -24,7 +25,7 @@ class UrlMappings {
         "/article/$id"(controller: "news", action: 'show')
 
         "/contact_us"(controller: "contactUs", action: 'index')
-
+        "/news_landing"(controller: "news", action: 'index')
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')

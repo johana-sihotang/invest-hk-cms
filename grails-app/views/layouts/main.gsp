@@ -21,6 +21,7 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
     <asset:stylesheet src="main.css"/>
+    <asset:stylesheet src="news_landing.css"/>
     <g:layoutHead/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>

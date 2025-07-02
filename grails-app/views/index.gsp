@@ -287,8 +287,10 @@
                 </div></div></div>
             <ul class="slick-dots" style="" role="tablist"><li class="slick-active" role="presentation"><button
                     type="button" role="tab" id="slick-slide-control10" aria-controls="slick-slide10"
-                    aria-label="1 of 2" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button
-                    type="button" role="tab" id="slick-slide-control11" aria-controls="slick-slide11"
+                    aria-label="1 of 2" tabindex="0" aria-selected="true">1</button>
+            </li>
+                <li role="presentation">
+                <button type="button" role="tab" id="slick-slide-control11" aria-controls="slick-slide11"
                     aria-label="2 of 2" tabindex="0">2</button></li></ul></div>
     </div>
 

@@ -14,7 +14,7 @@
             <li class="icon-before"><a href="#" class="text-lg hover-underline">INDUSTRIES</a></li>
             <li class="icon-before"><a href="#" class="text-lg hover-underline">OUR CLIENTS</a></li>
             <li class="icon-before"><a href="#" class="text-lg hover-underline">SETTING UP IN HONG KONG</a></li>
-            <li class="icon-before"><a href="#" class="text-lg hover-underline">NEWS & EVENTS</a></li>
+            <li class="icon-before"><g:link controller="News" action="index" class="text-lg hover-underline">NEWS & EVENTS</g:link></li>
             <li class="icon-before"><g:link controller="contactUs" action="index" class="text-lg hover-underline">CONTACT US</g:link></li>
         </ul>
     </div>

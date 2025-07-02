@@ -13,11 +13,15 @@
                     <h1>${news.title}</h1>
 
                     <div class="article__tags col-span-2">
+                        %{--KONDISI JIKA TAG KOSONG  --}%
                         <button class="tag tag-red">
                             <p>${news.industry}</p>
                         </button>
                         <button class="tag tag-black">
                             <p>${news.location}</p>
+                        </button>
+                        <button class="tag tag-black">
+                            <p>${news.contentType}</p>
                         </button>
 
                         <p class="font-medium mt-30"><g:formatDate date="${news.publicationDate}"

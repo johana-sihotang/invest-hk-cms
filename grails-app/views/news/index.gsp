@@ -1,9 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fairtech
-  Date: 23/06/25
-  Time: 21.44
---%>
 <div class =container>
     <div class="flex-item">
         <div class="borderinfo ">
@@ -72,7 +66,7 @@
 
         </div>
         <div class="borderimage">
-            <div class="heroSlider__thumbnails--image" style="background-image: url('/images/favicon/main_img01.jpg');">
+            <div class="heroSlider__thumbnails--image" style="background-image: url(${assetPath(src: 'favicon/main_img01.jpg')});">
                 <a href="#" class="heroSlider__thumbnails--link" aria-label="Pleas place your title here"></a>
                 <div class="heroSlider__thumbnails--tags">
                     <a href="#" class="tag tag__blue">News</a>
@@ -82,3 +76,138 @@
     </div>
 
 </div>
+
+
+
+
+
+
+<section class="formFilter formFilter__white">
+    <div class="container_">
+        <div class="formFilter__fieldTop">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div class="formFilter__heading">
+                        <h2 class="formFilter__heading--title">ALL NEWS</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="input-wrapper">
+                        <input type="text" name="searchNewsPress" class="input-control  input-control__icon" placeholder="Search News &amp; Press">
+                        <span class="ihk-search input-icon"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="formFilter__filterAccordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            <asset:image src="favicon/Filter_red.svg" alt="Filter Icon" width="24" height="24"/>
+            Filters
+        </button>
+
+        <div class="formFilter__fieldButtom " id="collapseOne">
+            <div class="formFilter__fieldButtom--row d-flex">
+                <div class="formFilter__fieldButtom--left flex-fill">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="formFilter__fieldButtom--group">
+                                <label class="label-field">Publication Date</label>
+                                <select name="publicationDate" class="js-select2 form-control select2-hidden-accessible" data-placeholder="Latest" data-select2-id="select2-data-1-yl8p" tabindex="-1" aria-hidden="true">
+                                    <option data-select2-id="select2-data-3-qumb"></option>
+                                    <option value="China">China</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Japan">Japan</option>
+                                </select>
+                                <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-11ty" style="width: 169px;">
+                                    <span class="selection">
+                                        <span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-publicationDate-t2-container" aria-controls="select2-publicationDate-t2-container">
+                                            <span class="select2-selection__rendered" id="select2-publicationDate-t2-container" role="textbox" aria-readonly="true" title="Latest">
+                                                <span class="select2-selection__placeholder">Latest</span>
+                                            </span>
+                                            <span class="select2-selection__arrow" role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i>
+                                                <b role="presentation"></b>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="formFilter__fieldButtom--group">
+                                <label class="label-field">Content Type</label>
+                                <select name="contentType" class="js-select2 form-control select2-hidden-accessible" data-placeholder="All Content Types" data-select2-id="select2-data-4-u9ll" tabindex="-1" aria-hidden="true">
+                                    <option data-select2-id="select2-data-6-j13g"></option>
+                                    <option value="China">China</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Japan">Japan</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-yxs8" style="width: 169px;">
+                                <span class="selection">
+                                    <span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-contentType-yf-container" aria-controls="select2-contentType-yf-container">
+                                        <span class="select2-selection__rendered" id="select2-contentType-yf-container" role="textbox" aria-readonly="true" title="All Content Types">
+                                            <span class="select2-selection__placeholder">All Content Types</span>
+                                        </span>
+                                        <span class="select2-selection__arrow" role="presentation">
+                                            <b role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i></b>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="dropdown-wrapper" aria-hidden="true">
+
+                                </span>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="formFilter__fieldButtom--group">
+                                <label class="label-field">Location</label>
+                                <select name="location" class="js-select2 form-control select2-hidden-accessible" data-placeholder="All Locations" data-select2-id="select2-data-7-qlbx" tabindex="-1" aria-hidden="true">
+                                    <option data-select2-id="select2-data-9-ea6p"></option>
+                                    <option value="China">China</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Japan">Japan</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-8-hn4x" style="width: 184.703px;"><span class="selection"><span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-location-xd-container" aria-controls="select2-location-xd-container"><span class="select2-selection__rendered" id="select2-location-xd-container" role="textbox" aria-readonly="true" title="All Locations"><span class="select2-selection__placeholder">All Locations</span></span><span class="select2-selection__arrow" role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>              </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="formFilter__fieldButtom--group">
+                                <label class="label-field">Industry</label>
+                                <select name="industry" class="js-select2 form-control select2-hidden-accessible" data-placeholder="All Industries" data-select2-id="select2-data-10-bzer" tabindex="-1" aria-hidden="true">
+                                    <option data-select2-id="select2-data-12-s4a7"></option>
+                                    <option value="China">China</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Japan">Japan</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-11-ghzw" style="width: 195.391px;"><span class="selection"><span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-industry-jj-container" aria-controls="select2-industry-jj-container"><span class="select2-selection__rendered" id="select2-industry-jj-container" role="textbox" aria-readonly="true" title="All Industries"><span class="select2-selection__placeholder">All Industries</span></span><span class="select2-selection__arrow" role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formFilter__fieldButtom--right">
+                    <div class="text-end media-desktop">
+                        <a href="#" class="textlink textlink__icon">
+                            <span class="ihk-refresh"></span>
+                            Reset Filters
+                        </a>
+                    </div>
+                    <div class="formFilter__fieldButtom--action">
+                        <button type="button" class="button button__outline"><span>APPLY FILTERS</span></button>
+                    </div>
+                    <div class="text-center media-not-desktop">
+                        <a href="#" class="textlink textlink__icon">
+                            <span class="ihk-refresh"></span>
+                            Reset Filters
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

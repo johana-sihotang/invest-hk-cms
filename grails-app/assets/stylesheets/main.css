@@ -7522,6 +7522,8 @@ button.bg-dark:hover {
 .mx-5 {
     margin-left: 3rem !important;
 }
+
+
 .p-0 {
     padding: 0 !important;
 }
@@ -9422,7 +9424,7 @@ body.no-scroll {
     -ms-grid-columns: 1fr 2fr;
     grid-template-columns: 1fr 2fr;
     max-width: 100%;
-    padding: 0;
+
 }
 .col-2-lg {
     display: -ms-grid;
@@ -10261,6 +10263,11 @@ body.no-scroll {
 }
 .article__container--content {
     margin: 50px 180px 50px 180px;
+    max-width: 1540px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-items: center;
+}
 }
 .article__container--content .blockquote blockquote {
     font-size: 40px;
@@ -10294,6 +10301,13 @@ body.no-scroll {
     line-height: 110%;
     margin: 0;
 }
+
+.article__container p {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
 .article__tags img {
     max-width: 100%;
     height: auto;
@@ -10305,6 +10319,8 @@ body.no-scroll {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 0 24px 64px 0;
+    padding-right: 90px;
+    padding-left: 80px;
 }
 .article i {
     color: #dc281e;
@@ -10375,7 +10391,7 @@ body.no-scroll {
         padding: 0 40px 40px 40px;
     }
     .article .col-2 {
-        padding: 0;
+        padding: 10px;
     }
 }
 .container {
@@ -10800,7 +10816,7 @@ body.no-scroll {
     }
 }
 .header__container {
-    padding: 0 100px;
+    padding: 0 180px;
 }
 .header__logo-hk {
     max-width: 250px;

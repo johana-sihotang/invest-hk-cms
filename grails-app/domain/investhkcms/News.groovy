@@ -18,8 +18,12 @@ class News {
         imageCaption nullable: true, maxSize: 2000
         subTitle nullable: true
         location nullable: true
-        contentType nullable: true, maxSize: 10485760
+        contentType nullable: true
         industry nullable: true
+        content nullable: false, maxSize: 10000
+
+
+
     }
 
     static mapping = {
