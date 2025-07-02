@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.delete-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+
             const url = btn.getAttribute('data-url');
             const message = btn.getAttribute('data-message') || 'Are you sure?';
 

@@ -37,10 +37,15 @@
                             Edit
                         </g:link>
 
-                        <g:link controller="adminNews" action="delete" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700 btn-delete"
-                                onclick="return confirm('Are you sure you want delete this news?')">
+                        <g:link controller="adminNews"
+                                action="delete"
+                                id="${item.id}"
+                                class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700 delete-btn"
+                                data-message="Are you sure you want to delete this news?"
+                                data-url="${createLink(controller: 'adminNews', action: 'delete', id: item.id)}">
                             <i class="bi bi-trash3-fill text-white"></i>
                         </g:link>
+
 
                         <g:link controller="adminNews" action="show" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700">
                             <i class="bi bi-eye-fill mr-2 text-white"></i>

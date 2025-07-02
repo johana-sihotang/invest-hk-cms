@@ -29,12 +29,23 @@
                     <td class="w-1/5 px-6 py-4">${item.username}</td>
                     <td class="w-1/5 px-6 py-4">${item.email}</td>
                     <td class="w-1/5 px-6 py-4">
-                        <i class="bi bi-record-fill text-green-600"></i>
-                        ${item.status}
+                        <g:if test="${item.status == 'ACTIVE'}">
+                            <i class="bi bi-record-fill text-green-600"></i>
+                            <span class="text-green-600">Active</span>
+                        </g:if>
+                        <g:else>
+                            <i class="bi bi-record-fill text-red-600"></i>
+                            <span class="text-red-600">Inactive</span>
+                        </g:else>
+
                     </td>
                     <td class="px-6 py-4 text-right flex gap-3">
-                        <g:link controller="admin" action="deleteAdmin" id="${item.username}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
-                                onclick="return confirm('Are you sure you want delete this?')">
+                        <g:link controller="admin"
+                                action="deleteAdmin"
+                                id="${item.username}"
+                                class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700 delete-btn"
+                                data-message="Are you sure you want to delete this?"
+                                data-url="${createLink(controller: 'admin', action: 'deleteAdmin', id: item.username)}">
                             <i class="bi bi-trash3-fill text-white"></i>
                         </g:link>
 
