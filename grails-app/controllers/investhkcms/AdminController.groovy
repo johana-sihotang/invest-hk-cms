@@ -19,7 +19,7 @@ class AdminController {
     def getAllAdmins() {
         List<AdminResponse> adminList = adminService.getAllAdmins()
         def currentAdmin = springSecurityService.currentUser
-        render(view: 'login', model: [adminList: adminList, currentAdmin: currentAdmin])
+        render(view: 'getAllAdmins', model: [adminList: adminList, currentAdmin: currentAdmin])
     }
 
     @Secured(['ROLE_ADMIN'])
@@ -49,7 +49,7 @@ class AdminController {
     }
 
     @Secured(['ROLE_ADMIN'])
-    def deleteUser(AdminDeleteRequest request){
+    def deleteAdmin(AdminDeleteRequest request){
         try {
             adminService.deleteAdminByUsername(request.username)
             flash.message = "Admin  deleted successfully!"
@@ -58,7 +58,7 @@ class AdminController {
         } catch (Exception e) {
             flash.message = "An unexpected error occurred: " + e.message
         }
-        redirect(action: "getAllUsers")
+        redirect(action: "getAllAdmins")
     }
 }
 

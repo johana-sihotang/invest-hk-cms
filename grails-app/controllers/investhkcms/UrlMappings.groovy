@@ -8,7 +8,7 @@ class UrlMappings {
             }
         }
 
-        "/admin/"(controller: 'admin',action: 'getAllAdmins' )
+        "/admin"(controller: 'admin',action: 'getAllAdmins' )
 
         "/admin/article/"(controller: 'adminNews', action: 'index')
         "/admin/article/create"(controller: 'adminNews', action: 'createNews')

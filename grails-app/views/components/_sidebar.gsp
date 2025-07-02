@@ -2,10 +2,10 @@
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 ">
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">
+                <g:link controller="admin" action="getAllAdmins" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">
                     <i class="bi bi-person-workspace shrink-0  text-gray-500 transition duration-75 group-hover:text-gray-900 text-2xl"></i>
                     <span class="ms-3">User</span>
-                </a>
+                </g:link>
             </li>
             <li>
                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group">

@@ -1,7 +1,7 @@
-<h1 class="text-3xl font-bold text-start md:text-center mb-5">News</h1>
+<h1 class="text-3xl font-bold text-start lg:text-center mb-5">News</h1>
 
 <g:link controller="adminNews" action="createNews"
-        class="inline-block mb-5 px-5 py-2.5 text-sm font-medium text-white text-center bg-slate-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+        class="inline-block mb-5 px-5 py-2.5 text-sm font-medium text-white text-center bg-[#d7271d] rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
     Add News
 </g:link>
 
@@ -55,5 +55,23 @@
 </div>
 </g:if>
 <g:else>
-    <p>No Data Found</p>
+    <div class="relative overflow-x-auto border border-gray-100 sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+                <th class="w-10 px-4 py-3">No</th>
+                <th class="w-2/5 px-6 py-3">Title</th>
+                <th class="w-1/5 px-6 py-3">Location</th>
+                <th class="w-1/5 px-6 py-3">Content Type</th>
+                <th class="w-1/5 px-6 py-3">Date Published</th>
+                <th class="w-2/6 px-6 py-3"><span class="sr-only">Action</span></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b">
+                    <td class="w-10 px-6 py-4" colspan="6">No Data Found</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </g:else>
