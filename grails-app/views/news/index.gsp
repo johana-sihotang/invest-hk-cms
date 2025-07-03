@@ -177,3 +177,23 @@
     </div>
 </section>
     </g:form>
+
+<section class="newsListing container">
+    <div class="row newsListing__cardList">
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/seeds_capital.png');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">14.03.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__yellow">INDUSTRY INSIGHTS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>
+        </div>
+</section>
