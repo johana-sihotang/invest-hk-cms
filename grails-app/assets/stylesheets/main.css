@@ -9586,6 +9586,12 @@ body.no-scroll {
 .tag.tag-red {
     background-color: #dc281e;
 }
+
+.tag.tag-blue {
+    background-color:#001ab1;
+}
+
+
 @media (max-width: 1000px) {
     .tag {
         padding: 5.5px 14px;
@@ -10304,14 +10310,15 @@ body.no-scroll {
 
 .article__container p {
     font-family: "Outfit", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 220;
+
     line-height: 150%;
 }
 .article__tags img {
     max-width: 100%;
     height: auto;
     display: block;
+
 }
 .article__title {
     display: -ms-flexbox;
@@ -10329,6 +10336,15 @@ body.no-scroll {
 }
 .article__tags {
     display: inline-block;
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 140%;
+    border-radius: 80px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 @media (max-width: 1000px) {
     .article__container--header {
