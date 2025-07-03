@@ -122,7 +122,12 @@
 
                 <div class="index__section__text">
                     <div class="index__section__inner2">
-                        <div class="index__section__textInner index__section__slide">
+                        <div class="index__section__textInner2 index__section__slide">
+                            <div class="index__section__top">Case Studies</div>
+                            <div class="index__section__tags">
+                                <a aria-label="Search for items with From Italy as a tag" search-val="" data-type="region" tabindex="0" template-href="/en/case-studies?region=United Kingdom" href="/en/case-studies?region=United Kingdom">From United Kingdom</a>
+                                <a aria-label="Search for items with Tourism &amp; Hospitality as a tag" search-val="" data-type="industry" tabindex="0" template-href="/en/case-studies?industry=Creative Industries, Sports &amp; Entertainment" href="/en/case-studies?industry=Creative Industries, Sports &amp; Entertainment">Creative Industries, Sports &amp; Entertainment</a>
+                            </div>
                             <div class="index__section__header">White Cube: Connecting the World through Art</div>
 
                             <div class="index__section__paragraph">One of the first international art galleries to establish itself in Hong Kong, since 2012 White Cube has been an essential destination for serious Asian art collectors and investors looking to access work by some of the world’s most exciting contemporary artists. </div>
