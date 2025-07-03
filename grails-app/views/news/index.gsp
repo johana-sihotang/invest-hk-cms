@@ -211,3 +211,144 @@
         </div>
     </div>
 </section>
+
+
+<section class="newsListing container">
+    <div class="row newsListing__cardList">
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/seeds_capital.png');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">14.03.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__yellow">INDUSTRY INSIGHTS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image02.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">10.03.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__blue">NEWS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image03.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Director-General’s Blog — A Fruitful Wrap-Up of 2024 &amp; Celebrating InvestHK’s 25th Anniversary in 2025"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">17.02.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag_red">PRESS RELEASE</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Director-General’s Blog — A Fruitful Wrap-Up of 2024 &amp; Celebrating InvestHK’s 25th Anniversary in 2025</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image04.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">14.03.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__blue">NEWS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image05.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">22.02.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__blue">NEWS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image06.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">14.03.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__yellow">INDUSTRY INSIGHTS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image07.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Director-General’s Blog — A Fruitful Wrap-Up of 2024 &amp; Celebrating InvestHK’s 25th Anniversary in 2025"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">17.02.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag">PRESS RELEASE</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Director-General’s Blog — A Fruitful Wrap-Up of 2024 &amp; Celebrating InvestHK’s 25th Anniversary in 2025</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image08.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">21.03.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__blue">NEWS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>            </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/news-image09.jpg');">
+                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">28.03.2025</div>
+                        <div class="cardNews__tags">
+                            <a href="#" class="tag tag__yellow">INDUSTRY INSIGHTS</a>      </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                </div>
+            </div>            </div>
+    </div>
+</section>

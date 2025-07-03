@@ -210,7 +210,7 @@ Specificity {
 
 .index__section__text {
     float: left;
-    width: 50%;
+    width: 40%;
 }
 
 .index__up .index__section__image {
@@ -799,4 +799,14 @@ slick-dots li {
         font-size: 11px;
     }
 
+}
+
+
+.index__section__inner2 {
+    float: left;
+    max-width: 675px;
+}
+
+.index__section__textInner {
+    margin: 60px 60px 60px 120px;
 }
