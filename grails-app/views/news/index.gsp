@@ -77,10 +77,6 @@
 
 </div>
 
-
-
-
-
 <g:form controller="news" action="index" method="GET">
 <section class="formFilter formFilter__white">
     <div class="container_">
@@ -178,22 +174,34 @@
 </section>
     </g:form>
 
+<g:if test="${newsList}">
+    <g:each in="${newsList}" var="news">
 <section class="newsListing container">
     <div class="row newsListing__cardList">
         <div class="col-lg-4 col-md-6">
             <div class="cardNews">
-                <div class="cardNews__thumbnail" style="background-image: url('/images/favicon/seeds_capital.png');">
-                    <a href="#" class="cardNews__thumbnail--link" aria-label="Record-high numbers of companies and startups affirm Hong Kong as a great place to do business"></a>
+                <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
+                    <g:link controller="news" action="show" id="${news.id}">
+                        <span class="cardNews__thumbnail--link" aria-label="${news.title.encodeAsHTML()}"></span>
+                    </g:link>
                 </div>
                 <div class="cardNews__content">
                     <div class="cardNews__info">
-                        <div class="cardNews__date">14.03.2025</div>
+                        <div class="cardNews__date"><g:formatDate date="${news.publicationDate}"
+                                                                  format="dd.MM.yyyy"/></div>
                         <div class="cardNews__tags">
-                            <a href="#" class="tag tag__yellow">INDUSTRY INSIGHTS</a>      </div>
+                            <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                        </div>
                     </div>
 
-                    <h4 class="cardNews__title"><a href="#">Record-high numbers of companies and startups affirm Hong Kong as a great place to do business</a></h4>
+                    <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
                 </div>
             </div>
         </div>
+    </div>
 </section>
+    </g:each>
+</g:if>
+<g:else>
+    <p>No data found</p>
+</g:else>

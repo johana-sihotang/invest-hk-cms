@@ -9438,7 +9438,7 @@ body.no-scroll {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr) [4];
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     max-width: 100%;
     gap: 10px;
 }
@@ -10706,7 +10706,108 @@ body.no-scroll {
     -ms-grid-column: span 3;
     grid-column: span 3;
 }
-@media (max-width: 1000px) {
+
+.header{
+    color: #000;
+    width: 100%;
+    height: 148px;
+    z-index: 20;
+    overflow: hidden;
+}
+.header__container {
+    height: 100%;
+    margin: 0 auto;
+}
+.header__container{
+    position: relative;
+    max-width: 100%;
+    padding: 0 80px;
+}
+.header__logo-hk {
+    max-width: 250px;
+    height: auto;
+}
+.header__logo {
+    background-color: #dc281e;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.header .header__container .social-media{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+.header__logo img {
+    width: 24px;
+    height: 24px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+.header .parallelogram {
+    width: 85%;
+    height: 150px;
+    background-color: #dc281e;
+    transform: skew(328deg);
+    margin: 0 10px;
+    color: red;
+}
+.header .two-dots {
+    color: #fff;
+    font-size: 36px;
+    text-decoration: none;
+}
+.header .logo-font-awasome {
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 15%;
+    font-size: 48px;
+    color: red;
+}
+.header .logo-font-awasome .icon-circle-outline {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: 5px solid #dc281e;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    aspect-ratio: 1/1;
+    text-decoration: none;
+}
+.header .logo-font-awasome .icon-circle-outline i {
+    font-size: 24px;
+}
+.header .logo-font-awasome i {
+    color: #dc281e;
+}
+@media (min-width: 1600px) {
+    .header__container {
+        max-width: 1540px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (min-width: 1400px) {
+    .header__container{
+        max-width: 1320px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+@media (max-width: 991px) {
     .footer {
         background-color: #000;
         color: #fff;
@@ -10830,80 +10931,13 @@ body.no-scroll {
         -ms-grid-column: span 1;
         grid-column: span 1;
     }
-}
-.header__container {
-    padding: 0 180px;
-}
-.header__logo-hk {
-    max-width: 250px;
-    height: auto;
-}
-.header__logo {
-    background-color: #dc281e;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-.header__logo img {
-    width: 24px;
-    height: 24px;
-    -o-object-fit: contain;
-    object-fit: contain;
-}
-.header .parallelogram {
-    width: 85%;
-    height: 150px;
-    background-color: #dc281e;
-    transform: skew(328deg);
-    margin: 0 10px;
-    color: red;
-}
-.header .two-dots {
-    color: #fff;
-    font-size: 36px;
-    text-decoration: none;
-}
-.header .logo-font-awasome {
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 15%;
-    font-size: 60px;
-    color: red;
-}
-.header .logo-font-awasome .icon-circle-outline {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    border: 5px solid #dc281e;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    aspect-ratio: 1/1;
-    text-decoration: none;
-}
-.header .logo-font-awasome .icon-circle-outline i {
-    font-size: 38px;
-}
-.header .logo-font-awasome i {
-    color: #dc281e;
-}
-@media (max-width: 1000px) {
+
     .header__container {
         padding: 0 40px;
-        max-width: 100%;
     }
     .header .parallelogram {
-        width: 100px;
-        height: 80px;
+        width: 120px;
+        height: 118px;
         background-color: #dc281e;
         transform: skew(328deg);
         margin: 0 10px;
@@ -10923,8 +10957,8 @@ body.no-scroll {
         font-size: 16px;
     }
     .header .logo-font-awasome .icon-circle-outline {
-        width: 30px;
-        height: 30px;
+        width: 42px;
+        height: 42px;
         aspect-ratio: 1/1;
         border: 3px solid #dc281e;
     }

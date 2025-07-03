@@ -12,15 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
 </head>
-<g:render template="/components/alert"/>
 <body class="h-full font-[Outfit]">
 <section class="relative w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
          style="background-image: url('${assetPath(src: 'light-blue.jpg')}');">
 
     <!-- Form container -->
     <div class="relative z-10 w-full max-w-md sm:max-w-lg md:max-w-xl bg-white/25 backdrop-blur-md rounded-lg shadow p-6">
-        <h1 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 text-center md:text-4xl mb-4">
+    <g:if test="${params.login_error}">
+        <div id="login-error-alert" class="bg-red-100 border border-red-400 text-red-700 px-2 py-2 rounded mb-4 flex justify-between" role="alert">
+            <p><strong class="font-bold">Login failed!</strong>
+                <span>Invalid username or password</span></p>
+            <button id="close-alert-btn" class="pointer"><i class="bi bi-x-circle"></i></button>
+        </div>
+    </g:if>
+
+    <h1 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 text-center md:text-4xl mb-4">
             Login
         </h1>
         <form class="space-y-4 md:space-y-6" id="loginForm" action="${postUrl ?: '/login/auth'}" method="POST">
@@ -61,5 +71,18 @@
     </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var closeBtn = document.getElementById('close-alert-btn');
+        var alertBox = document.getElementById('login-error-alert');
+
+        if (closeBtn && alertBox) {
+            closeBtn.addEventListener('click', function () {
+                alertBox.style.display = 'none';
+            });
+        }
+    });
+</script>
+
 </body>
 </html>

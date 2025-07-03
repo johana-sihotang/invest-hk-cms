@@ -48,7 +48,7 @@ class AdminNewsController {
             redirect(action: 'index')
         } catch (Exception e) {
             flash.error = e.message
-            respond request.errors, view: 'createNews'
+            respond request.errors, view: 'createNews', model: [request: request]
         }
     }
 

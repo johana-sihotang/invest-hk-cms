@@ -2,10 +2,10 @@
     <div class="header__container">
         <ul class="text-decoration-none col-4 content-center auto-col-4">
             <li>
-                <a href="#"><asset:image src="/logo-25.png" alt="" class="header__logo-hk"/></a>
+                <g:link uri="/"><asset:image src="/logo-25.png" alt="" class="header__logo-hk"/></g:link>
             </li>
             <li class="icon-hide">
-                <div class="col-4 content-center">
+                <div class="social-media content-center">
                     <g:render template="/components/social_media"/>
                 </div>
             </li>
