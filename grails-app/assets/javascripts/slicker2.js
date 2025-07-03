@@ -1,7 +1,7 @@
 function updateDotsPosition() {
     var currentSlide = $('.indexCarousellTop .slick-current');
     var readMore = currentSlide.find('nav.link a:contains("Read More")');
-    var dots = $('.indexCarousellTop .slick-dots');
+    var dots = $('.slick-dots');
     var carousel = $('.indexCarousellTop');
 
     if (readMore.length && dots.length && carousel.length) {
@@ -24,14 +24,13 @@ function updateDotsPosition() {
 }
 
 $(function() {
-
+    console.log('Slicker.js initialized');
     $('.indexCarousellTop').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
         arrows: true,
         dots: true,
-        appendDots: $('.indexCarousellTop'),
         autoplay: false,
         autoplaySpeed: 4000,
         adaptiveHeight: true,
@@ -56,7 +55,6 @@ $(function() {
         infinite: true,
         arrows: false,
         dots: true,
-        appendDots: $('.panel__section__slider'),
         autoplay: false,
         autoplaySpeed: 4000,
         adaptiveHeight: true,

@@ -6,8 +6,29 @@ class NewsController {
     NewsService newsService
 
     def index() {
-        List<News> news = newsService.getAllNews()
-        render view: "/news/index", model: [news: news]
+        Map paramsMap = [
+                contentType: params.contentType,
+                industry: params.industry,
+                location: params.location,
+                dateRange: params.dateRange
+        ].findAll {it.value}
+
+        List<News> filteredNews
+        if (paramsMap){
+            filteredNews = newsService.getFilteredNews(paramsMap)
+        } else {
+            filteredNews = News.list(sort: "publicationDate", order: 'desc')
+        }
+        List<ContentType> contentTypes = ContentType.list(sort: "name", order: "asc")
+        List<Industry> industries = Industry.list(sort: "name", order: "asc")
+        List<Location> locations = Location.list(sort: "name", order: "asc")
+
+        respond filteredNews, model: [
+                newsList: filteredNews,
+                contentTypes: contentTypes,
+                industries: industries,
+                locations: locations
+        ]
     }
 
     def show(Long id) {

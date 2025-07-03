@@ -3,10 +3,8 @@
 <head>
     <meta name="layout" content="main"/>
     <title>Home Page| Invest HK</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <asset:stylesheet src="home_page.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <asset:stylesheet src="home_page.css"/>
 
 </head>
 
@@ -353,9 +351,4 @@
             </div>
         </div>
 </div>
-
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Slick JS -->
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <asset:javascript src="slicker.js"/>
 </body>

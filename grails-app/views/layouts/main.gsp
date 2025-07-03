@@ -24,6 +24,8 @@
     <asset:stylesheet src="news_landing.css"/>
     <g:layoutHead/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 
 <body>
@@ -35,10 +37,12 @@
 </div>
 <g:render template="/components/card"/>
 <g:render template="/components/footer"/>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <asset:javascript src="application.js"/>
 <asset:javascript src="header.js"/>
 <asset:javascript src="humburger_menu.js"/>
 <asset:javascript src="alert.js"/>
 <asset:javascript src="continent_select.js"/>
+<asset:javascript src="slicker.js"/>
 </body>
 </html>
