@@ -1,7 +1,7 @@
 package investhkcms
 
 
-class AdminDashbordController {
+class AdminDashboardController {
 
 
 

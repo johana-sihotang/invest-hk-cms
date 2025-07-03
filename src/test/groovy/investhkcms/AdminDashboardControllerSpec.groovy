@@ -3,7 +3,7 @@ package investhkcms
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class AdminDashbordControllerSpec extends Specification implements ControllerUnitTest<AdminDashbordController> {
+class AdminDashboardControllerSpec extends Specification implements ControllerUnitTest<AdminDashboardController> {
 
      void "test index action"() {
         when:
