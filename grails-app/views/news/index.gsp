@@ -171,16 +171,9 @@
                     <div class="formFilter__fieldButtom--action">
                         <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
                     </div>
-                    <div class="text-center media-not-desktop">
-                        <a href="#" class="textlink textlink__icon" onclick="resetFilters(event)">
-                            <span class="ihk-refresh"></span>
-                            Reset Filters
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</g:form>
-<asset:javascript src="reset_filter.js"/>
+    </g:form>

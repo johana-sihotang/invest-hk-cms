@@ -104,6 +104,104 @@
 </div>
 
 
+
+<div class="index slider-wrapper" role="banner">
+    <div class="index__section index__up">
+        <div class="indexCarousellTop">
+            <!--Slide 1-->
+            <div class="slider">
+
+            <div class="index__section__image compat-object-fit"
+                 style="background-image: url(${assetPath(src: 'favicon/whitecube.jpg')});">
+                <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                   data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                   data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">
+                </a>
+
+            </div>
+
+                <div class="index__section__text">
+                    <div class="index__section__inner2">
+                        <div class="index__section__textInner index__section__slide">
+                            <div class="index__section__header">White Cube: Connecting the World through Art</div>
+
+                            <div class="index__section__paragraph">One of the first international art galleries to establish itself in Hong Kong, since 2012 White Cube has been an essential destination for serious Asian art collectors and investors looking to access work by some of the world’s most exciting contemporary artists. </div>
+                            <nav class="link">
+                                <a target="_self"
+                                   template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                   href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                   aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                   tabindex="0">Read More
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!--Slide 2-->
+            <div class="slider">
+                <div class="index__section__text">
+                    <div class="index__section__inner">
+                        <div class="index__section__textInner index__section__slide">
+                            <div class="index__section__header">Drone Tech Brings New Opportunities</div>
+
+                            <div class="index__section__paragraph"></div>
+                            <nav class="link">
+                                <a target="_self"
+                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                   tabindex="-1">Read More
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="index__section__image compat-object-fit"
+                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
+                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
+                    </a>
+                </div>
+            </div>
+            <!--Slide 3-->
+            <div class="slider">
+                <div class="index__section__text">
+                    <div class="index__section__inner slider">
+                        <div class="index__section__textInner index__section__slide">
+                            <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
+
+                            <div class="index__section__paragraph"></div>
+                            <nav class="link">
+                                <a target="_self"
+                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                   tabindex="-1">Read More
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="index__section__image compat-object-fit"
+                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
+                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="start">
     <div class="mainTitles">
         <div class="mainTitles__big">Setting Up in Hong Kong</div>
