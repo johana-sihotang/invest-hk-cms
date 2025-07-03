@@ -26,11 +26,6 @@
 index__up {
     min-height: 620px;
     height: calc(100vh - 179px);
-    -o-animation: fadeIn 1s;
-    -moz-animation: fadeIn 1s;
-    -webkit-animation: fadeIn 1s;
-    -ms-animation: fadeIn 1s;
-    animation: fadeIn 1s;
 }
 
 nav a {
@@ -657,13 +652,34 @@ slick-dots li {
         max-width: 1120px;
     }
 }
+@media screen and (max-width: 1200px) {
+    .index__up {
+        height: calc(100vh - 95px);
+    }
+}
 
 @media screen and (max-width: 1160px) {
+    .panel {
+        max-width: 745px;
+    }
+    .slick-list{
+        height: 1141px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .index__up {
+        height: auto;
+    }
+    .index__up .index__section__textInner {
+        margin: 60px 60px 70px;
+    }
     .index__up {
         height: auto;
     }
     .index__up .index__section__image {
         height: 500px;
+        margin-top: 10px
     }
     .index__section__image {
         float: none;
@@ -703,15 +719,6 @@ slick-dots li {
     .index__up .index__section__inner {
         float: none;
     }
-    .index__up .index__section__textInner {
-        margin: 0;
-        padding: 0 20px 50px;
-    }
-    .index__section__header {
-        font-size: 31px;
-        line-height: normal;
-        padding-top: 5px;
-    }
     .index__section__paragraph {
         font-size: 12px;
     }
@@ -720,9 +727,6 @@ slick-dots li {
         line-height: 30px;
         font-size: 12px;
         padding: 0 15px;
-    }
-    .panel {
-        max-width: 745px;
     }
 }
 
@@ -751,6 +755,11 @@ slick-dots li {
 
     .panel__section__innerUp {
         min-height: 174px;
+    }
+    .index__section__header {
+        font-size: 31px;
+        line-height: normal;
+        padding-top: 5px;
     }
 
     .panel__section {
