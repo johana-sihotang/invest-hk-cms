@@ -78,126 +78,132 @@
 </div>
 
 <g:form controller="news" action="index" method="GET">
-    <section class="formFilter formFilter__white">
-        <div class="container_">
-            <div class="formFilter__fieldTop">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-6">
-                        <div class="formFilter__heading">
-                            <h2 class="formFilter__heading--title">ALL NEWS</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-
-                        <div class="input-wrapper">
-                            <input type="text" name="searchNewsPress" class="input-control  input-control__icon" placeholder="Search News &amp; Press">
-                            <span class="ihk-search input-icon"></span>
-
-                        </div>
+<section class="formFilter formFilter__white">
+    <div class="container_">
+        <div class="formFilter__fieldTop">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div class="formFilter__heading">
+                        <h2 class="formFilter__heading--title">ALL NEWS</h2>
                     </div>
                 </div>
-            </div>
-
-            <button class="formFilter__filterAccordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                <asset:image src="favicon/Filter_red.svg" alt="Filter Icon" width="24" height="24"/>
-                Filters
-            </button>
-
-            <div class="formFilter__fieldButtom " id="collapseOne">
-                <div class="formFilter__fieldButtom--row d-flex">
-                    <div class="formFilter__fieldButtom--left flex-fill">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="formFilter__fieldButtom--group">
-                                    <label for="dataRange" class="label-field">Publication Date</label>
-                                    <select id="dataRange" name="dateRange" class="js-select2 form-control" data-placeholder="Latest" style="width: 100%;">
-                                        <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
-                                        <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
-                                        <option value="past1month" ${params.dateRange == 'past1month' ? 'selected' : ''}>Past 1 Month</option>
-                                        <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
-                                        <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="formFilter__fieldButtom--group">
-                                    <label class="label-field">Content Type</label>
-                                    <g:select name="contentType"
-                                              from="${contentTypes}"
-                                              optionKey="id"
-                                              optionValue="name"
-                                              noSelection="['':'All Content Types']"
-                                              value="${params.contentType}"/>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="formFilter__fieldButtom--group">
-                                    <label class="label-field">Location</label>
-                                    <g:select name="location"
-                                              from="${locations}"
-                                              optionKey="id"
-                                              optionValue="name"
-                                              noSelection="['':'All Locations']"
-                                              value="${params.location}"/>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="formFilter__fieldButtom--group">
-                                    <label class="label-field">Industry</label>
-                                    <g:select name="industry"
-                                              from="${industries}"
-                                              optionKey="id"
-                                              optionValue="name"
-                                              noSelection="['':'All Industries']"
-                                              value="${params.industry}"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="formFilter__fieldButtom--right">
-                        <div class="text-end media-desktop">
-                            <a href="#" class="textlink textlink__icon">
-                                <span class="ihk-refresh"></span>
-                                Reset Filters
-                            </a>
-                        </div>
-                        <div class="formFilter__fieldButtom--action">
-                            <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
-                        </div>
+                <div class="col-lg-6">
+                    <div class="input-wrapper">
+                        <input type="text" name="searchNewsPress" class="input-control  input-control__icon " placeholder="Search News &amp; Press" >
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</g:form>
 
-<g:if test="${newsList}">
-    <g:each in="${newsList}" var="news">
-        <section class="newsListing container">
-            <div class="row newsListing__cardList">
-                <div class="col-lg-4 col-md-6">
-                    <div class="cardNews">
-                        <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
-                            <g:link controller="news" action="show" id="${news.id}">
-                                <span class="cardNews__thumbnail--link" aria-label="${news.title.encodeAsHTML()}"></span>
-                            </g:link>
-                        </div>
-                        <div class="cardNews__content">
-                            <div class="cardNews__info">
-                                <div class="cardNews__date"><g:formatDate date="${news.publicationDate}"
-                                                                          format="dd.MM.yyyy"/></div>
-                                <div class="cardNews__tags">
-                                    <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
-                                </div>
+        <button class="formFilter__filterAccordion collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            <asset:image src="favicon/Filter_red.svg" alt="Filter Icon" width="24" height="24"/>
+            Filters
+        </button>
+
+        <div class="formFilter__fieldButtom " id="collapseOne">
+            <div class="formFilter__fieldButtom--row d-flex">
+                <div class="formFilter__fieldButtom--left flex-fill">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="text-xl">
+                                <label class="label-field">Publication Date</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl ">
+                                <select name="dateRange" class="form-select">
+                                    <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
+                                    <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
+                                    <option value="past1month" ${params.dateRange == 'past1month' ? 'selected' : ''}>Past 1 Month</option>
+                                    <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
+                                    <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
+                                </select>
                             </div>
 
-                            <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="text-xl">
+                                <label class="label-field">Content Type</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl">
+                                <g:select name="contentType"
+                                          from="${contentTypes}"
+                                          optionKey="id"
+                                          optionValue="name"
+                                          noSelection="['':'All Content Types']"
+                                          value="${params.contentType}"/>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="text-xl">
+                                <label class="label-field">Location</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl ">
+                                <g:select name="location"
+                                          from="${locations}"
+                                          optionKey="id"
+                                          optionValue="name"
+                                          noSelection="['':'All Locations']"
+                                          value="${params.location}"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="text-xl">
+                                <label class="label-field">Industry</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl">
+                                <g:select name="industry"
+                                          from="${industries}"
+                                          optionKey="id"
+                                          optionValue="name"
+                                          noSelection="['':'All Industries']"
+                                          value="${params.industry}"/>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="formFilter__fieldButtom--right">
+                    <div class="text-end media-desktop">
+                        <a href="#" class="textlink textlink__icon">
+                            <span class="ihk-refresh"></span>
+                            Reset Filters
+                        </a>
+                    </div>
+                    <div class="formFilter__fieldButtom--action">
+                        <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+    </g:form>
+
+<g:if test="${newsList}">
+    <g:each in="${newsList}" var="news">
+<section class="newsListing container">
+    <div class="row newsListing__cardList">
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
+                    <g:link controller="news" action="show" id="${news.id}">
+                        <span class="cardNews__thumbnail--link" aria-label="${news.title.encodeAsHTML()}"></span>
+                    </g:link>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date"><g:formatDate date="${news.publicationDate}"
+                                                                  format="dd.MM.yyyy"/></div>
+                        <div class="cardNews__tags">
+                            <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                        </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </g:each>
 </g:if>
 <g:else>

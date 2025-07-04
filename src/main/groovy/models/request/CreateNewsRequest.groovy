@@ -18,10 +18,10 @@ class CreateNewsRequest implements Validateable {
     static constraints = {
         title blank: false
         content blank: false
-        imageCaption nullable: true
-        subTitle nullable: true
+        imageCaption nullable: false
+        subTitle nullable: false
         locationId nullable: false
-        contentTypeId nullable: false
+        contentTypeId nullable: true
         industryId nullable: false
     }
 }

@@ -1,3 +1,6 @@
+.mb-10{
+    margin-top: 148px;
+}
 .borderinfo{
 
     margin-bottom: 0px;
@@ -246,7 +249,21 @@ button, select {
     z-index: 2;
 }
 
+.input-icon {
+    position: absolute;
+    font-size: 42px;
+    top: 10px;
+    right: 12px;
+    color: #d7271d;
+}
 
+
+.col-lg-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 15%;
+    margin-right: 110px;
+}
 
 
    .formFilter.formFilter__white {
@@ -530,6 +547,22 @@ select {
     font-size: 20px;
     line-height: 140%;
 }
+
+.formFilter.formFilter__white .select-control.select2-selection--single {
+    border-color: white;
+}
+
+.select2-container .select-control .select2-selection--single {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    color: #000;
+    border: 1px solid #bbbdbe;
+    border-radius: 0;
+    padding: 12px 66px 12px 12px;
+}
+
+
 .textlink__icon {
     padding-left: 38px;
 }
@@ -585,6 +618,22 @@ select {
 }
 .text-center {
     text-align: center
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1540px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .row {
@@ -707,11 +756,22 @@ a {
     .container {
         max-width: 100%;
     }
+    .mb-10{
+        margin-top: 118px;
+    }
 }
 @media (min-width: 992px) {
+    .mb-10{
+        margin-top: 118px;
+    }
 
 }
 @media (min-width: 768px) {
+
+    .panel__section__date{
+        display: none;
+    }
+
 
 }
 @media (min-width: 576px) {
