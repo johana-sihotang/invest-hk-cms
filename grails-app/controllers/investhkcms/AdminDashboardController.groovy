@@ -10,12 +10,6 @@ class AdminDashboardController {
         NewsService newsService
 
         @Secured(['ROLE_ADMIN'])
-        def index() {
-            List<News> news = newsService.getAllNews()
-            [news: news]
-        }
-
-        @Secured(['ROLE_ADMIN'])
         def show(Long id) {
             News news = newsService.getNewsById(id)
             if (!news) {
@@ -27,7 +21,7 @@ class AdminDashboardController {
         }
 
         @Secured(['ROLE_ADMIN'])
-        def createNews() {
+        def create() {
             def location = Location.list(sort: 'name', order: 'asc')
             def contentType = ContentType.list(sort: 'id', order: 'asc')
             def industry = Industry.list(sort: 'name', order: 'asc')

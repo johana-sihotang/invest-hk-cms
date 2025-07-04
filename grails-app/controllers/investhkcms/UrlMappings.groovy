@@ -10,6 +10,8 @@ class UrlMappings {
 
         "/admin"(controller: 'admin',action: 'getAllAdmins' )
 
+        "/admin/dashboard/create"(controller: 'adminDashboard', action: 'create')
+
 
         "/admin/article/"(controller: 'adminNews', action: 'index')
         "/admin/article/create"(controller: 'adminNews', action: 'createNews')

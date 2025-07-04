@@ -12,9 +12,9 @@
 </head>
 
 <body>
-<div class ="justify-items-center bg-sky-400">
+<div class ="justify-items-center">
 
-<div class="container w-1/2  ">
+<div class="container">
 
     <h1 class="text-3xl text-start md:text-center font-bold mb-5">Admin Dashboard</h1>
 

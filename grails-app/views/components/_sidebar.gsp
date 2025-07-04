@@ -12,10 +12,14 @@
 
             </li>
             <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-300  group">
-                    <i class="bi bi-house-door shrink-0  text-gray-500 transition duration-75 group-hover:text-gray-900 text-2xl"></i>
+                <g:link controller="adminDashboard" action="create"
+                        class="flex items-center p-2 rounded-lg group ${controllerName == 'adminDashboard' && actionName == 'create' ? 'bg-slate-900 text-white' : 'text-gray-900 hover:bg-gray-300'}">
+
+                    <i class="bi bi-house-door shrink-0 transition duration-75 text-2xl ${controllerName == 'adminDashboard' && actionName == 'create' ? 'text-white' : 'text-gray-500 group-hover:text-gray-900'}"></i>
+
                     <span class="ms-3">Home</span>
-                </a>
+                </g:link>
+
             </li>
             <li>
                 <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-300 " aria-controls="dropdown-example" data-collapse-toggle="dropdown-article">

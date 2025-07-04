@@ -2,12 +2,12 @@
 <html>
     <head>
         <title>Page Not Found</title>
-        <meta name="layout" content="main">
+        <meta name="layout" content="cdn-layout">
         <g:if env="development"><asset:stylesheet src="errors.css"/></g:if>
     </head>
     <body>
         <ul class="errors">
-            <li>Error: Page Not Found (404)</li>
+            <li class="text-8xl">Sorry Page Not Found (404)</li>
             <li>Path: ${request.forwardURI}</li>
         </ul>
     </body>
