@@ -6,40 +6,26 @@
     <title>
     <g:layoutTitle default="Grails"/>
     </title>
-
-    %{--font--}%
+    <g:layoutHead/>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS Pertama -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 
-    %{--font awasome--}%
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-    %{--tailwind cdn--}%
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
-    <asset:stylesheet src="main.css"/>
-    <asset:stylesheet src="news_landing.css"/>
-    <g:layoutHead/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!--SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    %{--Text Editor Tiny--}%
+    <script src="https://cdn.tiny.cloud/1/efa5um0ipuy2f437nmvmq6gfsdax3f439y8h3ncxee6zc1ud/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 
-<body>
-<g:render template="/components/humburger_menu"/>
-<g:render template="/components/header"/>
-<g:render template="/components/alert"/>
-<div class="pt-[117px]">
+<body class="min-h-screen !font-[Outfit] bg-white text-gray-800 h-full flex items-center justify-center">
     <g:layoutBody/>
-</div>
-<g:render template="/components/footer"/>
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<asset:javascript src="application.js"/>
-<asset:javascript src="header.js"/>
-<asset:javascript src="humburger_menu.js"/>
+
 </body>
 </html>

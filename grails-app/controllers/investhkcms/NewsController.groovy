@@ -35,8 +35,7 @@ class NewsController {
         try {
             News news = newsService.getNewsById(id)
             if (!news) {
-                flash.error = "News not found"
-                redirect(action: 'index')
+                redirect(controller: 'error', action: 'notFound')
                 return
             }
 
