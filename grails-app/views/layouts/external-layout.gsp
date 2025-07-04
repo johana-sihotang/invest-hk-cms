@@ -30,10 +30,26 @@
 </head>
 
 <body>
-<div class="m-10">
+<g:render template="/components/humburger_menu"/>
+<g:render template="/components/header"/>
+<g:render template="/components/alert"/>
+<div class="pt-[117px]">
     <g:layoutBody/>
 </div>
+<g:render template="/components/footer"/>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+<asset:javascript src="application.js"/>
+<asset:javascript src="header.js"/>
+<asset:javascript src="humburger_menu.js"/>
+<asset:javascript src="alert.js"/>
+<asset:javascript src="continent_select.js"/>
+<asset:javascript src="slicker.js"/>
+<script>
+    $(document).ready(function () {
+        $('.js-select2').select2({
+            width: 'resolve'
+        });
+    });
+</script>
 </body>
 </html>
