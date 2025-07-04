@@ -105,107 +105,107 @@
 
 
 
-<div class="index slider-wrapper" role="banner">
-    <div class="index__section index__up">
-        <div class="indexCarousellTop">
-            <!--Slide 1-->
-            <div class="slider">
+%{--<div class="index slider-wrapper" role="banner">--}%
+%{--    <div class="index__section index__up">--}%
+%{--        <div class="indexCarousellBottom">--}%
+%{--            <!--Slide 1-->--}%
+%{--            <div class="slider">--}%
 
-            <div class="index__section__image compat-object-fit"
-                 style="background-image: url(${assetPath(src: 'favicon/whitecube.jpg')});">
-                <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                   data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                   data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">
-                </a>
+%{--            <div class="index__section__image compat-object-fit"--}%
+%{--                 style="background-image: url(${assetPath(src: 'favicon/whitecube.jpg')});">--}%
+%{--                <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"--}%
+%{--                   data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"--}%
+%{--                   data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">--}%
+%{--                </a>--}%
 
-            </div>
+%{--            </div>--}%
 
-                <div class="index__section__text">
-                    <div class="index__section__inner2">
-                        <div class="index__section__textInner2 index__section__slide">
-                            <div class="index__section__top">Case Studies</div>
-                            <div class="index__section__tags">
-                                <a aria-label="Search for items with From Italy as a tag" search-val="" data-type="region" tabindex="0" template-href="/en/case-studies?region=United Kingdom" href="/en/case-studies?region=United Kingdom">From United Kingdom</a>
-                                <a aria-label="Search for items with Tourism &amp; Hospitality as a tag" search-val="" data-type="industry" tabindex="0" template-href="/en/case-studies?industry=Creative Industries, Sports &amp; Entertainment" href="/en/case-studies?industry=Creative Industries, Sports &amp; Entertainment">Creative Industries, Sports &amp; Entertainment</a>
-                            </div>
-                            <div class="index__section__header">White Cube: Connecting the World through Art</div>
+%{--                <div class="index__section__text">--}%
+%{--                    <div class="index__section__inner2">--}%
+%{--                        <div class="index__section__textInner2 index__section__slide">--}%
+%{--                            <div class="index__section__top">Case Studies</div>--}%
+%{--                            <div class="index__section__tags">--}%
+%{--                                <a aria-label="Search for items with From Italy as a tag" search-val="" data-type="region" tabindex="0" template-href="/en/case-studies?region=United Kingdom" href="/en/case-studies?region=United Kingdom">From United Kingdom</a>--}%
+%{--                                <a aria-label="Search for items with Tourism &amp; Hospitality as a tag" search-val="" data-type="industry" tabindex="0" template-href="/en/case-studies?industry=Creative Industries, Sports &amp; Entertainment" href="/en/case-studies?industry=Creative Industries, Sports &amp; Entertainment">Creative Industries, Sports &amp; Entertainment</a>--}%
+%{--                            </div>--}%
+%{--                            <div class="index__section__header">White Cube: Connecting the World through Art</div>--}%
 
-                            <div class="index__section__paragraph">One of the first international art galleries to establish itself in Hong Kong, since 2012 White Cube has been an essential destination for serious Asian art collectors and investors looking to access work by some of the world’s most exciting contemporary artists. </div>
-                            <nav class="link">
-                                <a target="_self"
-                                   template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                   href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                   aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                   tabindex="0">Read More
-                                </a>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+%{--                            <div class="index__section__paragraph">One of the first international art galleries to establish itself in Hong Kong, since 2012 White Cube has been an essential destination for serious Asian art collectors and investors looking to access work by some of the world’s most exciting contemporary artists. </div>--}%
+%{--                            <nav class="link">--}%
+%{--                                <a target="_self"--}%
+%{--                                   template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"--}%
+%{--                                   href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"--}%
+%{--                                   aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"--}%
+%{--                                   tabindex="0">Read More--}%
+%{--                                </a>--}%
+%{--                            </nav>--}%
+%{--                        </div>--}%
+%{--                    </div>--}%
+%{--                </div>--}%
 
 
 
-            </div>
+%{--            </div>--}%
 
-            <!--Slide 2-->
-            <div class="slider">
-                <div class="index__section__text">
-                    <div class="index__section__inner">
-                        <div class="index__section__textInner index__section__slide">
-                            <div class="index__section__header">Drone Tech Brings New Opportunities</div>
+%{--            <!--Slide 2-->--}%
+%{--            <div class="slider">--}%
+%{--                <div class="index__section__text">--}%
+%{--                    <div class="index__section__inner">--}%
+%{--                        <div class="index__section__textInner index__section__slide">--}%
+%{--                            <div class="index__section__header">Drone Tech Brings New Opportunities</div>--}%
 
-                            <div class="index__section__paragraph"></div>
-                            <nav class="link">
-                                <a target="_self"
-                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   tabindex="-1">Read More
-                                </a>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+%{--                            <div class="index__section__paragraph"></div>--}%
+%{--                            <nav class="link">--}%
+%{--                                <a target="_self"--}%
+%{--                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"--}%
+%{--                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"--}%
+%{--                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"--}%
+%{--                                   tabindex="-1">Read More--}%
+%{--                                </a>--}%
+%{--                            </nav>--}%
+%{--                        </div>--}%
+%{--                    </div>--}%
+%{--                </div>--}%
 
-                <div class="index__section__image compat-object-fit"
-                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
-                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                    </a>
-                </div>
-            </div>
-            <!--Slide 3-->
-            <div class="slider">
-                <div class="index__section__text">
-                    <div class="index__section__inner slider">
-                        <div class="index__section__textInner index__section__slide">
-                            <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
+%{--                <div class="index__section__image compat-object-fit"--}%
+%{--                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">--}%
+%{--                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"--}%
+%{--                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"--}%
+%{--                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">--}%
+%{--                    </a>--}%
+%{--                </div>--}%
+%{--            </div>--}%
+%{--            <!--Slide 3-->--}%
+%{--            <div class="slider">--}%
+%{--                <div class="index__section__text">--}%
+%{--                    <div class="index__section__inner slider">--}%
+%{--                        <div class="index__section__textInner index__section__slide">--}%
+%{--                            <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>--}%
 
-                            <div class="index__section__paragraph"></div>
-                            <nav class="link">
-                                <a target="_self"
-                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   tabindex="-1">Read More
-                                </a>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+%{--                            <div class="index__section__paragraph"></div>--}%
+%{--                            <nav class="link">--}%
+%{--                                <a target="_self"--}%
+%{--                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"--}%
+%{--                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"--}%
+%{--                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"--}%
+%{--                                   tabindex="-1">Read More--}%
+%{--                                </a>--}%
+%{--                            </nav>--}%
+%{--                        </div>--}%
+%{--                    </div>--}%
+%{--                </div>--}%
 
-                <div class="index__section__image compat-object-fit"
-                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
-                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+%{--                <div class="index__section__image compat-object-fit"--}%
+%{--                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">--}%
+%{--                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"--}%
+%{--                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"--}%
+%{--                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">--}%
+%{--                    </a>--}%
+%{--                </div>--}%
+%{--            </div>--}%
+%{--        </div>--}%
+%{--    </div>--}%
+%{--</div>--}%
 
 <div class="start">
     <div class="mainTitles">
@@ -259,7 +259,7 @@
         </a>
     </div>
 </div>
-</div>
+
 
 
 <div class="panel">
@@ -275,52 +275,50 @@
     </div>
 
     <div class="panel__section news">
-        <div class="panel__section__slider">
-            <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;"
-                 role="tabpanel">
-                <a template-href="/en/news/investhk-promotes-using-hong-kong-as-gateway-for-global-expansion-in-liaoning-province-to-enhance-cross-regional-collaboration/"
-                   href="https://www.investhk.gov.hk/en/news/investhk-promotes-using-hong-kong-as-gateway-for-global-expansion-in-liaoning-province-to-enhance-cross-regional-collaboration/"
-                   aria-label="InvestHK promotes using Hong Kong as gateway for global expansion in Liaoning Province to enhance cross-regional collaboration"
-                   tabindex="0"></a>
+        <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;"
+             role="tabpanel">
+            <a template-href="/en/news/investhk-promotes-using-hong-kong-as-gateway-for-global-expansion-in-liaoning-province-to-enhance-cross-regional-collaboration/"
+               href="https://www.investhk.gov.hk/en/news/investhk-promotes-using-hong-kong-as-gateway-for-global-expansion-in-liaoning-province-to-enhance-cross-regional-collaboration/"
+               aria-label="InvestHK promotes using Hong Kong as gateway for global expansion in Liaoning Province to enhance cross-regional collaboration"
+               tabindex="0"></a>
 
-                <div class="panel__section__text">
-                    <div class="panel__section__header">News</div>
+            <div class="panel__section__text">
+                <div class="panel__section__header">News</div>
 
-                    <div class="panel__section__paragraph">InvestHK promotes using Hong Kong as gateway for global expansion in Liaoning Province to enhance cross-regional collaboration</div>
+                <div class="panel__section__paragraph">InvestHK promotes using Hong Kong as gateway for global expansion in Liaoning Province to enhance cross-regional collaboration</div>
 
-                    <div class="panel__section__date">05.06.2025</div>
-                </div>
+                <div class="panel__section__date">05.06.2025</div>
             </div>
+        </div>
 
-            <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;"
-                 role="tabpanel" aria-describedby="slick-slide-control01">
-                <a template-href="/en/news/japanese-medical-and-life-science-companies-join-business-mission-to-understand-hong-kongs-investment-environment-and-explore-business-opportunities/"
-                   href="/en/news/japanese-medical-and-life-science-companies-join-business-mission-to-understand-hong-kongs-investment-environment-and-explore-business-opportunities/"
-                   aria-label="Japanese medical and life science companies join business mission to understand Hong Kong's investment environment and explore business opportunities"></a>
+        <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;"
+             role="tabpanel" aria-describedby="slick-slide-control01">
+            <a template-href="/en/news/japanese-medical-and-life-science-companies-join-business-mission-to-understand-hong-kongs-investment-environment-and-explore-business-opportunities/"
+               href="/en/news/japanese-medical-and-life-science-companies-join-business-mission-to-understand-hong-kongs-investment-environment-and-explore-business-opportunities/"
+               aria-label="Japanese medical and life science companies join business mission to understand Hong Kong's investment environment and explore business opportunities"></a>
 
-                <div class="panel__section__text">
-                    <div class="panel__section__header">News</div>
+            <div class="panel__section__text">
+                <div class="panel__section__header">News</div>
 
-                    <div class="panel__section__paragraph">Japanese medical and life science companies join business mission to understand Hong Kong's investment environment and explore business opportunities</div>
+                <div class="panel__section__paragraph">Japanese medical and life science companies join business mission to understand Hong Kong's investment environment and explore business opportunities</div>
 
-                    <div class="panel__section__date">30.05.2025</div>
-                </div>
+                <div class="panel__section__date">30.05.2025</div>
             </div>
+        </div>
 
-            <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;"
-                 aria-describedby="slick-slide-control02">
-                <a template-href="/en/news/mainland-pizzeria-chain-opens-first-restaurant-in-hong-kong-and-sets-up-regional-headquarters-to-expand-overseas/"
-                   href="/en/news/mainland-pizzeria-chain-opens-first-restaurant-in-hong-kong-and-sets-up-regional-headquarters-to-expand-overseas/"
-                   aria-label="Mainland pizzeria chain opens first restaurant in Hong Kong and sets up regional headquarters to expand overseas"
-                   tabindex="-1"></a>
+        <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;"
+             aria-describedby="slick-slide-control02">
+            <a template-href="/en/news/mainland-pizzeria-chain-opens-first-restaurant-in-hong-kong-and-sets-up-regional-headquarters-to-expand-overseas/"
+               href="/en/news/mainland-pizzeria-chain-opens-first-restaurant-in-hong-kong-and-sets-up-regional-headquarters-to-expand-overseas/"
+               aria-label="Mainland pizzeria chain opens first restaurant in Hong Kong and sets up regional headquarters to expand overseas"
+               tabindex="-1"></a>
 
-                <div class="panel__section__text">
-                    <div class="panel__section__header">News</div>
+            <div class="panel__section__text">
+                <div class="panel__section__header">News</div>
 
-                    <div class="panel__section__paragraph">Mainland pizzeria chain opens first restaurant in Hong Kong and sets up regional headquarters to expand overseas</div>
+                <div class="panel__section__paragraph">Mainland pizzeria chain opens first restaurant in Hong Kong and sets up regional headquarters to expand overseas</div>
 
-                    <div class="panel__section__date">30.05.2025</div>
-                </div>
+                <div class="panel__section__date">30.05.2025</div>
             </div>
         </div>
     </div>
@@ -342,33 +340,31 @@
 
 
     <div class="panel__section resource_center">
-        <div class="panel__section__slider">
-            <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;">
-                <a target="_blank" template-href="/media/5cnn4q2t/202504-newsletter-en.pdf"
-                   href="/media/5cnn4q2t/202504-newsletter-en.pdf" aria-label="› pdf version" tabindex="0"></a>
+        <div class="slider panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;">
+            <a target="_blank" template-href="/media/5cnn4q2t/202504-newsletter-en.pdf"
+               href="/media/5cnn4q2t/202504-newsletter-en.pdf" aria-label="› pdf version" tabindex="0"></a>
 
-                <div class="panel__section__text">
-                    <div class="panel__section__header">Resource Centre</div>
+            <div class="panel__section__text">
+                <div class="panel__section__header">Resource Centre</div>
 
-                    <div class="panel__section__paragraph">The Heartbeat of Business, April 2025</div>
+                <div class="panel__section__paragraph">The Heartbeat of Business, April 2025</div>
 
-                    <div class="panel__section__date"></div>
-                </div>
+                <div class="panel__section__date"></div>
             </div>
+        </div>
 
-            <div class="slider panel__section__inner panel__red panel__section__innerDown startDown">
-                <a target="_blank" template-href="/media/ucnawdrv/cise-enewsletter-apr-jun-2025.pdf"
-                   href="/media/ucnawdrv/cise-enewsletter-apr-jun-2025.pdf" aria-label="› Read More"
-                   tabindex="-1"></a>
+        <div class="slider panel__section__inner panel__red panel__section__innerDown startDown">
+            <a target="_blank" template-href="/media/ucnawdrv/cise-enewsletter-apr-jun-2025.pdf"
+               href="/media/ucnawdrv/cise-enewsletter-apr-jun-2025.pdf" aria-label="› Read More"
+               tabindex="-1"></a>
 
 
-                <div class="panel__section__text">
-                    <div class="panel__section__header">Resource Centre</div>
+            <div class="panel__section__text">
+                <div class="panel__section__header">Resource Centre</div>
 
-                    <div class="panel__section__paragraph">Creative Industries, Sports &amp; Entertainment News and Events Updates, Apr-Jun 2025</div>
+                <div class="panel__section__paragraph">Creative Industries, Sports &amp; Entertainment News and Events Updates, Apr-Jun 2025</div>
 
-                    <div class="panel__section__date"></div>
-                </div>
+                <div class="panel__section__date"></div>
             </div>
         </div>
     </div>
@@ -384,7 +380,6 @@
         </div>
 
         <div class="panel__section events">
-            <div class="panel__section__slider">
                 <div
                         class="panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;" tabindex="0" role="tabpanel">
                     <a template-href="/en/events/the-26th-annual-corporate-and-regulatory-update-acru-2025/"
@@ -436,7 +431,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
             <div class="panel__section FAQ">
@@ -453,5 +447,5 @@
                 </div>
             </div>
         </div>
-</div>
+
 </body>

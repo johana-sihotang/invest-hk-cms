@@ -50,17 +50,41 @@ $(function() {
         updateDotsPosition();
     });
 
-    $('.panel__section__slider').slick({
+    $('.news').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
         arrows: false,
         dots: true,
-        appendDots: $('.panel__section__slider'),
         autoplay: false,
         autoplaySpeed: 4000,
         adaptiveHeight: true,
     });
+
+
+    $('.resource_center').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        dots: true,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        adaptiveHeight: true,
+    });
+
+
+    $('.events').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        dots: true,
+        autoplay: false,
+        autoplaySpeed: 4000,
+        adaptiveHeight: true,
+    });
+
 });Ï
 
 
