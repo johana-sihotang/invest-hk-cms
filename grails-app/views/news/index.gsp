@@ -88,11 +88,8 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-
                     <div class="input-wrapper">
-                        <input type="text" name="searchNewsPress" class="input-control  input-control__icon" placeholder="Search News &amp; Press">
-                        <span class="ihk-search input-icon"></span>
-
+                        <input type="text" name="searchNewsPress" class="input-control  input-control__icon " placeholder="Search News &amp; Press" >
                     </div>
                 </div>
             </div>
@@ -108,8 +105,10 @@
                 <div class="formFilter__fieldButtom--left flex-fill">
                     <div class="row">
                         <div class="col-lg-3">
-                            <div class="formFilter__fieldButtom--group">
+                            <div class="text-xl">
                                 <label class="label-field">Publication Date</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl ">
                                 <select name="dateRange" class="form-select">
                                     <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
                                     <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
@@ -117,13 +116,14 @@
                                     <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
                                     <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
                                 </select>
-
                             </div>
 
                         </div>
                         <div class="col-lg-3">
-                            <div class="formFilter__fieldButtom--group">
+                            <div class="text-xl">
                                 <label class="label-field">Content Type</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl">
                                 <g:select name="contentType"
                                           from="${contentTypes}"
                                           optionKey="id"
@@ -134,8 +134,10 @@
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <div class="formFilter__fieldButtom--group">
+                            <div class="text-xl">
                                 <label class="label-field">Location</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl ">
                                 <g:select name="location"
                                           from="${locations}"
                                           optionKey="id"
@@ -145,8 +147,10 @@
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <div class="formFilter__fieldButtom--group">
+                            <div class="text-xl">
                                 <label class="label-field">Industry</label>
+                            </div>
+                            <div class="border-2 border-solid text-xl">
                                 <g:select name="industry"
                                           from="${industries}"
                                           optionKey="id"

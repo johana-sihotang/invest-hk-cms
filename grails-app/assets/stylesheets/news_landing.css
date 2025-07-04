@@ -248,7 +248,21 @@ button, select {
     z-index: 2;
 }
 
+.input-icon {
+    position: absolute;
+    font-size: 42px;
+    top: 10px;
+    right: 12px;
+    color: #d7271d;
+}
 
+
+.col-lg-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 15%;
+    margin-right: 110px;
+}
 
 
    .formFilter.formFilter__white {
@@ -532,6 +546,22 @@ select {
     font-size: 20px;
     line-height: 140%;
 }
+
+.formFilter.formFilter__white .select-control.select2-selection--single {
+    border-color: white;
+}
+
+.select2-container .select-control .select2-selection--single {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    color: #000;
+    border: 1px solid #bbbdbe;
+    border-radius: 0;
+    padding: 12px 66px 12px 12px;
+}
+
+
 .textlink__icon {
     padding-left: 38px;
 }
@@ -714,3 +744,5 @@ a {
     transition: all .3s ease-in-out;
     margin-bottom: 12px;
 }
+
+
