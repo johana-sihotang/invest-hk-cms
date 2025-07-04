@@ -5,14 +5,12 @@ import spock.lang.Specification
 
 class AdminDashboardControllerSpec extends Specification implements ControllerUnitTest<AdminDashboardController> {
 
-    def setup() {
-    }
+     void "test index action"() {
+        when:
+        controller.index()
 
-    def cleanup() {
-    }
+        then:
+        status == 200
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
+     }
 }

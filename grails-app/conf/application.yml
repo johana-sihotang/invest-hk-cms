@@ -105,17 +105,20 @@ grails:
         encoding: UTF-8
   plugin:
     springsecurity:
-      userlookup:
+      password:
+        algorithm: 'bcrypt'
+        bcrypt:
+          logrounds: 10
+      logout.postOnly: false
+      userLookup:
         userDomainClassName: investhkcms.Admin
         authorityJoinClassName: investhkcms.AdminRole
-      authority:
-        className: investhkcms.Role
-
-#spring:
-#  servlet:
-#    multipart:
-#      max-file-size: 10MB
-#      max-request-size: 10MB
+      controllerAnnotations:
+        staticRules:
+          - pattern: '/admin/**'
+            access: [ 'ROLE_ADMIN' ]
+          - pattern: '/**'
+            access: [ 'permitAll']
 server:
   port: 8003
 

@@ -1,5 +1,7 @@
 package investhkcms
 
+import models.enums.Status
+
 class BootStrap {
 
     def init = { servletContext ->
@@ -118,7 +120,25 @@ class BootStrap {
             }
         }
 
+        Admin.withTransaction { status ->
+            def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save(flush: true, failOnError: true)
+
+            def adminUser = Admin.findByUsername('admin') ?: new Admin(
+                    name: 'SuperAdmin',
+                    email: 'admin@example.com',
+                    username: 'admin',
+                    password: 'admin123',
+                    status: Status.ACTIVE
+            ).save(flush: true, failOnError: true)
+
+            if (!AdminRole.exists(adminUser.id, adminRole.id)) {
+                AdminRole.create(adminUser, adminRole, true)
+            }
+        }
+
     }
+
+
 
     def destroy = {}
 }

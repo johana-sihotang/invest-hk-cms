@@ -5,7 +5,7 @@ import models.request.CreateContactUsRequest
 
 
 class ContactUsController {
-    static layout = 'navbar-sidebar'
+    static layout = 'cms-layout'
     ContactUsService contactUsService
 
     def index() {

@@ -77,11 +77,7 @@
 
 </div>
 
-
-
-
-
-
+<g:form controller="news" action="index" method="GET">
 <section class="formFilter formFilter__white">
     <div class="container_">
         <div class="formFilter__fieldTop">
@@ -114,79 +110,50 @@
                         <div class="col-lg-3">
                             <div class="formFilter__fieldButtom--group">
                                 <label class="label-field">Publication Date</label>
-                                <select name="publicationDate" class="js-select2 form-control select2-hidden-accessible" data-placeholder="Latest" data-select2-id="select2-data-1-yl8p" tabindex="-1" aria-hidden="true">
-                                    <option data-select2-id="select2-data-3-qumb"></option>
-                                    <option value="China">China</option>
-                                    <option value="India">India</option>
-                                    <option value="Indonesia">Indonesia</option>
-                                    <option value="Singapore">Singapore</option>
-                                    <option value="Japan">Japan</option>
+                                <select name="dateRange" class="form-select">
+                                    <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
+                                    <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
+                                    <option value="past1month" ${params.dateRange == 'past1month' ? 'selected' : ''}>Past 1 Month</option>
+                                    <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
+                                    <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
                                 </select>
-                                <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-11ty" style="width: 169px;">
-                                    <span class="selection">
-                                        <span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-publicationDate-t2-container" aria-controls="select2-publicationDate-t2-container">
-                                            <span class="select2-selection__rendered" id="select2-publicationDate-t2-container" role="textbox" aria-readonly="true" title="Latest">
-                                                <span class="select2-selection__placeholder">Latest</span>
-                                            </span>
-                                            <span class="select2-selection__arrow" role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i>
-                                                <b role="presentation"></b>
-                                            </span>
-                                        </span>
-                                    </span>
-                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                </span>
+
                             </div>
+
                         </div>
                         <div class="col-lg-3">
                             <div class="formFilter__fieldButtom--group">
                                 <label class="label-field">Content Type</label>
-                                <select name="contentType" class="js-select2 form-control select2-hidden-accessible" data-placeholder="All Content Types" data-select2-id="select2-data-4-u9ll" tabindex="-1" aria-hidden="true">
-                                    <option data-select2-id="select2-data-6-j13g"></option>
-                                    <option value="China">China</option>
-                                    <option value="India">India</option>
-                                    <option value="Indonesia">Indonesia</option>
-                                    <option value="Singapore">Singapore</option>
-                                    <option value="Japan">Japan</option>
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-yxs8" style="width: 169px;">
-                                <span class="selection">
-                                    <span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-contentType-yf-container" aria-controls="select2-contentType-yf-container">
-                                        <span class="select2-selection__rendered" id="select2-contentType-yf-container" role="textbox" aria-readonly="true" title="All Content Types">
-                                            <span class="select2-selection__placeholder">All Content Types</span>
-                                        </span>
-                                        <span class="select2-selection__arrow" role="presentation">
-                                            <b role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i></b>
-                                        </span>
-                                    </span>
-                                </span>
-                                <span class="dropdown-wrapper" aria-hidden="true">
+                                <g:select name="contentType"
+                                          from="${contentTypes}"
+                                          optionKey="id"
+                                          optionValue="name"
+                                          noSelection="['':'All Content Types']"
+                                          value="${params.contentType}"/>
 
-                                </span>
-                            </span>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="formFilter__fieldButtom--group">
                                 <label class="label-field">Location</label>
-                                <select name="location" class="js-select2 form-control select2-hidden-accessible" data-placeholder="All Locations" data-select2-id="select2-data-7-qlbx" tabindex="-1" aria-hidden="true">
-                                    <option data-select2-id="select2-data-9-ea6p"></option>
-                                    <option value="China">China</option>
-                                    <option value="India">India</option>
-                                    <option value="Indonesia">Indonesia</option>
-                                    <option value="Singapore">Singapore</option>
-                                    <option value="Japan">Japan</option>
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-8-hn4x" style="width: 184.703px;"><span class="selection"><span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-location-xd-container" aria-controls="select2-location-xd-container"><span class="select2-selection__rendered" id="select2-location-xd-container" role="textbox" aria-readonly="true" title="All Locations"><span class="select2-selection__placeholder">All Locations</span></span><span class="select2-selection__arrow" role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>              </div>
+                                <g:select name="location"
+                                          from="${locations}"
+                                          optionKey="id"
+                                          optionValue="name"
+                                          noSelection="['':'All Locations']"
+                                          value="${params.location}"/>
+                            </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="formFilter__fieldButtom--group">
                                 <label class="label-field">Industry</label>
-                                <select name="industry" class="js-select2 form-control select2-hidden-accessible" data-placeholder="All Industries" data-select2-id="select2-data-10-bzer" tabindex="-1" aria-hidden="true">
-                                    <option data-select2-id="select2-data-12-s4a7"></option>
-                                    <option value="China">China</option>
-                                    <option value="India">India</option>
-                                    <option value="Indonesia">Indonesia</option>
-                                    <option value="Singapore">Singapore</option>
-                                    <option value="Japan">Japan</option>
-                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-11-ghzw" style="width: 195.391px;"><span class="selection"><span class="select2-selection select2-selection--single select-control" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-industry-jj-container" aria-controls="select2-industry-jj-container"><span class="select2-selection__rendered" id="select2-industry-jj-container" role="textbox" aria-readonly="true" title="All Industries"><span class="select2-selection__placeholder">All Industries</span></span><span class="select2-selection__arrow" role="presentation"><i class="fa-solid fa-chevron-down" style="color: #e81111;"></i><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>              </div>
+                                <g:select name="industry"
+                                          from="${industries}"
+                                          optionKey="id"
+                                          optionValue="name"
+                                          noSelection="['':'All Industries']"
+                                          value="${params.industry}"/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,16 +165,43 @@
                         </a>
                     </div>
                     <div class="formFilter__fieldButtom--action">
-                        <button type="button" class="button button__outline"><span>APPLY FILTERS</span></button>
-                    </div>
-                    <div class="text-center media-not-desktop">
-                        <a href="#" class="textlink textlink__icon">
-                            <span class="ihk-refresh"></span>
-                            Reset Filters
-                        </a>
+                        <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+    </g:form>
+
+<g:if test="${newsList}">
+    <g:each in="${newsList}" var="news">
+<section class="newsListing container">
+    <div class="row newsListing__cardList">
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
+                    <g:link controller="news" action="show" id="${news.id}">
+                        <span class="cardNews__thumbnail--link" aria-label="${news.title.encodeAsHTML()}"></span>
+                    </g:link>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date"><g:formatDate date="${news.publicationDate}"
+                                                                  format="dd.MM.yyyy"/></div>
+                        <div class="cardNews__tags">
+                            <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                        </div>
+                    </div>
+
+                    <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </g:each>
+</g:if>
+<g:else>
+    <p>No data found</p>
+</g:else>

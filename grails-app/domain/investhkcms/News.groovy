@@ -13,10 +13,10 @@ class News {
     Industry industry
 
     static constraints = {
-        title nullable: false
+        title nullable: false, maxSize: 10000
         image nullable: true
         imageCaption nullable: true, maxSize: 2000
-        subTitle nullable: true
+        subTitle nullable: true, maxSize: 10000
         location nullable: true
         contentType nullable: true
         industry nullable: true
@@ -28,6 +28,8 @@ class News {
 
     static mapping = {
         table 'news'
+        title type: 'text'
+        subTitle type: 'text'
         content type: 'text'
     }
 

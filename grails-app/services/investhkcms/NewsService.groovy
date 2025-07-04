@@ -4,6 +4,9 @@ import grails.gorm.transactions.Transactional
 import models.request.CreateNewsRequest
 import models.request.UpdateNewsRequest
 
+import java.time.LocalDate
+import java.time.ZoneId
+
 @Transactional
 class NewsService {
 
@@ -108,5 +111,48 @@ class NewsService {
 
         def imagePath = "/uploads/news/${fileName}"
         createNews(request, imagePath)
+    }
+
+    @Transactional
+    List<News> getFilteredNews(Map params) {
+        def criteria = News.createCriteria()
+
+        List<News> newsList = (List<News>) criteria.list {
+            if (params.contentType) {
+                eq 'contentType', ContentType.get(params.contentType as Long)
+            }
+            if (params.industry) {
+                eq 'industry', Industry.get(params.industry as Long)
+            }
+            if (params.location) {
+                eq 'location', Location.get(params.location as Long)
+            }
+
+            if (params.dateRange) {
+                Date startDate
+                switch (params.dateRange) {
+                    case 'latest':
+                        startDate = Date.from(LocalDate.now().minusDays(7).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                        break
+                    case 'past1month':
+                        startDate = Date.from(LocalDate.now().minusMonths(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                        break
+                    case 'past1year':
+                        startDate = Date.from(LocalDate.now().minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                        break
+                    case 'past2year':
+                        startDate = Date.from(LocalDate.now().minusYears(2).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                        break
+                }
+
+                if (startDate) {
+                    ge 'publicationDate', startDate
+                }
+            }
+
+            order 'publicationDate', 'desc'
+        }
+
+        return newsList
     }
 }

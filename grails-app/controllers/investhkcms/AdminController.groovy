@@ -1,35 +1,64 @@
 package investhkcms
+import grails.plugin.springsecurity.SpringSecurityService
+import grails.plugin.springsecurity.annotation.Secured
+import models.exception.AlreadyExistsException
+import models.exception.InvalidDataException
+import models.request.AdminDeleteRequest
+import models.request.AdminRegisterRequest
+import models.response.AdminAuthResponse
+import models.response.AdminResponse
+import models.response.RoleResponse
 
 class AdminController {
 
     AdminService adminService
+    SpringSecurityService springSecurityService
 
-    def login() {
-        {
-            render(view: 'login') //
+
+    @Secured(['ROLE_ADMIN'])
+    def getAllAdmins() {
+        List<AdminResponse> adminList = adminService.getAllAdmins()
+        def currentAdmin = springSecurityService.currentUser
+        render(view: 'getAllAdmins', model: [adminList: adminList, currentAdmin: currentAdmin])
+    }
+
+    @Secured(['ROLE_ADMIN'])
+    def getAllAdminAuth() {
+        List<AdminAuthResponse> adminAuthList = adminService.getAllAdminAuth()
+        List<AdminResponse> adminList = adminService.getAllAdmins()
+        List<RoleResponse> roleList = Role.list().collect { role ->
+            new RoleResponse(authority: role.authority)
+        }
+        def currentAdmin  = springSecurityService.currentUser
+        render(view: 'indexAuth', model: [adminAuthList: adminAuthList, adminList: adminList, roleList: roleList, currentAdmin:currentAdmin])
+    }
+
+    @Secured(['ROLE_ADMIN'])
+    def register(AdminRegisterRequest request){
+        try {
+            adminService.registerAdmin(request)
+            flash.message = "Admin registered successfully."
+            redirect(action: 'getAllAdmins')
+        } catch (AlreadyExistsException e) {
+            flash.error = e.message
+            redirect(action: 'getAllAdmins')
+        } catch (Exception e) {
+            flash.error = "An unexpected error occurred. Please try again."
+            redirect(action: 'getAllAdmins')
         }
     }
 
-    def authenticate() {
-        def username = params.username
-        def password = params.password
-
-        def admin = adminService.authenticate(username, password)
-
-        if (admin) {
-            session.admin = admin.username
-            flash.message = "Welcome, ${admin.username}!"
-            redirect(controller: 'dashboard', action: 'index')
-        } else {
-            flash.message = "Invalid username or password"
-            redirect(action: 'login')
+    @Secured(['ROLE_ADMIN'])
+    def deleteAdmin(AdminDeleteRequest request){
+        try {
+            adminService.deleteAdminByUsername(request.username)
+            flash.message = "Admin  deleted successfully!"
+        } catch (InvalidDataException e) {
+            flash.message = e.message
+        } catch (Exception e) {
+            flash.message = "An unexpected error occurred: " + e.message
         }
-    }
-
-    def logout() {
-        session.invalidate()
-        flash.message = "You have been logged out."
-        redirect(action: 'login')
+        redirect(action: "getAllAdmins")
     }
 }
 
