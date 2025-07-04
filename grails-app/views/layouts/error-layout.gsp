@@ -41,5 +41,15 @@
 <asset:javascript src="application.js"/>
 <asset:javascript src="header.js"/>
 <asset:javascript src="humburger_menu.js"/>
+<asset:javascript src="alert.js"/>
+<asset:javascript src="continent_select.js"/>
+<asset:javascript src="slicker.js"/>
+<script>
+    $(document).ready(function () {
+        $('.js-select2').select2({
+            width: 'resolve'
+        });
+    });
+</script>
 </body>
 </html>
