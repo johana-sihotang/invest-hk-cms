@@ -10813,6 +10813,9 @@ body.no-scroll {
     }
 }
 @media (max-width: 992px) {
+    .header{
+        height: 118px;
+    }
     .footer {
         background-color: #000;
         color: #fff;

@@ -1,3 +1,4 @@
+
 .indexCarousellTop {
     position: relative;
     width: 100vw;
@@ -643,7 +644,14 @@ slick-dots li {
     margin: 0 auto 90px;
     text-align: left;
 }
-
+@media (min-width: 1600px) {
+    .mb-10{
+        margin-top: calc(var(--spacing) * 30);
+    }
+    .index__up .index__section__textInner{
+        margin: 60px 60px 0 0;
+    }
+}
 @media screen and (max-width: 1440px) {
     .index__up .index__section__textInner {
         margin: 60px 60px 0;
@@ -762,6 +770,9 @@ slick-dots li {
 }
 
 @media screen and (max-width: 650px) {
+    .mb-10{
+        margin-top: 118px;
+    }
     .panel {
         max-width: 365px;
     }

@@ -14,8 +14,6 @@
 
 }
 
-
-
 .tags1 {
     background-color: red;
     color: white;
@@ -589,22 +587,6 @@ select {
     text-align: center
 }
 
-
-
-
-
-
-
-
-
-@media (min-width: 1600px) {
-    .container {
-        max-width: 1540px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -713,4 +695,25 @@ a {
     text-transform: uppercase;
     transition: all .3s ease-in-out;
     margin-bottom: 12px;
+}
+@media (min-width: 1600px) {
+    .container_ {
+        max-width: 1540px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 576px) {
+
 }

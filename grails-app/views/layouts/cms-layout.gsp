@@ -23,11 +23,11 @@
     %{--Text Editor Tiny--}%
     <script src="https://cdn.tiny.cloud/1/efa5um0ipuy2f437nmvmq6gfsdax3f439y8h3ncxee6zc1ud/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
-<body>
+<body class="bg-slate-100">
 <g:render template="/components/navbar"/>
 <g:render template="/components/sidebar"/>
 <g:render template="/components/alert"/>
-<div class="pt-20 ml-0 lg:ml-64 px-4">
+<div class="pt-32 ml-0 lg:ml-64 px-4">
     <g:layoutBody/>
 </div>
 

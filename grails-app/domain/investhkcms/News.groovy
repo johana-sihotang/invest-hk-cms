@@ -11,6 +11,9 @@ class News {
     Location location
     ContentType contentType
     Industry industry
+    Admin author
+
+    static belongsTo = [author:Admin]
 
     static constraints = {
         title nullable: false, maxSize: 10000

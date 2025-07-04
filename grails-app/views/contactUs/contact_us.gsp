@@ -90,19 +90,7 @@
                                         labelClass : 'text-[#dc281e] font-bold',
                                         selectClass: 'text-2xl/[150] w-full border-solid border-[1px] border-[#bbbdbe] p-3'
                                 ]"/>
-                                <span
-                                        class="select2 select2-container select2-container--default select2-container--below"
-                                        dir="ltr" data-select2-id="select2-data-2-qmc9" style="width: 674.5px;"><span
-                                        class="selection"><span
-                                            class="select2-selection select2-selection--single select-control"
-                                            role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-disabled="false" aria-labelledby="select2-continent-2s-container"
-                                            aria-controls="select2-continent-2s-container"><span
-                                                class="select2-selection__rendered" id="select2-continent-2s-container"
-                                                role="textbox" aria-readonly="true" title="Europe"></span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+
                             </div>
                         </div>
 
@@ -118,19 +106,6 @@
                                         labelClass : 'text-[#dc281e] font-bold',
                                         selectClass: 'text-2xl/[150] w-full border-solid border-[1px] border-[#bbbdbe] p-3'
                                 ]"/>
-                                <span
-                                        class="select2 select2-container select2-container--default select2-container--below"
-                                        dir="ltr" data-select2-id="select2-data-5-n66y" style="width: 674.5px;"><span
-                                        class="selection"><span
-                                            class="select2-selection select2-selection--single select-control"
-                                            role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-disabled="false" aria-labelledby="select2-location-gw-container"
-                                            aria-controls="select2-location-gw-container"><span
-                                                class="select2-selection__rendered" id="select2-location-gw-container"
-                                                role="textbox" aria-readonly="true" title="Indonesia"></span><span
-                                                class="select2-selection__arrow" role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
                             </div>
                         </div>
                     </div>

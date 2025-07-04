@@ -14,6 +14,7 @@
             <th class="w-2/5 px-6 py-3">Title</th>
             <th class="w-1/5 px-6 py-3">Location</th>
             <th class="w-1/5 px-6 py-3">Content Type</th>
+            <th class="w-1/5 px-6 py-3">Author</th>
             <th class="w-1/5 px-6 py-3">Date Published</th>
             <th class="w-2/6 px-6 py-3"><span class="sr-only">Action</span></th>
         </tr>
@@ -27,6 +28,7 @@
                 </td>
                 <td class="w-1/5 px-4 py-4">${item.location}</td>
                 <td class="w-1/5 px-6 py-4">${item.contentType?.name}</td>
+                <td class="w-1/5 px-6 py-4">${item.author}</td>
                 <td class="w-1/5 px-6 py-4">
                     <g:formatDate date="${item.publicationDate}" format="dd MMM yyyy" />
                 </td>

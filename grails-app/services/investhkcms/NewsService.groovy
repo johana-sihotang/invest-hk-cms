@@ -1,6 +1,7 @@
 package investhkcms
 
 import grails.gorm.transactions.Transactional
+import grails.plugin.springsecurity.SpringSecurityService
 import models.request.CreateNewsRequest
 import models.request.UpdateNewsRequest
 
@@ -9,6 +10,8 @@ import java.time.ZoneId
 
 @Transactional
 class NewsService {
+
+    SpringSecurityService springSecurityService
 
     List<News> getAllNews() {
         return News.list(short: "title")
@@ -29,6 +32,9 @@ class NewsService {
         news.contentType = ContentType.get(request.contentTypeId)
         news.industry = Industry.get(request.industryId)
         news.publicationDate = new Date()
+
+        def currentAdmin = springSecurityService.currentUser as Admin
+        news.author = currentAdmin
 
 
         if (imagePath) {

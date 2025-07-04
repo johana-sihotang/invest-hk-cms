@@ -4,11 +4,11 @@
   Date: 25/06/2025
   Time: 10:40
 --%>
-<div class ="justify-items-center bg-sky-400">
+<div class ="justify-items-center">
 
-<div class="container w-1/2  ">
+<div class="container ">
 
-    <h1 class="text-3xl text-start md:text-center font-bold mb-5">Create News</h1>
+    <h1 class="text-3xl text-start lg:text-center font-bold mb-5">Create News</h1>
 
     <g:hasErrors bean="${news}">
         <div class="alert alert-danger">
@@ -44,7 +44,7 @@
                   placeholder="Content"></textarea>
     </div>
 
-    <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div class="grid gap-6 mb-6 lg:grid-cols-3">
         <div>
             <g:render template="/components/input_selected" model="[
                     label        : 'Location',
@@ -93,7 +93,7 @@
         <button type="submit"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">Submit
         </button>
-        <g:link controller="cmsNews" action="index" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">
+        <g:link controller="adminNews" action="index" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">
             Cancel
         </g:link>
     </div>
