@@ -20,8 +20,8 @@ class AdminNewsController {
     def show(Long id) {
         News news = newsService.getNewsById(id)
         if (!news){
-            flash.error = "News not found"
-            redirect(action: 'index')
+            flash.error = "News with ID ${id} not found"
+            redirect(controller: 'error', action: 'notFound')
             return
         }
         [news: news]

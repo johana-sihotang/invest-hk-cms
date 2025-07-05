@@ -28,18 +28,16 @@
     <div class="text-center lg:text-left max-w-xl">
         <h1 class="text-4xl lg:text-6xl font-bold text-red-600 mb-4">Oops! Page Not Found (404)</h1>
 
-        <p class="text-lg text-gray-600 mb-6">
-            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-        </p>
-
+        <p class="text-gray-700 text-lg mb-4">${flash.error ?: 'The page you are looking for could not be found.'}</p>
         <p class="text-sm text-gray-500 italic mb-6">
             Path: ${request.forwardURI}
         </p>
-
-        <a href="/admin"
-           class="inline-block px-6 py-3 bg-red-600 w-24 hover:bg-red-700 text-white text-lg font-medium rounded transition">
-            Back
+        <a href="javascript:history.back()"
+           class="inline-block mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-lg font-medium rounded transition">
+            ← Back to Previous Page
         </a>
+
+
     </div>
 
 

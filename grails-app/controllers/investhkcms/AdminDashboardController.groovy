@@ -10,17 +10,6 @@ class AdminDashboardController {
         NewsService newsService
 
         @Secured(['ROLE_ADMIN'])
-        def show(Long id) {
-            News news = newsService.getNewsById(id)
-            if (!news) {
-                flash.error = "News not found"
-                redirect(action: 'index')
-                return
-            }
-            [news: news]
-        }
-
-        @Secured(['ROLE_ADMIN'])
         def create() {
             def location = Location.list(sort: 'name', order: 'asc')
             def contentType = ContentType.list(sort: 'id', order: 'asc')
