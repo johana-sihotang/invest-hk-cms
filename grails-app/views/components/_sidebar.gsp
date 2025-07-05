@@ -12,10 +12,10 @@
 
             </li>
             <li>
-                <g:link controller="adminDashboard" action="create"
-                        class="flex items-center p-2 rounded-lg group ${controllerName == 'adminDashboard' && actionName == 'create' ? 'bg-slate-900 text-white' : 'text-gray-900 hover:bg-gray-300'}">
+                <g:link controller="adminHomepage" action="index"
+                        class="flex items-center p-2 rounded-lg group ${controllerName == 'adminHomepage' && actionName == 'index' ? 'bg-slate-900 text-white' : 'text-gray-900 hover:bg-gray-300'}">
 
-                    <i class="bi bi-house-door shrink-0 transition duration-75 text-2xl ${controllerName == 'adminDashboard' && actionName == 'create' ? 'text-white' : 'text-gray-500 group-hover:text-gray-900'}"></i>
+                    <i class="bi bi-house-door shrink-0 transition duration-75 text-2xl ${controllerName == 'adminHomepage' && actionName == 'index' ? 'text-white' : 'text-gray-500 group-hover:text-gray-900'}"></i>
 
                     <span class="ms-3">Home</span>
                 </g:link>

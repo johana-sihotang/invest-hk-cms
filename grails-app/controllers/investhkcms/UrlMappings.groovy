@@ -2,10 +2,16 @@ package investhkcms
 
 class UrlMappings {
     static mappings = {
+        "/$controller/$action?/$id?(.$format)?"{
+            constraints {
+                // apply constraints here
+            }
+        }
         group "/admin", {
             "/"(controller: 'admin', action: 'getAllAdmins')
 
-            "/dashboard/create"(controller: 'adminDashboard', action: 'create')
+            "/homepage/"(controller: 'adminHomepage', action: 'index')
+            "/homepage/save"(controller: 'adminHomepage', action: 'save')
 
             "/article"(controller: 'adminNews', action: 'index')
             "/article/create"(controller: 'adminNews', action: 'createNews')
@@ -49,10 +55,5 @@ class UrlMappings {
         "500"(view: '/error')
         "404"(controller: 'error', action: 'notFound')
 
-        "/$controller/$action?/$id?(.$format)?"{
-            constraints {
-                // apply constraints here
-            }
-        }
     }
 }

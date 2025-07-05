@@ -1,37 +1,39 @@
 package investhkcms
 
 import grails.plugin.springsecurity.annotation.Secured
-import models.request.CreateNewsRequest
+import models.request.HomepageConfigRequest
 
-class AdminDashboardController {
-    class AdminNewsController {
-        static layout = "cms-layout"
+class AdminHomepageController {
+    static layout = "cms-layout"
 
-        NewsService newsService
+    AdminHomepageService adminHomepageService
 
-        @Secured(['ROLE_ADMIN'])
-        def create() {
-            def location = Location.list(sort: 'name', order: 'asc')
-            def contentType = ContentType.list(sort: 'id', order: 'asc')
-            def industry = Industry.list(sort: 'name', order: 'asc')
-            [news: new News(), locations: location, contentType: contentType, industries: industry]
+    @Secured(['ROLE_ADMIN'])
+    def index() {
+        def config = HomepageConfig.first() ?: new HomepageConfig(bannerSourceType: "news").save()
+        def startItems = StartSectionItem.list(sort: "position")
+        def sliders = HomepageSlider.list()
+        def newsList = News.list(sort: 'title')
+
+        [config: config, startItems: startItems, sliders: sliders, newsList: newsList]
+    }
+
+    @Secured(['ROLE_ADMIN'])
+    def save(HomepageConfigRequest request) {
+        if (!request.validate()) {
+            respond request.errors, view: 'index'
+            return
         }
 
-        @Secured(['ROLE_ADMIN'])
-        def save(CreateNewsRequest request) {
-            if (!request.validate()) {
-                respond request.errors, view: 'createNews'
-                return
-            }
-
-            try {
-                newsService.handleNewsCreation(request)
-                flash.success = "News created successfully"
-                redirect(action: 'index')
-            } catch (Exception e) {
-                flash.error = e.message
-                respond request.errors, view: 'createNews', model: [request: request]
-            }
+        try {
+            adminHomepageService.saveHomepageConfig(request)
+            flash.success = "Homepage config saved successfully"
+            redirect(action: 'save')
+        } catch (Exception e) {
+            flash.error = "Error saving homepage config: ${e.message}"
+            respond request.errors, view: 'index'
         }
     }
+
+
 }

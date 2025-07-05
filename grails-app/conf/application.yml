@@ -119,8 +119,7 @@ grails:
             access: [ 'ROLE_ADMIN' ]
           - pattern: '/**'
             access: [ 'permitAll']
-server:
-  port: 8003
+
 
 
 

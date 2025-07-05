@@ -1,24 +1,25 @@
-const imageInput = document.getElementById("imageFile");
-const preview = document.getElementById("imagePreview");
-const previewArea = document.getElementById("previewArea");
-const uploadText = document.getElementById("uploadText");
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('input[type="file"][accept*="image"]').forEach(function (input) {
+        input.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (!file) return;
 
-imageInput.addEventListener("change", function () {
-    const file = this.files[0];
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const inputId = input.id; // e.g., "startImages[0]" or "sliderImages[0]"
+                const previewImg = document.getElementById(`imagePreview-${inputId}`);
+                const previewArea = document.getElementById(`previewArea-${inputId}`);
 
-    if (file) {
-        const reader = new FileReader();
+                if (previewImg) {
+                    previewImg.src = e.target.result;
+                    previewImg.classList.remove('hidden');
+                }
 
-        reader.onload = function (e) {
-            preview.src = e.target.result;
-            preview.classList.remove("hidden");
-            previewArea.classList.add("hidden");
-        };
-
-        reader.readAsDataURL(file);
-    } else {
-        preview.src = "";
-        preview.classList.add("hidden");
-        previewArea.classList.remove("hidden");
-    }
+                if (previewArea) {
+                    previewArea.classList.add('hidden');
+                }
+            };
+            reader.readAsDataURL(file);
+        });
+    });
 });

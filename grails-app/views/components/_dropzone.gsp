@@ -1,29 +1,28 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%-- Param: imageUrl = nilai gambar jika ada (optional) --%>
+<%-- Param: imageUrl, fieldName --%>
 <% def imageUrl = imageUrl ?: '' %>
+<% def fieldName = fieldName ?: 'imageFile' %>
 
 <div class="w-full">
-    <label for="imageFile" class="block mb-2 text-sm font-medium text-gray-900">Image</label>
+    <label for="${fieldName}" class="block mb-2 text-sm font-medium text-gray-900">Upload File</label>
 
-    <label for="imageFile"
+    <label for="${fieldName}"
            class="flex flex-col items-center justify-center w-full h-48 md:h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition relative overflow-hidden">
 
-        <div id="previewArea" class="flex flex-col items-center justify-center pt-5 pb-6 <%= imageUrl ? 'hidden' : '' %>">
+        <div id="previewArea-${fieldName}" class="flex flex-col items-center justify-center pt-5 pb-6 <%= imageUrl ? 'hidden' : '' %>">
             <svg class="w-8 h-8 mb-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
                  viewBox="0 0 20 16">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5A5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
             </svg>
-            <p id="uploadText" class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+            <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
             <p class="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
         </div>
 
-        <img id="imagePreview"
-             src="${imageUrl ?: ''}"
+        <img id="imagePreview-${fieldName}"
+             src="${imageUrl}"
              alt="Preview"
              class="absolute object-contain w-full h-full ${imageUrl ? '' : 'hidden'} rounded-lg" />
 
-
-        <input id="imageFile" name="imageFile" type="file" accept="image/*" class="hidden"/>
+        <input id="${fieldName}" name="${fieldName}" type="file" accept="image/*" class="hidden"/>
     </label>
 </div>
