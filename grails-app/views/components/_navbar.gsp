@@ -20,10 +20,10 @@
             <cu:currentAdmin>
                 <div class="px-4 py-3">
                     <span class="block text-sm text-gray-900">
-                        ${it.name ?: 'Anonymous'}
+                        ${it.username ?: 'Anonymous'}
                     </span>
                     <span class="block text-sm text-gray-500 truncate">
-                        ${it.email ?: 'name@flowbite.com'}
+                        ${it.email ?: 'unknown'}
                     </span>
                 </div>
             </cu:currentAdmin>

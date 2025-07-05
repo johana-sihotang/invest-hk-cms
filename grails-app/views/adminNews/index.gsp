@@ -28,7 +28,7 @@
                 </td>
                 <td class="w-1/5 px-4 py-4">${item.location}</td>
                 <td class="w-1/5 px-6 py-4">${item.contentType?.name}</td>
-                <td class="w-1/5 px-6 py-4">${item.author}</td>
+                <td class="w-1/5 px-6 py-4">${item.author?.username}</td>
                 <td class="w-1/5 px-6 py-4">
                     <g:formatDate date="${item.publicationDate}" format="dd MMM yyyy" />
                 </td>
