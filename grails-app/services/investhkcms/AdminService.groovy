@@ -10,8 +10,7 @@ import models.response.AdminResponse
 import org.springframework.dao.DataIntegrityViolationException
 
 import javax.persistence.EntityNotFoundException
-import javax.transaction.Status
-import java.nio.file.FileAlreadyExistsException
+import models.enums.Status
 
 @Transactional
 class AdminService {
@@ -60,6 +59,7 @@ class AdminService {
     @Transactional
     def registerAdmin(AdminRegisterRequest request){
         try{
+            log.debug("Registering admin with status: '${request.status}'")
             Status adminStatus = Status.fromValue(request.status as String)
             if (adminStatus == null) {
                 throw new InvalidDataException("Invalid status value provided")
@@ -111,7 +111,7 @@ class AdminService {
 
             admin.delete(flush: true)
         } catch (DataIntegrityViolationException e) {
-            throw new InvalidDataException("Admin  cannot be deleted due to existing references")
+            throw new InvalidDataException("Admin cannot be deleted due to existing references")
         } catch (Exception e) {
             throw new RuntimeException("Admin deletion failed due to server error")
         }

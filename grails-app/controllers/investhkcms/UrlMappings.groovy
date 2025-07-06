@@ -9,6 +9,7 @@ class UrlMappings {
         }
         group "/admin", {
             "/"(controller: 'admin', action: 'getAllAdmins')
+            "/register"(controller: 'admin', action: 'register')
 
             "/homepage/"(controller: 'adminHomepage', action: 'index')
             "/homepage/save"(controller: 'adminHomepage', action: 'save')
