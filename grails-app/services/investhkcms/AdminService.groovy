@@ -55,6 +55,7 @@ class AdminService {
         return  AdminAuthResponse
     }
 
+
     @Secured(['ROLE_ADMIN'])
     @Transactional
     def registerAdmin(AdminRegisterRequest request){
