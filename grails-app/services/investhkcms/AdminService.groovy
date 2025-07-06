@@ -10,8 +10,7 @@ import models.response.AdminResponse
 import org.springframework.dao.DataIntegrityViolationException
 
 import javax.persistence.EntityNotFoundException
-import javax.transaction.Status
-import java.nio.file.FileAlreadyExistsException
+import models.enums.Status
 
 @Transactional
 class AdminService {
@@ -55,6 +54,7 @@ class AdminService {
         }
         return  AdminAuthResponse
     }
+
 
     @Secured(['ROLE_ADMIN'])
     @Transactional

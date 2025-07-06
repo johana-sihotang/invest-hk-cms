@@ -6,7 +6,10 @@
     <title>Admin | CMS</title>
 </head>
 <body >
-<h1 class="text-3xl font-bold text-start lg:text-center mb-5">Admin</h1>
+<div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold text-start lg:text-center mb-5">Admin</h1>
+    <g:render template="register"/>
+</div>
 <g:if test="${adminList}">
     <div class="relative overflow-x-auto border border-gray-100 sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500">
@@ -15,6 +18,7 @@
                 <th class="w-20 px-6 py-3">No</th>
                 <th class="w-2/5 px-6 py-3">Name</th>
                 <th class="w-1/5 px-6 py-3">Username</th>
+                <th class="w-1/5 px-6 py-3">Email</th>
                 <th class="w-1/5 px-6 py-3">Status</th>
                 <th class="w-2/6 px-6 py-3"><span class="sr-only">Action</span></th>
             </tr>
