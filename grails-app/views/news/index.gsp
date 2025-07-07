@@ -124,7 +124,7 @@
                                 <label class="label-field">Content Type</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
-                                <g:select name="contentType"
+                                <g:select name="contentType "
                                           from="${contentTypes}"
                                           optionKey="id"
                                           optionValue="name"

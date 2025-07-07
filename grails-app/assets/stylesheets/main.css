@@ -10263,6 +10263,7 @@ body.no-scroll {
 }
 .article {
     font-family: Outfit;
+    margin-top: 140px;
 }
 .article__container--header {
     margin: 0 80px 50px 80px;
@@ -10308,10 +10309,9 @@ body.no-scroll {
     margin: 0;
 }
 
-.article__container p {
+.article__container  {
     font-family: "Outfit", sans-serif;
-    font-weight: 220;
-
+    font-size: 20px;
     line-height: 150%;
 }
 .article__tags img {
@@ -10344,7 +10344,6 @@ body.no-scroll {
     line-height: 140%;
     border-radius: 80px;
     text-decoration: none;
-    text-transform: uppercase;
 }
 @media (max-width: 1000px) {
     .article__container--header {
@@ -10804,7 +10803,7 @@ body.no-scroll {
 }
 @media (min-width: 1400px) {
     .header__container{
-        max-width: 1320px;
+        max-width: 1595px;
     }
 }
 @media (min-width: 1200px) {
