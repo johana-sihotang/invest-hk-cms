@@ -13,9 +13,46 @@ class NewsService {
 
     SpringSecurityService springSecurityService
 
-    List<News> getAllNews() {
-        return News.list(short: "title")
+    List<News> getAllNews(Map params) {
+        params.max = Math.min(params.int('max') ?: 10, 100)
+        params.offset = params.int('offset') ?: 0
+        params.sort = params.sort ?: 'publicationDate'
+        params.order = params.order ?: 'desc'
+
+        def search = params.search?.trim()
+        def criteria = News.createCriteria()
+
+        return criteria.list(params) {
+            if (search) {
+                or {
+                    ilike('title', "%${search}%")
+                    ilike('subTitle', "%${search}%")
+                    author {
+                        ilike('username', "%${search}%")
+                    }
+                }
+            }
+        }
     }
+
+
+    int countSearchNews(Map params) {
+        def search = params.search?.trim()
+        def criteria = News.createCriteria()
+
+        return criteria.count {
+            if (search) {
+                or {
+                    ilike('title', "%${search}%")
+                    ilike('subTitle', "%${search}%")
+                    author {
+                        ilike('username', "%${search}%")
+                    }
+                }
+            }
+        }
+    }
+
 
     News getNewsById(Long id){
         return News.get(id)
@@ -118,6 +155,7 @@ class NewsService {
         def imagePath = "/uploads/news/${fileName}"
         createNews(request, imagePath)
     }
+
 
     @Transactional
     List<News> getFilteredNews(Map params) {
