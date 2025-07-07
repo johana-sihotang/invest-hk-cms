@@ -10,7 +10,11 @@ class UrlMappings {
         group "/admin", {
             "/"(controller: 'admin', action: 'getAllAdmins')
             "/register"(controller: 'admin', action: 'register')
-
+            "/$username/delete"(controller: 'admin', action: 'deleteAdmin') {
+                constraints {
+                    username(matches: /[\w.@-]+/)
+                }
+            }
             "/homepage/"(controller: 'adminHomepage', action: 'index')
             "/homepage/save"(controller: 'adminHomepage', action: 'save')
 

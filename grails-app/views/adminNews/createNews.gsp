@@ -4,11 +4,11 @@
   Date: 25/06/2025
   Time: 10:40
 --%>
-<div class ="justify-items-center">
+<div class ="container-item-center">
 
-<div class="container ">
+<div class="container-center">
 
-    <h1 class="text-3xl text-start lg:text-center font-bold mb-5">Create News</h1>
+    <h1 class="title">Create News</h1>
 
     <g:hasErrors bean="${news}">
         <div class="alert alert-danger">
@@ -21,30 +21,30 @@
     </g:hasErrors>
 
 <g:form controller="adminNews" action="save" method="POST" enctype="multipart/form-data">
-    <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div class="container-grid-two">
         <div>
-            <label for="article_title" class="block mb-2 text-sm font-medium text-gray-900">Title</label>
+            <label for="article_title" class="label-title">Title</label>
             <input name="title" type="text" id="article_title"
-                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                   class="input-title"
                    placeholder="Title" required/>
         </div>
 
         <div>
-            <label for="subTitle" class="block mb-2 text-sm font-medium text-gray-900">Sub Title</label>
+            <label for="subTitle" class="label-title">Sub Title</label>
             <input name="subTitle" type="text" id="subTitle"
-                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                   class="input-title"
                    placeholder="Sub Title" required/>
         </div>
     </div>
 
     <div class="my-6">
-        <label for="content" class="block mb-2 text-sm font-medium text-gray-900">Content</label>
+        <label for="content" class="label-title">Content</label>
         <textarea name="content" id="content" rows="4"
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 min-h-42 w-full"
+                  class="input-title"
                   placeholder="Content"></textarea>
     </div>
 
-    <div class="grid gap-6 mb-6 lg:grid-cols-3">
+    <div class="container-grid-three">
         <div>
             <g:render template="/components/input_selected" model="[
                     label        : 'Location',
@@ -82,18 +82,18 @@
     <div class="flex gap-6 flex-col">
         <g:render template="/components/dropzone"/>
         <div>
-            <label for="imageCaption" class="block mb-2 text-sm font-medium text-gray-900">Image Caption</label>
+            <label for="imageCaption" class="label-title">Image Caption</label>
             <input name="imageCaption" type="text" id="imageCaption"
-                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                   class="input-title"
                    placeholder="Image Caption" required/>
         </div>
     </div>
     </div>
     <div class="flex gap-5">
         <button type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">Submit
+                class="btn-submit">Submit
         </button>
-        <g:link controller="adminNews" action="index" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center">
+        <g:link controller="adminNews" action="index" class="btn-cancel">
             Cancel
         </g:link>
     </div>

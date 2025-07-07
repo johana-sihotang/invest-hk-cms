@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title-add-btn{
+    @apply flex justify-between;
+}
+.title {
+   @apply text-3xl font-bold text-start mb-5;
+}
+.container_table{
+    @apply relative overflow-x-auto border border-gray-100 sm:rounded-lg
+}
+.container-item-center{
+    @apply justify-items-center mb-5
+}
+.table{
+  @apply w-full text-sm text-left text-gray-500
+}
+.table-head{
+    @apply text-xs text-gray-700 uppercase bg-gray-50
+}
+.table-head-cell-no{
+    @apply w-20 px-6 py-3
+}
+.table-head-cell-name{
+    @apply w-2/6 px-6 py-3
+}
+.table-head-cell{
+    @apply w-1/6 px-6 py-3
+}
+.table-row{
+    @apply bg-white border-b
+}
+.table-data{
+    @apply font-medium text-gray-900 whitespace-nowrap
+}
+.status-active{
+    @apply inline-flex items-center gap-1 text-green-600
+}
+.status-inactive{
+    @apply inline-flex items-center gap-1 text-red-600
+}
+.container_action{
+   @apply px-6 py-4 text-right flex gap-3
+}
+.btn-add{
+    @apply inline mb-5 px-5 py-2.5 text-sm font-medium text-white text-center bg-[#d7271d] rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300
+}
+.container_modal{
+    @apply hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[999] justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full
+}
+.btn-delete {
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-red-600
+    bg-white border border-red-300 rounded-md shadow-sm
+    hover:bg-red-50 hover:text-red-800
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400
+    transition;
+}
+
+.btn-edit {
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-slate-600
+    bg-white border border-slate-300 rounded-md shadow-sm
+    hover:bg-slate-50 hover:text-slate-800
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400
+    transition;
+}
+
+.btn-show {
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-emerald-600
+    bg-white border border-emerald-300 rounded-md shadow-sm
+    hover:bg-emerald-50 hover:text-emerald-800
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
+    transition;
+}
+
+.btn-submit {
+   @apply text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center
+}
+
+.btn-cancel {
+    @apply text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center
+}
+
+.container-center{
+    @apply container lg:w-2/3
+}
+
+.container-grid-two{
+    @apply grid gap-6 mb-6 md:grid-cols-2
+}
+
+.container-grid-three{
+    @apply grid gap-6 mb-6 md:grid-cols-3
+}
+
+.label-title{
+    @apply block mb-2 text-sm font-medium text-gray-900
+}
+
+.input-title{
+   @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+}

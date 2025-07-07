@@ -86,8 +86,10 @@ class AdminService {
             throw new InvalidDataException('Invalid data provided')
         } catch (AlreadyExistsException e) {
             log.error(e.getMessage(), e)
+            throw e
         } catch (InvalidDataException e) {
             log.error(e.getMessage(), e)
+            throw e
         } catch (Exception e) {
             log.error(e.getMessage(), e)
             throw new RuntimeException("Registration failed due to server error.")

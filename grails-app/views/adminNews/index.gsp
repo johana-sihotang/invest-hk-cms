@@ -2,7 +2,7 @@
 
 <div class="flex justify-between items-center">
     <g:link controller="adminNews" action="createNews"
-            class="inline-block mb-5 px-5 py-2.5 text-sm font-medium text-white text-center bg-[#d7271d] rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+            class="btn-add">
         Add News
     </g:link>
 
@@ -57,32 +57,29 @@
                 </td>
             <td class="px-6 py-4">
                 <div class="flex gap-2">
-                    <g:link controller="adminNews" action="edit" id="${item.id}"
-                            class="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-slate-600 bg-white border border-slate-300 rounded-md shadow-sm hover:bg-slate-100 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 transition"
-                            aria-label="Edit news with ID ${item.id}" title="Edit">
-                        <i class="bi bi-pencil-square text-slate-700" aria-hidden="true"></i>
-                        <span class="sr-only">Edit</span>
-                    </g:link>
+                    <ui:actionButton
+                            icon="bi bi-pencil-square"
+                            type="edit"
+                            href="${createLink(controller: 'adminNews', action: 'edit', id: item.id)}"
+                            title="Edit"
+                            ariaLabel="Edit news" />
 
+                    <ui:actionButton
+                            icon="bi bi-eye-fill"
+                            type="show"
+                            href="${createLink(controller: 'adminNews', action: 'show', id: item.id)}"
+                            title="View"
+                            ariaLabel="View news" />
 
-                    <g:link controller="adminNews"
-                            action="delete"
-                            id="${item.id}"
-                            class="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-red-600 bg-white border border-red-300 rounded-md shadow-sm hover:bg-red-50 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transition delete-btn"
-                            data-message="Are you sure you want to delete this news?"
-                            data-url="${createLink(controller: 'adminNews', action: 'delete', id: item.id)}"
-                            aria-label="Delete news with ID ${item.id}" title="Delete">
-                        <i class="bi bi-trash3-fill text-red-600" aria-hidden="true"></i>
-                        <span class="sr-only">Delete</span>
-                    </g:link>
+                    <ui:actionButton
+                            icon="bi bi-trash3-fill"
+                            type="delete"
+                            href="${createLink(controller: 'adminNews', action: 'delete', id: item.id)}"
+                            title="Delete"
+                            ariaLabel="Delete news"
+                            username="${item.id}"
+                            message="Are you sure you want to delete this?" />
 
-
-                    <g:link controller="adminNews" action="show" id="${item.id}"
-                            class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700"
-                            aria-label="View details of news with ID ${item.id}" title="View Detail">
-                        <i class="bi bi-eye-fill text-white" aria-hidden="true"></i>
-                        <span class="sr-only">View Detail</span>
-                    </g:link>
                 </div>
             </td>
         </tr>

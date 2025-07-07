@@ -4,17 +4,17 @@
   Date: 28/06/2025
   Time: 18:18
 --%>
-<h1 class="text-3xl font-bold text-start lg:text-center mb-5">Contact Us</h1>
+<h1 class="title">Contact Us</h1>
 <g:if test="${contactUs}">
-    <div class="relative overflow-x-auto border border-gray-100 sm:rounded-lg">
-        <table class="w-full text-sm text-left text-gray-500">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+    <div class="container_table">
+        <table class="table">
+            <thead class="table-head">
             <tr>
-                <th class="w-2/5 px-6 py-3">Name</th>
-                <th class="w-1/5 px-6 py-3">Email</th>
-                <th class="w-1/5 px-6 py-3">Tel</th>
-                <th class="w-1/5 px-6 py-3">Date Published</th>
-                <th class="w-2/6 px-6 py-3"><span class="sr-only">Action</span></th>
+                <th class="table-head-cell-name">Name</th>
+                <th class="table-head-cell">Email</th>
+                <th class="table-head-cell">Tel</th>
+                <th class="table-head-cell">Date Published</th>
+                <th class="table-head-cell"><span class="sr-only">Action</span></th>
             </tr>
             </thead>
             <tbody>
@@ -29,6 +29,21 @@
                         <g:formatDate date="${item.dateCreated}" format="dd MMM yyyy" />
                     </td>
                     <td class="px-6 py-4 text-right flex gap-3">
+                        <ui:actionButton
+                                icon="bi bi-eye-fill"
+                                type="show"
+                                href="${createLink(controller: 'adminNews', action: 'show', id: item.id)}"
+                                title="View"
+                                ariaLabel="View news" />
+
+                        <ui:actionButton
+                                icon="bi bi-trash3-fill"
+                                type="delete"
+                                href="${createLink(controller: 'adminNews', action: 'delete', id: item.id)}"
+                                title="Delete"
+                                ariaLabel="Delete news"
+                                username="${item.id}"
+                                message="Are you sure you want to delete this?" />
                         <button
                                 type="button"
                                 class="delete-btn inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
