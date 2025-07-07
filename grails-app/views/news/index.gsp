@@ -108,14 +108,15 @@
                             <div class="text-xl">
                                 <label class="label-field">Publication Date</label>
                             </div>
-                            <div class="border-2 border-solid text-xl ">
-                                <select name="dateRange" class="form-select">
+                            <div class="border-2 border-solid text-xl">
+                                <select name="dateRange" class="form-select" >
                                     <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
                                     <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
                                     <option value="past1month" ${params.dateRange == 'past1month' ? 'selected' : ''}>Past 1 Month</option>
                                     <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
                                     <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
                                 </select>
+                                <i class="fa-solid fa-caret-down" style="color:red"></i>
                             </div>
 
                         </div>
@@ -124,13 +125,13 @@
                                 <label class="label-field">Content Type</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
-                                <g:select name="contentType "
+                                <g:select name="contentType" class="form-select"
                                           from="${contentTypes}"
                                           optionKey="id"
                                           optionValue="name"
                                           noSelection="['':'All Content Types']"
                                           value="${params.contentType}"/>
-
+                                <i class="fa-solid fa-caret-down" style="color:red"></i>
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -138,12 +139,13 @@
                                 <label class="label-field">Location</label>
                             </div>
                             <div class="border-2 border-solid text-xl ">
-                                <g:select name="location"
+                                <g:select name="location" class="form-select"
                                           from="${locations}"
                                           optionKey="id"
                                           optionValue="name"
                                           noSelection="['':'All Locations']"
                                           value="${params.location}"/>
+                                <i class="fa-solid fa-caret-down" style="color:red"></i>
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -151,12 +153,13 @@
                                 <label class="label-field">Industry</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
-                                <g:select name="industry"
+                                <g:select name="industry" class="form-select"
                                           from="${industries}"
                                           optionKey="id"
                                           optionValue="name"
                                           noSelection="['':'All Industries']"
                                           value="${params.industry}"/>
+                                <i class="fa-solid fa-caret-down" style="color:red"></i>
                             </div>
                         </div>
                     </div>
@@ -207,5 +210,5 @@
     </g:each>
 </g:if>
 <g:else>
-    <p>No data found</p>
+    <p></p>
 </g:else>
