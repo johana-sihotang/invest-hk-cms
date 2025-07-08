@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html,body{
+    @apply font-[Outfit] min-h-screen
+}
+
 .title-add-btn{
     @apply flex justify-between;
 }
@@ -29,6 +33,12 @@
 .table-head-cell{
     @apply w-1/6 px-6 py-3
 }
+.table-head-cell-not-found{
+    @apply w-10 px-6 py-4
+}
+.table-head-cell-action{
+   @apply px-6 py-4 text-right flex gap-3
+}
 .table-row{
     @apply bg-white border-b
 }
@@ -43,6 +53,9 @@
 }
 .container_action{
    @apply px-6 py-4 text-right flex gap-3
+}
+.container-add-search{
+    @apply flex justify-between items-center
 }
 .btn-add{
     @apply inline mb-5 px-5 py-2.5 text-sm font-medium text-white text-center bg-[#d7271d] rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300
@@ -81,6 +94,9 @@
 .btn-cancel {
     @apply text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center
 }
+.btn-search{
+    @apply px-4 py-2 bg-red-600 text-white font-bold hover:bg-red-700
+}
 
 .container-center{
     @apply container lg:w-2/3
@@ -100,4 +116,26 @@
 
 .input-title{
    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+}
+
+.search {
+    @apply flex mb-5;
+}
+
+.input-search {
+    @apply px-4 py-2 border border-gray-300 border-r-0
+    rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-200 w-full;
+}
+
+.btn-search {
+    @apply px-4 py-2 bg-red-600 text-white border border-red-600
+    rounded-r-lg hover:bg-red-700 transition;
+}
+
+.pagination {
+    @apply text-xl flex gap-2 py-2
+}
+
+.step{
+    @apply text-slate-400
 }

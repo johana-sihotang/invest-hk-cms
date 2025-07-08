@@ -11,9 +11,9 @@ class ErrorController {
         boolean isAdminPage = fullPath.contains("/admin")
 
         if (isAdminPage) {
-            render(view: "/notFound_admin")
+            render(view: "/notFoundAdmin")
         } else {
-            render(view: "/notFound_user")
+            render(view: "/notFoundUser")
         }
     }
 }

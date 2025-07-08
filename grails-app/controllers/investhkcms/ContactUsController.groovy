@@ -11,7 +11,7 @@ class ContactUsController {
     def index() {
         def continents = Continent.list(sort: 'name', order: 'asc')
         def locations = Location.list(sort: 'name', order: 'asc')
-        render view: 'contact_us', layout: 'main', model: [
+        render view: 'contactUs', layout: 'main', model: [
                 contactUs: new ContactUs(),
                 continent: continents,
                 locations: locations

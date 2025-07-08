@@ -10,52 +10,48 @@
         <table class="table">
             <thead class="table-head">
             <tr>
-                <th class="table-head-cell-name">Name</th>
-                <th class="table-head-cell">Email</th>
-                <th class="table-head-cell">Tel</th>
-                <th class="table-head-cell">Date Published</th>
+                <th class="table-head-cell-name">
+                    <ui:sortableColumn label="Name" sort="name" />
+                </th>
+                <th class="table-head-cell">
+                    <ui:sortableColumn label="Email" sort="email" />
+                </th>
+                <th class="table-head-cell">
+                    <ui:sortableColumn label="Tel" sort="tel" />
+                </th>
+                <th class="table-head-cell">
+                    <ui:sortableColumn label="Date Published" sort="dateCreated"/>
+                </th>
                 <th class="table-head-cell"><span class="sr-only">Action</span></th>
             </tr>
             </thead>
             <tbody>
             <g:each in="${contactUs}" var="item">
                 <tr class="bg-white border-b">
-                    <td class="w-2/5 px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    <td class="table-head-cell-name">
                         ${item.firstName} ${item.lastName}
                     </td>
-                    <td class="w-1/5 px-6 py-4">${item.email}</td>
-                    <td class="w-1/5 px-6 py-4">${item.tel}</td>
-                    <td class="w-1/5 px-6 py-4">
+                    <td class="table-head-cell">${item.email}</td>
+                    <td class="table-head-cell">${item.tel}</td>
+                    <td class="table-head-cell">
                         <g:formatDate date="${item.dateCreated}" format="dd MMM yyyy" />
                     </td>
-                    <td class="px-6 py-4 text-right flex gap-3">
+                    <td class="table-head-cell-action">
                         <ui:actionButton
                                 icon="bi bi-eye-fill"
                                 type="show"
-                                href="${createLink(controller: 'adminNews', action: 'show', id: item.id)}"
+                                href="${createLink(controller: 'adminContactUs', action: 'show', id: item.id)}"
                                 title="View"
-                                ariaLabel="View news" />
+                                ariaLabel="View Contact Us" />
 
                         <ui:actionButton
                                 icon="bi bi-trash3-fill"
                                 type="delete"
-                                href="${createLink(controller: 'adminNews', action: 'delete', id: item.id)}"
+                                href="${createLink(controller: 'adminContactUs', action: 'delete', id: item.id)}"
                                 title="Delete"
-                                ariaLabel="Delete news"
+                                ariaLabel="Delete Contact Us"
                                 username="${item.id}"
                                 message="Are you sure you want to delete this?" />
-                        <button
-                                type="button"
-                                class="delete-btn inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
-                                data-url="${createLink(controller: 'adminContactUs', action: 'delete', id: item.id)}"
-                                data-message="Are you sure you want to delete this message?">
-                            <i class="bi bi-trash3-fill text-white"></i>
-                        </button>
-                        
-                        <g:link controller="adminContactUs" action="show" id="${item.id}" class="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-emerald-600 rounded hover:bg-emerald-700">
-                            <i class="bi bi-eye-fill mr-2 text-white"></i>
-                            Detail
-                        </g:link>
                     </td>
                 </tr>
             </g:each>
@@ -64,20 +60,20 @@
     </div>
 </g:if>
 <g:else>
-    <div class="relative overflow-x-auto border border-gray-100 sm:rounded-lg">
-        <table class="w-full text-sm text-left text-gray-500">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+    <div class="container_table">
+        <table class="table">
+            <thead class="table-head">
             <tr>
-                <th class="w-2/5 px-6 py-3">Name</th>
-                <th class="w-1/5 px-6 py-3">Email</th>
-                <th class="w-1/5 px-6 py-3">Tel</th>
-                <th class="w-1/5 px-6 py-3">Date Published</th>
-                <th class="w-2/6 px-6 py-3"><span class="sr-only">Action</span></th>
+                <th class="table-head-cell-name">Name</th>
+                <th class="table-head-cell">Email</th>
+                <th class="table-head-cell">Tel</th>
+                <th class="table-head-cell">Date Published</th>
+                <th class="table-head-cell"><span class="sr-only">Action</span></th>
             </tr>
             </thead>
             <tbody>
             <tr class="bg-white border-b">
-                <td class="w-10 px-6 py-4" colspan="6">No Data Found</td>
+                <td class="table-head-cell-not-found" colspan="6">No Data Found</td>
             </tr>
             </tbody>
         </table>
