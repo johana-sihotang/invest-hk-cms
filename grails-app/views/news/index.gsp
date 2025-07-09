@@ -74,6 +74,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 </div>
@@ -110,6 +111,7 @@
                                 <label class="label-field">Publication Date</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
+                                <div class="custom-dropdown">
                                 <select name="dateRange" class="form-select" >
                                     <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
                                     <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
@@ -117,7 +119,7 @@
                                     <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
                                     <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
                                 </select>
-                                <i class="fa-solid fa-caret-down" style="color:red"></i>
+                                </div>
                             </div>
 
                         </div>
@@ -125,15 +127,15 @@
                             <div class="text-xl">
                                 <label class="label-field">Content Type</label>
                             </div>
-
-                            <div class="border-2 border-solid text-xl">
+                            <div class="border-2 border-solid text-small">
+                                <div class="custom-dropdown">
                                 <g:select name="contentType" class="form-select"
                                           from="${contentTypes}"
                                           optionKey="id"
                                           optionValue="name"
                                           noSelection="['':'All Content Types']"
                                           value="${params.contentType}"/>
-                                <i class="fa-solid fa-caret-down" style="color:red"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -141,18 +143,25 @@
                                 <label class="label-field">Location</label>
                             </div>
                             <div class="border-2 border-solid text-xl ">
-                                <div class="dropdown">
-                                    <button type ="button" onclick="myFunction()" class="dropbtn">List</button>
-                                    <div id="myDropdown" class="dropdown-content">
-                                        <ul>
-                                            <g:each in="${locations}" var="location">
-                                                <li value="${location.name}">${location.name}</li>
-                                            </g:each>
-
-                                        </ul>
-                                    </div>
-
+                                <div class="custom-dropdown">
+                                    <g:select name="location" class="form-select"
+                                              from="${locations}"
+                                              optionKey="id"
+                                              optionValue="name"
+                                              noSelection="['':'All location']"
+                                              value="${params.Location}"/>
                                 </div>
+                                </div>
+%{--                                <div class="dropdown">--}%
+%{--                                    <button type ="button" onclick="myFunction()" class="dropbtn">List</button>--}%
+%{--                                    <div id="myDropdown" class="dropdown-content">--}%
+%{--                                        <ul>--}%
+%{--                                            <g:each in="${locations}" var="location">--}%
+%{--                                                <li value="${location.name}">${location.name}</li>--}%
+%{--                                            </g:each>--}%
+
+%{--                                        </ul>--}%
+%{--                                    </div>--}%
 
 
 %{--                                <g:select name="location" class="form-select"--}%
@@ -161,21 +170,20 @@
 %{--                                          optionValue="name"--}%
 %{--                                          noSelection="['':'All Locations']"--}%
 %{--                                          value="${params.location}"/>--}%
-                                <i class="fa-solid fa-caret-down" style="color:red"></i>
-                            </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="text-xl">
                                 <label class="label-field">Industry</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
-                                <g:select name="industry" class="form-select"
-                                          from="${industries}"
-                                          optionKey="id"
-                                          optionValue="name"
-                                          noSelection="['':'All Industries']"
-                                          value="${params.industry}"/>
-                                <i class="fa-solid fa-caret-down" style="color:red"></i>
+                                <div class="custom-dropdown">
+                                    <g:select name="industry" class="form-select"
+                                              from="${industries}"
+                                              optionKey="id"
+                                              optionValue="name"
+                                              noSelection="['':'All Industries']"
+                                              value="${params.industry}"/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -220,7 +228,50 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
+                    <g:link controller="news" action="show" id="${news.id}">
+                        <span class="cardNews__thumbnail--link" aria-label="${news.title.encodeAsHTML()}"></span>
+                    </g:link>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">
+                            <g:formatDate date="${news.publicationDate}" format="dd.MM.yyyy"/></div>
+                        <div class="cardNews__tags">
+                            <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                        </div>
+                    </div>
+                    <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+            <div class="cardNews">
+                <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
+                    <g:link controller="news" action="show" id="${news.id}">
+                        <span class="cardNews__thumbnail--link" aria-label="${news.title.encodeAsHTML()}"></span>
+                    </g:link>
+                </div>
+                <div class="cardNews__content">
+                    <div class="cardNews__info">
+                        <div class="cardNews__date">
+                            <g:formatDate date="${news.publicationDate}" format="dd.MM.yyyy"/></div>
+                        <div class="cardNews__tags">
+                            <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                        </div>
+                    </div>
+                    <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 </section>
 
     </g:each>

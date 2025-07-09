@@ -9,7 +9,7 @@ class BootStrap {
         def continentMapping = [
                 'Africa': [
                         "Angola", "Republic of Côte d'Ivoire", "Gabon", "South Africa", "Mauritania",
-                        "Republic of South Sudan", "Central African Republic", "Mauritius", "Tanzania",
+                        "Republic of South Sudan", "Central African Republic     ", "Mauritius", "Tanzania",
                         "Uganda", "Comoros", "Rwanda", "Liberia", "Benin", "Congo Republic",
                         "Cameroon", "Guinea-Bissau", "Zimbabwe", "Tunisia", "Somalia", "Senegal",
                         "Equatorial", "Sierra Leone", "Guinea", "Burundi", "Ethiopia", "Chad",
@@ -27,7 +27,7 @@ class BootStrap {
                 ],
                 'Europe': [
                         "Azerbaijan", "Finland", "Norway", "Russia", "Hungary", "Luxembourg", "Czech Republic",
-                        "Estonia", "Portugal", "Republic of North Macedonia", "Romania", "Greece", "Latvia",
+                        "Estonia", "Portugal", "Republic of North", "Romania", "Greece", "Latvia",
                         "Belgium", "Moldova", "Spain", "United Kingdom", "Sweden", "France", "Italia",
                         "Bulgaria", "Austria", "Georgia", "Malta", "Turkey", "Slovenia", "Switzerland",
                         "Lithuania", "Germany", "Slovakia", "Croatia", "Cyprus", "Iceland",
@@ -40,7 +40,7 @@ class BootStrap {
                 'North & South America': [
                         "Anguilla", "United States", "French Guiana", "British Virgin Island", "Bermuda",
                         "Bouvet Island", "Costa Rica", "Venezuela", "Montserrat", "Guatemala", "Mexico",
-                        "Cayman Islands", "Ecuador", "Brazil", "Republic of Guatemala", "Caicos Islands",
+                        "Cayman Islands", "Ecuador", "Brazil", "Republic mala", "Caicos Islands",
                         "Paraguay", "Canada", "Chile", "Falkland Islands", "Uruguay", "Nicaragua", "Peru",
                         "Argentina", "Suriname", "El Salvador", "Panama", "Guyana", "Honduras", "Colombia",
                         "Belize", "South Georgia"
@@ -109,7 +109,7 @@ class BootStrap {
             if (Industry.count() == 0) {
                 [
                         "Business & Professional Services", "Consumer Products", "Financial Services",
-                        "Fintech", "Information & Communication Technology", "InvestHK news",
+                        "Fintech", "Information & Communication", "InvestHK news",
                         "Tourism & Hospitality", "Transport, Logistics & Industrials"
                 ].each { name ->
                     new Industry(name: name).save(flush: true, failOnError: true)

@@ -26,6 +26,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -44,5 +45,12 @@
 <asset:javascript src="alert.js"/>
 <asset:javascript src="continent_select.js"/>
 <asset:javascript src="slicker.js"/>
+<script>
+    $(document).ready(function () {
+        $('.js-select2').select2({
+            width: 'resolve'
+        });
+    });
+</script>
 </body>
 </html>
