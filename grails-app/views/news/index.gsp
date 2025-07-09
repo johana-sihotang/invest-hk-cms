@@ -1,3 +1,4 @@
+<%@ page import="investhkcms.News" %>
 <div class =container>
     <div class="flex-item">
         <div class="borderinfo ">
@@ -124,6 +125,7 @@
                             <div class="text-xl">
                                 <label class="label-field">Content Type</label>
                             </div>
+
                             <div class="border-2 border-solid text-xl">
                                 <g:select name="contentType" class="form-select"
                                           from="${contentTypes}"
@@ -139,12 +141,26 @@
                                 <label class="label-field">Location</label>
                             </div>
                             <div class="border-2 border-solid text-xl ">
-                                <g:select name="location" class="form-select"
-                                          from="${locations}"
-                                          optionKey="id"
-                                          optionValue="name"
-                                          noSelection="['':'All Locations']"
-                                          value="${params.location}"/>
+                                <div class="dropdown">
+                                    <button type ="button" onclick="myFunction()" class="dropbtn">List</button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <ul>
+                                            <g:each in="${locations}" var="location">
+                                                <li value="${location.name}">${location.name}</li>
+                                            </g:each>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+
+%{--                                <g:select name="location" class="form-select"--}%
+%{--                                          from="${locations}"--}%
+%{--                                          optionKey="id"--}%
+%{--                                          optionValue="name"--}%
+%{--                                          noSelection="['':'All Locations']"--}%
+%{--                                          value="${params.location}"/>--}%
                                 <i class="fa-solid fa-caret-down" style="color:red"></i>
                             </div>
                         </div>
@@ -194,19 +210,19 @@
                 </div>
                 <div class="cardNews__content">
                     <div class="cardNews__info">
-                        <div class="cardNews__date"><g:formatDate date="${news.publicationDate}"
-                                                                  format="dd.MM.yyyy"/></div>
+                        <div class="cardNews__date">
+                            <g:formatDate date="${news.publicationDate}" format="dd.MM.yyyy"/></div>
                         <div class="cardNews__tags">
                             <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
                         </div>
                     </div>
-
                     <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
     </g:each>
 </g:if>
 <g:else>

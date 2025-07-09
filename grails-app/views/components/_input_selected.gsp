@@ -30,42 +30,4 @@
         </g:each>
     </ul>
 </div>
-<script>
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id + '_dropdown');
-        dropdown.classList.toggle('hidden');
-    }
 
-    function filterDropdown(id) {
-        const input = document.getElementById(id + '_input');
-        const filter = input.value.toLowerCase();
-        const dropdown = document.getElementById(id + '_dropdown');
-        const options = dropdown.getElementsByTagName('li');
-
-        dropdown.classList.remove('hidden');
-
-        for (let i = 0; i < options.length; i++) {
-            const txtValue = options[i].textContent || options[i].innerText;
-            options[i].style.display = txtValue.toLowerCase().includes(filter) ? '' : 'none';
-        }
-    }
-
-    function selectDropdownOption(id, el) {
-        const input = document.getElementById(id + '_input');
-        const hidden = document.getElementById(id);
-        const dropdown = document.getElementById(id + '_dropdown');
-
-        input.value = el.textContent;
-        hidden.value = el.getAttribute('data-value');
-        dropdown.classList.add('hidden');
-    }
-
-    // Klik luar -> tutup dropdown
-    document.addEventListener('click', function (e) {
-        document.querySelectorAll('ul[id$="_dropdown"]').forEach(dropdown => {
-            if (!dropdown.parentElement.contains(e.target)) {
-                dropdown.classList.add('hidden');
-            }
-        });
-    });
-</script>

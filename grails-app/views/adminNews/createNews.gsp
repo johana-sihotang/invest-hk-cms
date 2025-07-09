@@ -4,7 +4,7 @@
   Date: 25/06/2025
   Time: 10:40
 --%>
-<div class ="justify-items-center bg-sky-400">
+<div class ="justify-items-center ">
 
 <div class="container w-1/2  ">
 
