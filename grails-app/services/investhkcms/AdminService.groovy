@@ -16,7 +16,7 @@ import models.enums.Status
 class AdminService {
 
     @Secured(['ROLE_ADMIN'])
-    List<AdminResponse> getAllAdmins() {
+    List<AdminResponse> getAllAdmins(Map params) {
         List<Admin> adminList = Admin.list()
         def adminResponse = []
 
@@ -31,6 +31,22 @@ class AdminService {
             adminResponse << new AdminResponse(adminData)
         }
         return adminResponse
+    }
+
+    private void applySearch(def query, Map params) {
+        def search = params.search?.trims()
+        if(!search) return
+        query.or{
+            ilike("title", "%${search}%")
+            ilike("username", "%${search}")
+            ilike("email", "%${search}%")
+        }
+    }
+
+    private void applySort(def query, Map params){
+        def sort = params.sort ?: "id"
+        def order =  params.order ?: "asc"
+        query.order(sort, order)
     }
 
     @Secured(['ROLE_ADMIN'])
@@ -59,7 +75,6 @@ class AdminService {
     @Secured(['ROLE_ADMIN'])
     @Transactional
     def registerAdmin(AdminRegisterRequest request){
-        try{
             log.debug("Registering admin with status: '${request.status}'")
             Status adminStatus = Status.fromValue(request.status as String)
             if (adminStatus == null) {
@@ -81,24 +96,10 @@ class AdminService {
             if(!admin.save(flus:true)) {
                 throw new InvalidDataException("Failed to save user: ${admin.errors}")
             }
-        } catch (DataIntegrityViolationException e){
-            log.error(e.getMessage(), e)
-            throw new InvalidDataException('Invalid data provided')
-        } catch (AlreadyExistsException e) {
-            log.error(e.getMessage(), e)
-            throw e
-        } catch (InvalidDataException e) {
-            log.error(e.getMessage(), e)
-            throw e
-        } catch (Exception e) {
-            log.error(e.getMessage(), e)
-            throw new RuntimeException("Registration failed due to server error.")
-        }
     }
 
     @Secured(['ROLE_ADMIN'])
     void deleteAdminByUsername(String username) {
-        try {
             Admin admin
 
             if (username != null && !username.isEmpty()) {
@@ -113,11 +114,7 @@ class AdminService {
             deleteAdminRoles(admin)
 
             admin.delete(flush: true)
-        } catch (DataIntegrityViolationException e) {
-            throw new InvalidDataException("Admin cannot be deleted due to existing references")
-        } catch (Exception e) {
-            throw new RuntimeException("Admin deletion failed due to server error")
-        }
+
     }
     private void deleteAdminRoles(Admin admin) {
         def adminRoles = AdminRole.findAllByAdmin(admin)
