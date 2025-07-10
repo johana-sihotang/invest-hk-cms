@@ -8,7 +8,7 @@ dataSource:
   dialect: org.hibernate.dialect.MySQL8Dialect
   username: root
   password: ""
-  url: jdbc:mysql://localhost:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
+  url: jdbc:mysql://127.0.0.1:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
   pooled: true
   jmxExport: true
 environments:
@@ -19,7 +19,7 @@ environments:
       dialect: org.hibernate.dialect.MySQL8Dialect
       username: admin
       password: admin123
-      url: jdbc:mysql://10.0.10.43:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
+      url: jdbc:mysql://127.0.0.1:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
   test:
     dataSource:
       dbCreate: update
@@ -27,7 +27,7 @@ environments:
       dialect: org.hibernate.dialect.MySQL8Dialect
       username: admin
       password: admin123
-      url: jdbc:mysql://10.0.10.43:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
+      url: jdbc:mysql://127.0.0.1:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
   production:
     dataSource:
       dbCreate: update
@@ -35,7 +35,7 @@ environments:
       dialect: org.hibernate.dialect.MySQL8Dialect
       username: admin
       password: admin123
-      url: jdbc:mysql://10.0.10.43:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
+      url: jdbc:mysql://127.0.0.1:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
       properties:
         jmxEnabled: true
         initialSize: 5
