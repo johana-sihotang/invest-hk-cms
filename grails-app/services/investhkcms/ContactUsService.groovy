@@ -6,11 +6,31 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class ContactUsService {
 
-    List<ContactUs> getAllContactUs(){
-       return ContactUs.list(short: 'title')
+    List<ContactUs> getAllContactUs(Map params){
+       return ContactUs.createCriteria().list {
+           applySearch(delegate, params)
+           applySort(delegate, params)
+       }
     }
     ContactUs getContactUsById(Long id){
         return ContactUs.get(id)
+    }
+
+    private void applySearch(def query, Map params){
+        def search = params.search?.trim()
+        if(!search) return
+        query.or{
+            ilike("firstName","%${search}%")
+            ilike("email","%${search}%")
+            ilike("tel","%${search}%")
+            ilike("dateCreated","%${search}%")
+        }
+    }
+
+    private void applySort(def query, Map params){
+        def sort =  params.sort ?: 'id'
+        def order = params.order ?: "asc"
+        query.order(sort, order)
     }
 
     List<Location> getLocationsByContinent(Long continentId) {

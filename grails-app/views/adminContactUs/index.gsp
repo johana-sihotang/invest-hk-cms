@@ -4,14 +4,27 @@
   Date: 28/06/2025
   Time: 18:18
 --%>
-<h1 class="title">Contact Us</h1>
+
+
+<div class="container-add-search">
+    <h1 class="title">Contact Us</h1>
+    <g:form controller="adminContactUs" action="index" method="get" class="search">
+        <label for="search" class="sr-only">Search News</label>
+        <input type="text" name="search" id="search" value="${ search ?: ''}" placeholder="Search"
+               class="input-search">
+        <button type="submit"
+                class="btn-search">
+            <i class="bi bi-search"></i>
+        </button>
+    </g:form>
+</div>
 <g:if test="${contactUs}">
     <div class="container_table">
         <table class="table">
             <thead class="table-head">
             <tr>
                 <th class="table-head-cell-name">
-                    <ui:sortableColumn label="Name" sort="name" />
+                    <ui:sortableColumn label="Name" sort="firstName" />
                 </th>
                 <th class="table-head-cell">
                     <ui:sortableColumn label="Email" sort="email" />

@@ -17,13 +17,12 @@ class NewsService {
         def criteria = News.createCriteria()
         return criteria.list {
             applySearch(delegate, params)
-            applySorting(delegate, params)
+            applySorting(delegate,params)
         }
     }
      private void applySearch(def query, Map params) {
          def search = params.search?.trim()
          if (!search) return
-
          query.or {
              ilike('title', "%${search}%")
              location{
@@ -35,12 +34,10 @@ class NewsService {
          }
      }
 
-    private void applySorting(def query, Map params) {
+     private void applySorting(def query, Map params) {
         def sort = params.sort ?: 'id'
         def order = params.order ?: 'asc'
-        if(sort) {
-            query.order(sort, order)
-        }
+        query.order(sort,order)
     }
 
     News getNewsById(Long id){

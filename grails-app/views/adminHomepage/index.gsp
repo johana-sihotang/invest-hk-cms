@@ -5,7 +5,7 @@
 
 <body>
 <div class="container">
-    <h1 class="text-3xl text-start md:text-center font-bold mb-5">Homepage</h1>
+    <h1 class="title">Update Homepage</h1>
 
     <g:hasErrors bean="${config}">
         <div class="alert alert-danger">
@@ -18,13 +18,13 @@
     </g:hasErrors>
 
     <g:form controller="adminHomepage" action="save" method="POST" enctype="multipart/form-data">
-        <h4 class="text-2xl font-bold mb-3">Section Slider Banner</h4>
+        <h4 class="section_title">Section Slider Banner</h4>
         <input type="hidden" name="bannerSourceType" value="news"/>
 
-        <div id="newsSelectionContainer" class="mb-6 space-y-4">
-            <div class="news-select-group flex items-center gap-2">
+        <div id="newsSelectionContainer" class="selection-container">
+            <div class="news-select-group selection-item">
                 <select name="selectedNewsIds"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+                        class="select-news">
                     <g:each in="${newsList}" var="news">
                         <option value="${news.id}">${news.title.encodeAsHTML()}</option>
                     </g:each>
@@ -33,22 +33,21 @@
             </div>
         </div>
 
-        <button type="button" id="addBannerBtn" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-4">
+        <button type="button" id="addBannerBtn" class="btn-add">
             + Add Banner
         </button>
 
-
         <!-- Start Section -->
-        <h4 class="text-2xl font-bold mb-3">Start Section Images & Captions</h4>
+        <h4 class="section_title">Start Section Images & Captions</h4>
 
         <div id="startSectionContainer" class="grid gap-6 mb-6 md:grid-cols-2">
         </div>
 
         <div id="startSectionTemplate" class="hidden">
             <div class="start-section-group">
-                <label class="block mb-2 text-sm font-medium text-gray-900">Caption</label>
-                <input name="startCaptions" type="text"
-                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                <label for="start" class="start-label">Caption</label>
+                <input id="start" name="startCaptions" type="text"
+                       class="start-input"
                        placeholder="Caption"/>
 
                 <g:render template="/components/dropzone"
@@ -57,7 +56,7 @@
         </div>
 
         <button type="button" id="addStartSectionBtn"
-                class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-4">
+                class="btn-add">
             + Add Start Section
         </button>
 
@@ -65,14 +64,14 @@
         <!-- Slider -->
         <h4 class="text-2xl font-bold mb-3">Slider Section</h4>
 
-        <!-- Container utama semua slider item -->
+        <!-- Container slider item -->
         <div id="slidersWrapper" class="space-y-6 mb-6">
-            <!-- Item slider akan ditambahkan melalui JS -->
+            <!-- Add item slider -->
         </div>
 
-        <!-- Tombol Add Slider -->
+        <!-- Add Slider -->
         <button type="button" id="addSliderBtn"
-                class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2">
+                class="btn-add">
             + Add Slider
         </button>
 

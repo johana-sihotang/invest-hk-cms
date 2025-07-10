@@ -139,3 +139,25 @@ html,body{
 .step{
     @apply text-slate-400
 }
+.container-layout{
+    @apply pt-32 ml-0 lg:ml-64 px-4
+}
+
+.section_title{
+    @apply text-2xl font-bold mb-3
+}
+.selection-container{
+    @apply mb-6 space-y-4
+}
+.selection-item{
+   @apply flex items-center gap-2
+}
+.select-news{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5
+}
+.start-section-label{
+   @apply block mb-2 text-sm font-medium text-gray-900
+}
+.start-input{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5
+}
