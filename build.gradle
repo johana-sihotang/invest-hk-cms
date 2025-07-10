@@ -70,6 +70,7 @@ dependencies {
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
     runtimeOnly "org.fusesource.jansi:jansi:1.18"
     runtimeOnly 'mysql:mysql-connector-java:8.0.33'
+    testImplementation "org.springframework.boot:spring-boot-starter-tomcat"
     testImplementation "io.micronaut:micronaut-inject-groovy"
     testImplementation "org.grails:grails-gorm-testing-support"
     testImplementation "org.grails:grails-web-testing-support"
@@ -107,17 +108,4 @@ assets {
     minifyJs = true
     minifyCss = true
     skipNonDigests = true
-}
-ext {
-    dockerTag = "grails-sample/${project.name}:${project.version}".toLowerCase()
-    dockerBuildDir = mkdir("${buildDir}/docker")
-}
-task prepareDocker(type: Copy, dependsOn: assemble) {
-    description = 'Copy files from src/main/docker and application jar to Docker temporal build directory'
-    group = 'Docker'
-
-    from 'src/main/docker'
-    from project.jar
-
-    into dockerBuildDir
 }
