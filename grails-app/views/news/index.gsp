@@ -111,7 +111,7 @@
                                 <label class="label-field">Publication Date</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
-                                <div class="custom-dropdown">
+                                <div class="custom-dropdown publicationDate">
                                 <select name="dateRange" class="form-select" >
                                     <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
                                     <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
@@ -128,7 +128,7 @@
                                 <label class="label-field">Content Type</label>
                             </div>
                             <div class="border-2 border-solid text-small">
-                                <div class="custom-dropdown">
+                                <div class="custom-dropdown contentType ">
                                 <g:select name="contentType" class="form-select"
                                           from="${contentTypes}"
                                           optionKey="id"
@@ -143,7 +143,7 @@
                                 <label class="label-field">Location</label>
                             </div>
                             <div class="border-2 border-solid text-xl ">
-                                <div class="custom-dropdown">
+                                <div class="custom-dropdown location ">
                                     <g:select name="location" class="form-select"
                                               from="${locations}"
                                               optionKey="id"
@@ -176,7 +176,7 @@
                                 <label class="label-field">Industry</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
-                                <div class="custom-dropdown">
+                                <div class="custom-dropdown industry">
                                     <g:select name="industry" class="form-select"
                                               from="${industries}"
                                               optionKey="id"
@@ -186,27 +186,30 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="formFilter__fieldButtom--right">
+                            <div class="text-end media-desktop">
+                                <a href="#" class="textlink textlink__icon">
+                                    <span class="ihk-refresh"></span>
+                                    Reset Filters
+                                </a>
+                            </div>
+                            <div class="formFilter__fieldButtom--action">
+                                <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="formFilter__fieldButtom--right">
-                    <div class="text-end media-desktop">
-                        <a href="#" class="textlink textlink__icon">
-                            <span class="ihk-refresh"></span>
-                            Reset Filters
-                        </a>
-                    </div>
-                    <div class="formFilter__fieldButtom--action">
-                        <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
+
 </section>
     </g:form>
 
 <g:if test="${newsList}">
     <g:each in="${newsList}" var="news">
+
 <section class="newsListing container">
     <div class="row newsListing__cardList">
         <div class="col-lg-4 col-md-6">

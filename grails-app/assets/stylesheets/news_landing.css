@@ -353,6 +353,7 @@ button:not(:disabled)
 
 .formFilter__fieldButtom--row {
     align-items: flex-end;
+
 }
 .d-flex {
     display: flex
@@ -778,6 +779,23 @@ a {
     padding-right: 30px;
 }
 
+.publicationDate{
+    padding-right: 180px;
+}
+
+.contentType select {
+    padding-right: 170px;
+}
+
+.location select{
+    padding-right: 110px;
+}
+
+.industry{
+    padding-right: 10px;
+}
+
+
 .custom-dropdown::after {
     content: '\25BC';
     position: absolute;
@@ -786,4 +804,9 @@ a {
     transform: translateY(-50%);
     pointer-events: none;
     color: red;
+}
+
+.formFilter__fieldButtom--action{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
