@@ -1,6 +1,3 @@
-import com.bmuschko.gradle.docker.tasks.image.Dockerfile
-import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
-
 buildscript {
     repositories {
         maven { url "https://repo.grails.org/grails/core" }
@@ -123,29 +120,4 @@ task prepareDocker(type: Copy, dependsOn: assemble) {
     from project.jar
 
     into dockerBuildDir
-}
-task createDockerfile(type: Dockerfile, dependsOn: prepareDocker) {
-    description = 'Create a Dockerfile file'
-    group = 'Docker'
-
-    destFile = project.file("${dockerBuildDir}/Dockerfile")
-
-    from 'openjdk:8u151-jdk-alpine'
-
-    exposePort 8080
-
-    workingDir '/app'
-
-    copyFile jar.archiveName, 'application.jar'
-    copyFile 'app-entrypoint.sh', 'app-entrypoint.sh'
-    runCommand 'chmod +x app-entrypoint.sh'
-
-    entryPoint '/app/app-entrypoint.sh'
-}
-task buildImage(type: DockerBuildImage, dependsOn: createDockerfile) {
-    description = 'Create Docker image to run the Grails application'
-    group = 'Docker'
-
-    inputDir = file(dockerBuildDir)
-    images.add(dockerTag)
 }
