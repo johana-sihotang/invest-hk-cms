@@ -12,7 +12,7 @@
     padding-right: 450px;
     padding-left: 50px;
 
-}
+}c
 
 
 
@@ -271,6 +271,7 @@ button, select {
     flex: 0 0 25%;
     max-width: 15%;
     margin-right: 110px;
+    padding-top: 30px;
 }
 
 
@@ -537,7 +538,7 @@ select {
 }
 
 .formFilter__fieldButtom--right {
-    width: 395px;
+    width: 250px;
 }
 
 .media-desktop {
@@ -809,4 +810,5 @@ a {
 .formFilter__fieldButtom--action{
     padding-bottom: 20px;
     margin-bottom: 20px;
+
 }
