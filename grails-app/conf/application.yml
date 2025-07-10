@@ -15,14 +15,27 @@ environments:
   development:
     dataSource:
       dbCreate: update
+      driverClassName: com.mysql.cj.jdbc.Driver
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      username: admin
+      password: admin123
+      url: jdbc:mysql://10.0.10.43:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
   test:
     dataSource:
       dbCreate: update
-      url: jdbc:h2:mem:testDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+      driverClassName: com.mysql.cj.jdbc.Driver
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      username: admin
+      password: admin123
+      url: jdbc:mysql://10.0.10.43:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
   production:
     dataSource:
-      dbCreate: none
-      url: jdbc:h2:./prodDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+      dbCreate: update
+      driverClassName: com.mysql.cj.jdbc.Driver
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      username: admin
+      password: admin123
+      url: jdbc:mysql://10.0.10.43:3306/investhk_database?useSSL=false&serverTimezone=Asia/Jakarta
       properties:
         jmxEnabled: true
         initialSize: 5
