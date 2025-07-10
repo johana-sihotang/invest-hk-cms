@@ -133,7 +133,5 @@ grails:
           - pattern: '/**'
             access: [ 'permitAll']
 
-server:
-  port: 8001
 
 
