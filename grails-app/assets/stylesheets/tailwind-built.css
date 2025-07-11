@@ -1815,7 +1815,10 @@ html,body {
 }
 
 .table-head-cell-name {
-  width: 33.333333%;
+  width: 50%;
+  max-width: 20rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
   padding-left: 1.5rem;
   padding-right: 1.5rem;

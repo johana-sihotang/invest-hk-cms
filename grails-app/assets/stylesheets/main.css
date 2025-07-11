@@ -9634,7 +9634,6 @@ body.no-scroll {
     overflow-y: auto;
     transition: all 0.3s ease-in-out;
     font-family: Outfit;
-    padding: 10px;
 }
 .humburger-menu__container {
     display: -ms-flexbox;
@@ -10214,6 +10213,7 @@ body.no-scroll {
 
 .detailPage__detailContent__paragraph a{
     word-break: break-word;
+    color: #d9242d;
 }
 
 @media (max-width: 1000px) {
@@ -10319,7 +10319,7 @@ body.no-scroll {
     font-size: 20px;
     line-height: 150%;
 }
-.article__tags img {
+.article__tags__images img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -10384,9 +10384,6 @@ body.no-scroll {
         max-width: 1540px;
         padding: 0;
         justify-items: center;
-    }
-    .detailPage__detailContent__paragraph{
-
     }
 
     .detailPage__detailContent__paragraph p{

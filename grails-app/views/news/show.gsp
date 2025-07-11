@@ -60,13 +60,17 @@
             <div class="text-content">${raw(news.content)}</div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-11">
-            <g:render template="/components/contact_us"/>
-        </div>
-
+    <div class="mb-10">
+        <section class="contact_us">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <g:render template="/components/contact_us"/>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
     <button id="scrollToTopBtn" class="scroll-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>

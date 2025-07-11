@@ -207,11 +207,12 @@
 </section>
     </g:form>
 
+<section class="newsListing container">
+    <div class="row newsListing__cardList">
 <g:if test="${newsList}">
     <g:each in="${newsList}" var="news">
 
-<section class="newsListing container">
-    <div class="row newsListing__cardList">
+
         <div class="col-lg-4 col-md-6">
             <div class="cardNews">
                 <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
@@ -231,11 +232,15 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
     </g:each>
 </g:if>
 <g:else>
-    <p></p>
+    <div class="no-data">
+        <p>No data</p>
+    </div>
 </g:else>
+    </div>
+</section>
+div
+<g:render template="/components/contact_us"/>
