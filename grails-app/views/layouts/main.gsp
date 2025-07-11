@@ -44,7 +44,7 @@
 <asset:javascript src="humburger_menu.js"/>
 <asset:javascript src="alert.js"/>
 <!--disble continent select-->
-<asset:javascript src="continent_select.js"/>
+<asset:javascript src="disable_continent_select.js"/>
 <asset:javascript src="slicker.js"/>
 </body>
 </html>
