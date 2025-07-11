@@ -22,6 +22,7 @@
 
     <asset:stylesheet src="main.css"/>
     <asset:stylesheet src="news_landing.css"/>
+    <asset:stylesheet src="con"/>
     <g:layoutHead/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -46,5 +47,12 @@
 <!--disble continent select-->
 <asset:javascript src="disable_continent_select.js"/>
 <asset:javascript src="slicker.js"/>
+<script>
+    $(document).ready(function () {
+        $('.js-select2').select2({
+            width: 'resolve'
+        });
+    });
+</script>
 </body>
 </html>

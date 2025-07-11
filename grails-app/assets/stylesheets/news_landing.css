@@ -1,5 +1,4 @@
 .mb-10{
-    margin-top: 148px;
 }
 .borderinfo{
 
@@ -50,7 +49,6 @@
     position: relative;
     width: 100vw;
     padding: 0;
-
 }
 
 .breadcrumb_label {
@@ -59,6 +57,16 @@
 
 .borderimage{
     width: 60%
+}
+
+.border-2{
+    border-width: 1px;
+    padding-right: 320px;
+
+}
+
+fa-solid fa-caret-down{
+    color: red;
 }
 
 .heroSlider__thumbnails--image {
@@ -154,7 +162,7 @@ h2 {
     line-height: 140%;
 }
 
-a {
+.heroSlider__content--title a {
     color: white;
     text-decoration: none;
     background-color: transparent;
@@ -345,6 +353,7 @@ button:not(:disabled)
 
 .formFilter__fieldButtom--row {
     align-items: flex-end;
+
 }
 .d-flex {
     display: flex
@@ -432,6 +441,13 @@ select {
     vertical-align: middle;
 }
 
+.form-select{
+    -webkit-appearance: none;
+}
+.icon_buttom{
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 512' fill='%23d2191b' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.3 192l128 128 128-128z'/%3E%3C/svg%3E");
+}
+
 .select2-container .select-control.select2-selection--single {
     background-color: #fff;
     width: 100%;
@@ -453,7 +469,8 @@ select {
     display: block;
     height: 28px;
     user-select: none;
-    -webkit-user-select: none;
+    -webkit-appereance: none;
+    /*-webkit-user-select: none;*/
 }
 
 .row {
@@ -756,13 +773,9 @@ a {
     .container {
         max-width: 100%;
     }
-    .mb-10{
-        margin-top: 118px;
-    }
 }
 @media (max-width: 992px) {
     .mb-10{
-        margin-top: 118px;
     }
 
 }
@@ -772,7 +785,52 @@ a {
         display: none;
     }
 
+.show {display: block;}
 
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-dropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+}
+
+.publicationDate{
+    padding-right: 180px;
+}
+
+.contentType select {
+    padding-right: 170px;
+}
+
+.location select{
+    padding-right: 110px;
+}
+
+.industry{
+    padding-right: 10px;
+}
+
+
+.custom-dropdown::after {
+    content: '\25BC';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: red;
+}
+
+.formFilter__fieldButtom--action{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 }
 @media (min-width: 576px) {
 

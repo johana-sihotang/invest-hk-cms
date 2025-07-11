@@ -25,7 +25,7 @@
 <g:render template="/components/navbar"/>
 <g:render template="/components/sidebar"/>
 <g:render template="/components/alert"/>
-<div class="pt-32 ml-0 lg:ml-64 px-4">
+<div class="container-layout">
     <g:layoutBody/>
 </div>
 
