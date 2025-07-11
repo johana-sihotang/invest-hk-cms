@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="contactUs__office--item">
-                                    <asset:image src="/favicon/phone-call.svg"
+                                    <asset:image src="favicon/phone-call.svg"
                                                  class="contactUs__office--icon"/>+852 3107 1000
                                 </div>
 

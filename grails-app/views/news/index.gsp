@@ -1,3 +1,4 @@
+<%@ page import="investhkcms.News" %>
 <div class =container>
     <div class="flex-item">
         <div class="borderinfo ">
@@ -73,6 +74,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 </div>
@@ -108,14 +110,16 @@
                             <div class="text-xl">
                                 <label class="label-field">Publication Date</label>
                             </div>
-                            <div class="border-2 border-solid text-xl ">
-                                <select name="dateRange" class="form-select">
+                            <div class="border-2 border-solid text-xl">
+                                <div class="custom-dropdown publicationDate">
+                                <select name="dateRange" class="form-select" >
                                     <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
                                     <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
                                     <option value="past1month" ${params.dateRange == 'past1month' ? 'selected' : ''}>Past 1 Month</option>
                                     <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
                                     <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
                                 </select>
+                                </div>
                             </div>
 
                         </div>
@@ -123,14 +127,15 @@
                             <div class="text-xl">
                                 <label class="label-field">Content Type</label>
                             </div>
-                            <div class="border-2 border-solid text-xl">
-                                <g:select name="contentType"
+                            <div class="border-2 border-solid text-small">
+                                <div class="custom-dropdown contentType ">
+                                <g:select name="contentType" class="form-select"
                                           from="${contentTypes}"
                                           optionKey="id"
                                           optionValue="name"
                                           noSelection="['':'All Content Types']"
                                           value="${params.contentType}"/>
-
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -138,50 +143,76 @@
                                 <label class="label-field">Location</label>
                             </div>
                             <div class="border-2 border-solid text-xl ">
-                                <g:select name="location"
-                                          from="${locations}"
-                                          optionKey="id"
-                                          optionValue="name"
-                                          noSelection="['':'All Locations']"
-                                          value="${params.location}"/>
-                            </div>
+                                <div class="custom-dropdown location ">
+                                    <g:select name="location" class="form-select"
+                                              from="${locations}"
+                                              optionKey="id"
+                                              optionValue="name"
+                                              noSelection="['':'All location']"
+                                              value="${params.Location}"/>
+                                </div>
+                                </div>
+%{--                                <div class="dropdown">--}%
+%{--                                    <button type ="button" onclick="myFunction()" class="dropbtn">List</button>--}%
+%{--                                    <div id="myDropdown" class="dropdown-content">--}%
+%{--                                        <ul>--}%
+%{--                                            <g:each in="${locations}" var="location">--}%
+%{--                                                <li value="${location.name}">${location.name}</li>--}%
+%{--                                            </g:each>--}%
+
+%{--                                        </ul>--}%
+%{--                                    </div>--}%
+
+
+%{--                                <g:select name="location" class="form-select"--}%
+%{--                                          from="${locations}"--}%
+%{--                                          optionKey="id"--}%
+%{--                                          optionValue="name"--}%
+%{--                                          noSelection="['':'All Locations']"--}%
+%{--                                          value="${params.location}"/>--}%
                         </div>
                         <div class="col-lg-3">
                             <div class="text-xl">
                                 <label class="label-field">Industry</label>
                             </div>
                             <div class="border-2 border-solid text-xl">
-                                <g:select name="industry"
-                                          from="${industries}"
-                                          optionKey="id"
-                                          optionValue="name"
-                                          noSelection="['':'All Industries']"
-                                          value="${params.industry}"/>
+                                <div class="custom-dropdown industry">
+                                    <g:select name="industry" class="form-select"
+                                              from="${industries}"
+                                              optionKey="id"
+                                              optionValue="name"
+                                              noSelection="['':'All Industries']"
+                                              value="${params.industry}"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formFilter__fieldButtom--right">
+                            <div class="text-end media-desktop">
+                                <a href="#" class="textlink textlink__icon">
+                                    <span class="ihk-refresh"></span>
+                                    Reset Filters
+                                </a>
+                            </div>
+                            <div class="formFilter__fieldButtom--action">
+                                <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="formFilter__fieldButtom--right">
-                    <div class="text-end media-desktop">
-                        <a href="#" class="textlink textlink__icon">
-                            <span class="ihk-refresh"></span>
-                            Reset Filters
-                        </a>
-                    </div>
-                    <div class="formFilter__fieldButtom--action">
-                        <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
+
 </section>
     </g:form>
 
-<g:if test="${newsList}">
-    <g:each in="${newsList}" var="news">
 <section class="newsListing container">
     <div class="row newsListing__cardList">
+<g:if test="${newsList}">
+    <g:each in="${newsList}" var="news">
+
+
         <div class="col-lg-4 col-md-6">
             <div class="cardNews">
                 <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
@@ -191,21 +222,25 @@
                 </div>
                 <div class="cardNews__content">
                     <div class="cardNews__info">
-                        <div class="cardNews__date"><g:formatDate date="${news.publicationDate}"
-                                                                  format="dd.MM.yyyy"/></div>
+                        <div class="cardNews__date">
+                            <g:formatDate date="${news.publicationDate}" format="dd.MM.yyyy"/></div>
                         <div class="cardNews__tags">
                             <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
                         </div>
                     </div>
-
                     <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+
     </g:each>
 </g:if>
 <g:else>
-    <p>No data found</p>
+    <div class="no-data">
+        <p>No data</p>
+    </div>
 </g:else>
+    </div>
+</section>
+div
+<g:render template="/components/contact_us"/>

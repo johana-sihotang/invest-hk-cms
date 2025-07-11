@@ -219,8 +219,8 @@ index__section__image {
     float: left;
     width: 50%;
     height: 620px;
-}
 
+}
 .compat-object-fit{
     background-size: cover !important;
     background-position: top center !important;
@@ -769,6 +769,7 @@ slick-dots li {
     }
 }
 
+
 @media screen and (max-width: 650px) {
     .mb-10{
         margin-top: 118px;
@@ -784,6 +785,7 @@ slick-dots li {
         font-size: 31px;
         line-height: normal;
         padding-top: 5px;
+        font-family: RobotoSlab-Bold, serif;
     }
     .panel__section__text {
         padding: 40px 30px;
@@ -791,6 +793,8 @@ slick-dots li {
         text-align: left;
         height: 174px;
     }
+
+
 
     .panel__section {
         margin: 4px 2px;
