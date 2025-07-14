@@ -161,7 +161,7 @@ class NewsService {
             if (params.dateRange) {
                 Date startDate
                 switch (params.dateRange) {
-                    case 'latest':
+                    case 'last7days':
                         startDate = Date.from(LocalDate.now().minusDays(7).atStartOfDay(ZoneId.systemDefault()).toInstant())
                         break
                     case 'past1month':
@@ -179,10 +179,12 @@ class NewsService {
                     ge 'publicationDate', startDate
                 }
             }
+            applySearch(delegate, params)
 
             order 'publicationDate', 'desc'
         }
 
         return newsList
     }
+
 }

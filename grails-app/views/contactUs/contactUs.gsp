@@ -1,5 +1,6 @@
 <html lang="en">
 <head>
+    <meta name="layout" content="main">
     <asset:stylesheet src="main.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +24,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <div class="contact_us_office">
                     <div class="contactForm__heading">

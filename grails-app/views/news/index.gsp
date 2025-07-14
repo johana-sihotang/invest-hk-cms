@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="input-wrapper">
-                        <input type="text" name="searchNewsPress" class="input-control  input-control__icon " placeholder="Search News &amp; Press" >
+                        <input type="text" name="search" id="search" value="${ search ?: ''}" class="input-control  input-control__icon " placeholder="Search News & Press" >
                     </div>
                 </div>
             </div>
@@ -112,13 +112,14 @@
                             </div>
                             <div class="border-2 border-solid text-xl">
                                 <div class="custom-dropdown publicationDate">
-                                <select name="dateRange" class="form-select" >
-                                    <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
-                                    <option value="latest" ${params.dateRange == 'latest' ? 'selected' : ''}>Latest</option>
-                                    <option value="past1month" ${params.dateRange == 'past1month' ? 'selected' : ''}>Past 1 Month</option>
-                                    <option value="past1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
-                                    <option value="past2year" ${params.dateRange == 'past2year' ? 'selected' : ''}>Past 2 Years</option>
-                                </select>
+                                    <select name="dateRange" class="form-select">
+                                        <option value="" ${!params.dateRange ? 'selected' : ''}>All Dates</option>
+                                        <option value="last7days" ${params.dateRange == 'last7days' ? 'selected' : ''}>Last 7 Days</option>
+                                        <option value="last1month" ${params.dateRange == 'past1month' ? 'selected' : ''}>Past 1 Month</option>
+                                        <option value="last1year" ${params.dateRange == 'past1year' ? 'selected' : ''}>Past 1 Year</option>
+                                        <option value="last2year" ${params.dateRange == 'past2years' ? 'selected' : ''}>Past 2 Year</option>
+                                    </select>
+
                                 </div>
                             </div>
 
@@ -188,10 +189,10 @@
                         </div>
                         <div class="formFilter__fieldButtom--right">
                             <div class="text-end media-desktop">
-                                <a href="#" class="textlink textlink__icon">
+                                <g:link controller="news" action="index" class="textlink textlink__icon">
                                     <span class="ihk-refresh"></span>
                                     Reset Filters
-                                </a>
+                                </g:link>
                             </div>
                             <div class="formFilter__fieldButtom--action">
                                 <button type="submit" class="button button__outline"><span>APPLY FILTERS</span></button>
@@ -211,8 +212,6 @@
     <div class="row newsListing__cardList">
 <g:if test="${newsList}">
     <g:each in="${newsList}" var="news">
-
-
         <div class="col-lg-4 col-md-6">
             <div class="cardNews">
                 <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
@@ -225,7 +224,15 @@
                         <div class="cardNews__date">
                             <g:formatDate date="${news.publicationDate}" format="dd.MM.yyyy"/></div>
                         <div class="cardNews__tags">
-                            <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                            <g:if test="${news.contentType?.name == 'News'}">
+                                <g:link controller="news" action="show" id="${news.id}" class="tag tag__blue">${news.contentType?.name?.toUpperCase()}</g:link>
+                            </g:if>
+                            <g:if test="${news.contentType?.name == 'Press Release'}">
+                                <g:link controller="news" action="show" id="${news.id}" class="tag tag__red">${news.contentType?.name?.toUpperCase()}</g:link>
+                            </g:if>
+                            <g:if test="${news.contentType?.name == 'Industry Insight'}">
+                                <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                            </g:if>
                         </div>
                     </div>
                     <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
@@ -242,5 +249,14 @@
 </g:else>
     </div>
 </section>
-div
-<g:render template="/components/contact_us"/>
+<div class="mb-10">
+    <section class="contact_us">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <g:render template="/components/contact_us"/>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

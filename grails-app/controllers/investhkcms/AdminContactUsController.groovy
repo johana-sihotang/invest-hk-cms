@@ -11,7 +11,7 @@ class AdminContactUsController {
     @Secured(['ROLE_ADMIN'])
     def index() {
         List<ContactUs> contactUs = contactUsService.getAllContactUs(params)
-        render(view: '/adminContactUs/index', model: [contactUs: contactUs, search: params.search])
+        [contactUs: contactUs, search: params.search]
     }
 
     @Secured(['ROLE_ADMIN'])
@@ -22,7 +22,7 @@ class AdminContactUsController {
             redirect(action: 'index')
             return
         }
-        render(view: '/adminContactUs/show', model: [contactUs: contactUs])
+        [contactUs: contactUs]
     }
 
     @Secured(['ROLE_ADMIN'])
