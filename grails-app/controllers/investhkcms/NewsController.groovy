@@ -8,26 +8,28 @@ class NewsController {
     def index() {
         Map paramsMap = [
                 contentType: params.contentType,
-                industry: params.industry,
-                location: params.location,
-                dateRange: params.dateRange
-        ].findAll {it.value}
+                industry   : params.industry,
+                location   : params.location,
+                dateRange  : params.dateRange,
+                search     : params.search
+        ].findAll { it.value?.toString()?.trim() }
 
         List<News> filteredNews
-        if (paramsMap){
+        if (paramsMap) {
             filteredNews = newsService.getFilteredNews(paramsMap)
         } else {
             filteredNews = News.list(sort: "publicationDate", order: 'desc')
         }
+
         List<ContentType> contentTypes = ContentType.list(sort: "name", order: "asc")
         List<Industry> industries = Industry.list(sort: "name", order: "asc")
         List<Location> locations = Location.list(sort: "name", order: "asc")
 
         respond filteredNews, model: [
-                newsList: filteredNews,
-                contentTypes: contentTypes,
-                industries: industries,
-                locations: locations
+                newsList     : filteredNews,
+                contentTypes : contentTypes,
+                industries   : industries,
+                locations    : locations
         ]
     }
 

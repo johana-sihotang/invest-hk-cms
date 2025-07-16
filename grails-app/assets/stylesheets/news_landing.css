@@ -60,8 +60,6 @@
 }
 
 .border-2{
-    border-width: 1px;
-    padding-right: 320px;
 
 }
 
@@ -247,10 +245,6 @@ button, select {
     text-transform: none;
 }
 
-.tag__blue {
-    background-color: #001ab1;
-}
-
 .heroSlider__thumbnails--tags {
     position: absolute;
     bottom: 40px;
@@ -270,7 +264,6 @@ button, select {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 15%;
-    margin-right: 110px;
 }
 
 
@@ -637,19 +630,9 @@ select {
     text-align: center
 }
 
-
-
-
-
-
-
-
-
 @media (min-width: 1600px) {
     .container {
-        max-width: 1540px;
-        padding-left: 20px;
-        padding-right: 20px;
+        /*max-width: 1540px;*/
     }
 }
 
@@ -724,8 +707,19 @@ a {
 }
 .tag__yellow {
     background-color: #ffe440;
-    color: #fff;
+    color: #000000;
 }
+
+.tag__blue {
+    background-color: #001ab1;
+    color: #FFFFFF;
+}
+
+.tag__red {
+    background-color: #d9242d;
+    color: #FFFFFF;
+}
+
 
 .cardNews__title {
     line-height: 120%;
@@ -740,10 +734,6 @@ a {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-}
-
-.tag__blue {
-    background-color: #001ab1;
 }
 
 .tag_red {
@@ -769,7 +759,7 @@ a {
 }
 @media (min-width: 1600px) {
     .container_ {
-        max-width: 1540px;
+        /*max-width: 1540px;*/
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -806,7 +796,7 @@ a {
 }
 
 .publicationDate{
-    padding-right: 180px;
+
 }
 
 .contentType select {

@@ -11,13 +11,14 @@ class ContactUsController {
     def index() {
         def continents = Continent.list(sort: 'name', order: 'asc')
         def locations = Location.list(sort: 'name', order: 'asc')
-        render view: 'contactUs', layout: 'main', model: [
+
+        render(view: 'contactUs', model: [
                 contactUs: new ContactUs(),
                 continent: continents,
                 locations: locations
-        ]
-
+        ])
     }
+
 
     def save(CreateContactUsRequest request){
         def redirectUrl = params.redirectUrl
@@ -50,7 +51,7 @@ class ContactUsController {
     def locationsByContinent(Long continentId) {
         def locations = contactUsService.getLocationsByContinent(continentId)
         if (locations.isEmpty()) {
-            render status: 404
+            redirect(action: "index")
             return
         }
         render locations as JSON

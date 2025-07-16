@@ -19,6 +19,7 @@ class AdminRole implements Serializable{
         if (other instanceof AdminRole) {
             other.adminId == admin?.id && other.roleId == role?.id
         }
+        return false
     }
 
     @Override
