@@ -132,7 +132,7 @@
                                 <div class="custom-dropdown contentType ">
                                 <g:select name="contentType" class="form-select"
                                           from="${contentTypes}"
-                                          optionKey="id"
+                                          optionKey="name"
                                           optionValue="name"
                                           noSelection="['':'All Content Types']"
                                           value="${params.contentType}"/>
@@ -147,10 +147,10 @@
                                 <div class="custom-dropdown location ">
                                     <g:select name="location" class="form-select"
                                               from="${locations}"
-                                              optionKey="id"
+                                              optionKey="name"
                                               optionValue="name"
                                               noSelection="['':'All location']"
-                                              value="${params.Location}"/>
+                                              value="${params.location}"/>
                                 </div>
                                 </div>
 %{--                                <div class="dropdown">--}%
@@ -180,7 +180,7 @@
                                 <div class="custom-dropdown industry">
                                     <g:select name="industry" class="form-select"
                                               from="${industries}"
-                                              optionKey="id"
+                                              optionKey="name"
                                               optionValue="name"
                                               noSelection="['':'All Industries']"
                                               value="${params.industry}"/>
@@ -210,32 +210,32 @@
 
 <section class="newsListing container">
     <div class="row newsListing__cardList">
-<g:if test="${newsList}">
-    <g:each in="${newsList}" var="news">
+<g:if test="${news}">
+    <g:each in="${news}" var="items">
         <div class="col-lg-4 col-md-6">
             <div class="cardNews">
-                <div class="cardNews__thumbnail" style="background-image: url('${news.image}');">
-                    <g:link controller="news" action="show" id="${news.id}">
-                        <span class="cardNews__thumbnail--link" aria-label="${news.title.encodeAsHTML()}"></span>
+                <div class="cardNews__thumbnail" style="background-image: url('${items.image}');">
+                    <g:link controller="news" action="show" id="${items.id}">
+                        <span class="cardNews__thumbnail--link" aria-label="${items.title.encodeAsHTML()}"></span>
                     </g:link>
                 </div>
                 <div class="cardNews__content">
                     <div class="cardNews__info">
                         <div class="cardNews__date">
-                            <g:formatDate date="${news.publicationDate}" format="dd.MM.yyyy"/></div>
+                            <g:formatDate date="${items.publicationDate}" format="dd.MM.yyyy"/></div>
                         <div class="cardNews__tags">
-                            <g:if test="${news.contentType?.name == 'News'}">
-                                <g:link controller="news" action="show" id="${news.id}" class="tag tag__blue">${news.contentType?.name?.toUpperCase()}</g:link>
+                            <g:if test="${items.contentType?.name == 'News'}">
+                                <g:link controller="news" action="show" id="${items.id}" class="tag tag__blue">${items.contentType?.name?.toUpperCase()}</g:link>
                             </g:if>
-                            <g:if test="${news.contentType?.name == 'Press Release'}">
-                                <g:link controller="news" action="show" id="${news.id}" class="tag tag__red">${news.contentType?.name?.toUpperCase()}</g:link>
+                            <g:if test="${items.contentType?.name == 'Press Release'}">
+                                <g:link controller="news" action="show" id="${items.id}" class="tag tag__red">${items.contentType?.name?.toUpperCase()}</g:link>
                             </g:if>
-                            <g:if test="${news.contentType?.name == 'Industry Insight'}">
-                                <g:link controller="news" action="show" id="${news.id}" class="tag tag__yellow">${news.contentType?.name?.toUpperCase()}</g:link>
+                            <g:if test="${items.contentType?.name == 'Industry Insight'}">
+                                <g:link controller="news" action="show" id="${items.id}" class="tag tag__yellow">${items.contentType?.name?.toUpperCase()}</g:link>
                             </g:if>
                         </div>
                     </div>
-                    <h4 class="cardNews__title"><g:link controller="news" action="show" id="${news.id}">${news.title.encodeAsHTML()}</g:link></h4>
+                    <h4 class="cardNews__title"><g:link controller="news" action="show" id="$items.id}">${items.title.encodeAsHTML()}</g:link></h4>
                 </div>
             </div>
         </div>

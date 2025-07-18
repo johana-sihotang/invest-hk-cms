@@ -13,42 +13,56 @@ class NewsService {
 
     SpringSecurityService springSecurityService
 
-    List<News> getAllNews(){
-        return News.list(sort: "publicationDate")
+    List<News> getAllNews(Map params) {
+        def criteria = News.createCriteria()
+        def results = criteria.list {
+            applyFilterSearch(delegate, params)
+            applySorting(delegate, params)
+        } as List<News>
+        return results
+    }
+     private void applyFilterSearch(def query, Map params) {
+         def search = params.search?.trim()
+         if (search) {
+             query.or {
+                 ilike('title', "%${search}%")
+                 location {
+                     ilike('name', "%${search}%")
+                 }
+                 author {
+                     ilike('username', "%${search}%")
+                 }
+             }
+         }
+         if (params.contentType) {
+             query.or {
+                 contentType {
+                     ilike('name', "%${params.contentType}%")
+                 }
+             }
+         }
+         if (params.location) {
+             query.or {
+                 location {
+                     ilike('name', "%${params.location}%")
+                 }
+             }
+         }
+         if (params.industry) {
+             query.or {
+                 industry {
+                     ilike('name', "%${params.industry}%")
+                 }
+             }
+         }
+     }
+
+     static void applySorting(def query, Map params) {
+        def sort = params.sort ?: 'id'
+        def order = params.order ?: 'asc'
+        query.order(sort,order)
     }
 
-    List<News> searchNews(Map params) {
-        def searchFields = ['title', 'contentType', 'location', 'publicationDate']
-        def search = params.findAll {key, value -> searchFields.contains(key) && value }
-        return News.findAllWhere(search)
-    }
-
-//    List<News> getAllNews(Map params) {
-//        def criteria = News.createCriteria()
-//        return criteria.list {
-//            applySearch(delegate, params)
-//            applySorting(delegate,params)
-//        }
-//    }
-//     private void applySearch(def query, Map params) {
-//         def search = params.search?.trim()
-//         if (!search) return
-//         query.or {
-//             ilike('title', "%${search}%")
-//             location{
-//                 ilike('name', "%${search}%")
-//             }
-//             author{
-//                 ilike('username', "%${search}%")
-//             }
-//         }
-//     }
-//
-//     private void applySorting(def query, Map params) {
-//        def sort = params.sort ?: 'id'
-//        def order = params.order ?: 'asc'
-//        query.order(sort,order)
-//    }
 
     News getNewsById(Long id){
         return News.get(id)

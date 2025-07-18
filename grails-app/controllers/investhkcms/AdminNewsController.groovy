@@ -12,12 +12,9 @@ class AdminNewsController {
 
     @Secured(['ROLE_ADMIN'])
     def index() {
-        def news = newsService.getAllNews()
-        def search = newsService.searchNews(params)
-        [news: news, search:search]
+        def news = newsService.getAllNews(params)
+        [news: news, search: params.search]
     }
-
-
 
     @Secured(['ROLE_ADMIN'])
     def show(Long id) {
