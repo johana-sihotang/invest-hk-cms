@@ -140,75 +140,36 @@ class NewsService {
     }
 
     @Transactional
-    def handleNewsCreation(CreateNewsRequest request) {
-        def imageFile = request.imageFile
+    def handleNewsCreate(CreateNewsRequest request) {
+        def imagePath = saveImage(request.imageFile)
+        createNews(request, imagePath)
+    }
 
+    @Transactional
+    def handleNewsUpdate(UpdateNewsRequest request) {
+        def imagePath = saveImage(request.imageFile)
+        updateNews(request, imagePath)
+    }
+
+    private String saveImage(def imageFile){
         if (!imageFile || imageFile.empty) {
-            throw new IllegalArgumentException("Image file is required.")
+            throw new IllegalAccessException("Image file is required")
         }
-
-        if (!imageFile.contentType?.startsWith("image/")) {
-            throw new IllegalArgumentException("Uploaded file must be an image.")
+        if(!imageFile.contentType?.startsWith("image/")){
+            throw new IllegalArgumentException("Uploaded file must be an image")
         }
-
-        if (imageFile.size > 5 * 1024 * 1024) {
-            throw new IllegalArgumentException("Image file is too large (max 2MB).")
+        final long MAX_IMAGE_SIZE = 5 * 1024 * 1024
+        if (imageFile.size > MAX_IMAGE_SIZE) {
+            throw new IllegalArgumentException("Image file is too large (Max 5MB)")
         }
-
         def fileName = UUID.randomUUID().toString() + "_" + imageFile.originalFilename
         def uploadDir = new File("${System.getProperty('user.dir')}/uploads/news")
-        if (!uploadDir.exists()) uploadDir.mkdirs()
+        if (!uploadDir.exists()) uploadDir.mkdir()
 
         def destination = new File(uploadDir, fileName)
         imageFile.transferTo(destination)
 
-        def imagePath = "/uploads/news/${fileName}"
-        createNews(request, imagePath)
-    }
-
-
-    @Transactional
-    List<News> getFilteredNews(Map params) {
-        def criteria = News.createCriteria()
-
-        List<News> newsList = (List<News>) criteria.list {
-            if (params.contentType) {
-                eq 'contentType', ContentType.get(params.contentType as Long)
-            }
-            if (params.industry) {
-                eq 'industry', Industry.get(params.industry as Long)
-            }
-            if (params.location) {
-                eq 'location', Location.get(params.location as Long)
-            }
-
-            if (params.dateRange) {
-                Date startDate
-                switch (params.dateRange) {
-                    case 'last7days':
-                        startDate = Date.from(LocalDate.now().minusDays(7).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                    case 'past1month':
-                        startDate = Date.from(LocalDate.now().minusMonths(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                    case 'past1year':
-                        startDate = Date.from(LocalDate.now().minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                    case 'past2year':
-                        startDate = Date.from(LocalDate.now().minusYears(2).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                }
-
-                if (startDate) {
-                    ge 'publicationDate', startDate
-                }
-            }
-            applySearch(delegate, params)
-
-            order 'publicationDate', 'desc'
-        }
-
-        return newsList
+        return "/uploads/news/${fileName}"
     }
 
 }

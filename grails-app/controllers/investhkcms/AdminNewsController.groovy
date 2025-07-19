@@ -43,7 +43,7 @@ class AdminNewsController {
         }
 
         try {
-            newsService.handleNewsCreation(request)
+            newsService.handleNewsCreate(request)
             flash.success = "News created successfully"
             redirect(action: 'index')
         } catch (Exception e) {
@@ -72,9 +72,8 @@ class AdminNewsController {
             respond request.errors, view: 'edit', model: [news: news]
             return
         }
-
-        try {
-            newsService.handleNewsCreation(request)
+         try {
+            newsService.handleNewsUpdate(request)
             flash.success = "News update successfully"
             redirect(action: 'index')
         } catch (Exception e) {
