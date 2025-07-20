@@ -12,8 +12,10 @@ class AdminNewsController {
 
     @Secured(['ROLE_ADMIN'])
     def index() {
-        def news = newsService.getAllNews(params)
-        [news: news, search: params.search]
+        def result = newsService.getAllNews(params)
+        def news = result.toList()
+        def total = result.totalCount
+        [news: news, total: total, params: params]
     }
 
     @Secured(['ROLE_ADMIN'])

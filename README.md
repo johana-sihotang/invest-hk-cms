@@ -21,3 +21,10 @@
 
 - [Grails Asset Pipeline Core documentation](https://www.asset-pipeline.com/manual/)
 
+## Running Build Tailwind
+npm init -y
+
+npm install -D tailwindcss
+
+npx tailwindcss -i ./grails-app/assets/stylesheets/tailwind.css -o ./grails-app/assets/stylesheets/tailwind-built.css
+

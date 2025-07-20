@@ -15,7 +15,9 @@ class NewsService {
 
     List<News> getAllNews(Map params) {
         def criteria = News.createCriteria()
-        def results = criteria.list {
+        def max = params.int('max') ?: 10
+        def offset = params.int('offset') ?: 0
+        def results = criteria.list (max: max, offset: offset) {
             applyFilterSearch(delegate, params)
             applySorting(delegate, params)
         } as List<News>

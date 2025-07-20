@@ -11,7 +11,7 @@
     </g:link>
         <g:form controller="adminNews" action="index" method="get" class="search">
             <label for="search" class="sr-only">Search News</label>
-            <input type="text" name="search" id="search" value="${ search ?: ''}" placeholder="Search"
+            <input type="text" name="search" id="search" value="${ params.search ?: ''}" placeholder="Search"
                    class="input-search">
             <button type="submit"
                     class="btn-search">
@@ -111,8 +111,4 @@
         </table>
     </div>
 </g:else>
-%{--<g:if test="${total > 0}">--}%
-%{--    <div class="pagination">--}%
-%{--        <g:paginate controller="adminNews" action="index" total="${total}" params="${params}" maxsteps="5" max="5" />--}%
-%{--    </div>--}%
-%{--</g:if>--}%
+<g:render template="/components/pagination"/>
