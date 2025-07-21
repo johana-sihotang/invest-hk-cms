@@ -145,10 +145,13 @@ html,body{
 }
 
 .section_title{
-    @apply text-2xl font-bold mb-3
+    @apply text-xl font-bold mb-3
 }
 .selection-container{
-    @apply mb-6 space-y-4
+    @apply mb-6 space-y-4 p-4 bg-gray-300 rounded-lg
+}
+#newsSelectionContainer{
+    @apply py-4 space-y-4
 }
 .selection-item{
    @apply flex items-center gap-2

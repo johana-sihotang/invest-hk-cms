@@ -1,6 +1,6 @@
 package investhkcms
 
-class UiTagLib {
+class UiHelperTagLib {
     static namespace = "ui"
 
     def sortableColumn = { attrs, body ->
