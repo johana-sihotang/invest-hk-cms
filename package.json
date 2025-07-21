@@ -1,0 +1,19 @@
+{
+  "name": "invest-hk-cms",
+  "version": "1.0.0",
+  "description": "Grails CMS with TailwindCSS",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build-tailwind": "tailwindcss -i ./grails-app/assets/stylesheets/tailwind.css -o ./grails-app/assets/stylesheets/tailwind-built.css --watch",
+    "build-tailwind-once": "tailwindcss -i ./grails-app/assets/stylesheets/tailwind.css -o ./grails-app/assets/stylesheets/tailwind-built.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "3.4.1"
+  }
+}

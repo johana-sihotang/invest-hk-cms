@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/*npx tailwindcss -i ./grails-app/assets/stylesheets/tailwind.css -o ./grails-app/assets/stylesheets/tailwind-built.css --watch*/
-
 html,body{
     @apply font-[Outfit] min-h-screen
 }
@@ -16,19 +13,19 @@ html,body{
    @apply text-3xl font-bold text-start mb-5;
 }
 .container_table{
-    @apply relative overflow-x-auto border border-gray-100 sm:rounded-lg
+    @apply relative overflow-x-auto border border-gray-100 lg:rounded-lg
 }
 .container-item-center{
     @apply justify-items-center mb-5
 }
 .table{
-  @apply w-full text-sm text-left text-gray-500
+  @apply w-full text-xl text-left text-gray-500
 }
 .table-head{
     @apply text-xs text-gray-700 uppercase bg-gray-50
 }
 .table-head-cell-no{
-    @apply w-20 px-6 py-3
+    @apply w-20 px-6 py-3 text-xl
 }
 .table-head-cell-name {
     @apply w-3/6 max-w-xs px-6 py-3 whitespace-nowrap overflow-hidden text-ellipsis;
@@ -62,41 +59,41 @@ html,body{
     @apply flex justify-between items-center
 }
 .btn-add{
-    @apply inline mb-5 px-5 py-2.5 text-sm font-medium text-white text-center bg-[#d7271d] rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300
+    @apply inline mb-5 px-5 py-2.5 text-lg font-medium text-white text-center bg-[#d7271d] rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300
 }
 .container_modal{
     @apply hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[999] justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full
 }
 .btn-delete {
-    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-red-600
-    bg-white border border-red-300 rounded-md shadow-sm
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-lg font-medium text-red-600
+    bg-white border border-red-300 rounded-md shadow-lg
     hover:bg-red-50 hover:text-red-800
     focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400
     transition;
 }
 
 .btn-edit {
-    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-slate-600
-    bg-white border border-slate-300 rounded-md shadow-sm
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-lg font-medium text-slate-600
+    bg-white border border-slate-300 rounded-md shadow-lg
     hover:bg-slate-50 hover:text-slate-800
     focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400
     transition;
 }
 
 .btn-show {
-    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium text-emerald-600
-    bg-white border border-emerald-300 rounded-md shadow-sm
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-lg font-medium text-emerald-600
+    bg-white border border-emerald-300 rounded-md shadow-lg
     hover:bg-emerald-50 hover:text-emerald-800
     focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
     transition;
 }
 
 .btn-submit {
-   @apply text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center
+   @apply text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full lg:w-auto px-5 py-2.5 mt-5 text-center
 }
 
 .btn-cancel {
-    @apply text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-5 text-center
+    @apply text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-lg w-full lg:w-auto px-5 py-2.5 mt-5 text-center
 }
 .btn-search{
     @apply px-4 py-2 bg-red-600 text-white font-bold hover:bg-red-700
@@ -115,11 +112,11 @@ html,body{
 }
 
 .label-title{
-    @apply block mb-2 text-sm font-medium text-gray-900
+    @apply block mb-2 text-lg font-medium text-gray-900
 }
 
 .input-title{
-   @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+   @apply bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
 }
 
 .search {
@@ -157,11 +154,34 @@ html,body{
    @apply flex items-center gap-2
 }
 .select-news{
-    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg block w-full p-2.5
 }
 .start-section-label{
-   @apply block mb-2 text-sm font-medium text-gray-900
+   @apply block mb-2 text-lg font-medium text-gray-900
 }
 .start-input{
-    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg block w-full p-2.5
+}
+
+/*pagination*/
+.pagination{
+    @apply mt-4 flex items-center gap-2
+}
+.prevLink, .nextLink, .currentStep, .step {
+    @apply  px-4 py-2 text-lg font-medium text-gray-900
+}
+
+.currentStep{
+    @apply bg-red-600 text-white border-solid ring-4 ring-red-200 rounded-full
+}
+
+.pagination .disabled {
+    @apply text-gray-400 cursor-not-allowed opacity-60;
+    pointer-events: none;
+}
+.icon-pagination{
+    @apply text-xl font-bold
+}
+.prevLink, .nextLink{
+    @apply flex items-center
 }

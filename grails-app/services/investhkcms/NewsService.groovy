@@ -15,7 +15,9 @@ class NewsService {
 
     List<News> getAllNews(Map params) {
         def criteria = News.createCriteria()
-        def results = criteria.list {
+        def max = params.int('max') ?: 10
+        def offset = params.int('offset') ?: 0
+        def results = criteria.list (max: max, offset: offset) {
             applyFilterSearch(delegate, params)
             applySorting(delegate, params)
         } as List<News>
@@ -60,7 +62,19 @@ class NewsService {
      static void applySorting(def query, Map params) {
         def sort = params.sort ?: 'id'
         def order = params.order ?: 'asc'
-        query.order(sort,order)
+
+         if (sort == 'location.name'){
+             query.createAlias('location', 'loc')
+             query.order('loc.name', order)
+         } else if (sort == 'contentType.name'){
+             query.createAlias('contentType', 'ct')
+             query.order('ct.name', order)
+         } else if (sort == 'industry.name'){
+             query.createAlias('industry', 'i')
+             query.order('i.name', order)
+         } else {
+             query.order(sort, order)
+         }
     }
 
 
