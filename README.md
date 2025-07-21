@@ -1,30 +1,21 @@
-## Grails 6.2.3 Documentation
+# 📘 Invest HK CMS — Grails 6.2.3 + Tailwind CSS Setup
 
-- [User Guide](https://docs.grails.org/6.2.3/guide/index.html)
-- [API Reference](https://docs.grails.org/6.2.3/api/index.html)
-- [Grails Guides](https://guides.grails.org/index.html)
+This project is built using **Grails 6.2.3** with **Tailwind CSS** for CMS frontend styling.  
+Below is the complete guide for getting started and understanding the tools used.
+
 ---
 
-## Feature geb documentation
+## 🚀 Quick Start (Tailwind Build)
 
-- [Grails Geb Functional Testing for Grails documentation](https://github.com/grails3-plugins/geb#readme)
+> Required: Node.js v18 or v20 recommended (avoid v22 due to known issues with `npx` and Tailwind)
 
-- [https://www.gebish.org/manual/current/](https://www.gebish.org/manual/current/)
+1. **Install Tailwind & Dependencies**
 
-## Feature scaffolding documentation
+   Make sure you're in the project root directory, then run:
 
-- [Grails Scaffolding Plugin documentation](https://grails.github.io/scaffolding/latest/groovydoc/)
-
-- [https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html](https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html)
-
-## Feature asset-pipeline-grails documentation
-
-- [Grails Asset Pipeline Core documentation](https://www.asset-pipeline.com/manual/)
-
-## Running Build Tailwind
-npm init -y
-
-npm install -D tailwindcss
-
-npx tailwindcss -i ./grails-app/assets/stylesheets/tailwind.css -o ./grails-app/assets/stylesheets/tailwind-built.css
-
+   ```bash
+   npm install
+   ```
+      ```bash
+   npm run build-tailwind
+   ```
