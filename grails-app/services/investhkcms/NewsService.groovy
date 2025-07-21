@@ -62,7 +62,19 @@ class NewsService {
      static void applySorting(def query, Map params) {
         def sort = params.sort ?: 'id'
         def order = params.order ?: 'asc'
-        query.order(sort,order)
+
+         if (sort == 'location.name'){
+             query.createAlias('location', 'loc')
+             query.order('loc.name', order)
+         } else if (sort == 'contentType.name'){
+             query.createAlias('contentType', 'ct')
+             query.order('ct.name', order)
+         } else if (sort == 'industry.name'){
+             query.createAlias('industry', 'i')
+             query.order('i.name', order)
+         } else {
+             query.order(sort, order)
+         }
     }
 
 
