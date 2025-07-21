@@ -80,7 +80,7 @@
                 <th class="table-head-cell-name">Name</th>
                 <th class="table-head-cell">Email</th>
                 <th class="table-head-cell">Tel</th>
-                <th class="table-head-cell">Date Published</th>
+                <th class="table-head-cell-name">Date Published</th>
                 <th class="table-head-cell"><span class="sr-only">Action</span></th>
             </tr>
             </thead>

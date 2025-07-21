@@ -11,7 +11,7 @@ class UiTagLib {
 
         def newOrder = (currentSort == sort && currentOrder == "asc") ? "desc" : "asc"
 
-        def cssClass = "inline-flex items-center gap-1"
+        def cssClass = "inline-flex items-center gap-1 text-xl"
         def icon = ""
 
         if (currentSort == sort) {
