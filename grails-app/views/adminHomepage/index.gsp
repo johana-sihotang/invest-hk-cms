@@ -1,10 +1,12 @@
 <html>
 <head>
+    <meta name="layout" content="cms-layout"/>
     <title>Admin | Homepage</title>
+
 </head>
 
 <body>
-<div class="container">
+<div class="container_homepage">
     <h1 class="title">Update Homepage</h1>
 
     <g:hasErrors bean="${config}">
@@ -24,10 +26,19 @@
             <h4 class="section_title">Section Slider Banner</h4>
             <div id="newsSelectionContainer">
                 <div class="news-select-group selection-item">
-                    <select name="selectedNewsIds"
-                            class="select-news">
-                        <g:each in="${newsList}" var="news">
-                            <option value="${news.id}">${news.title.encodeAsHTML()}</option>
+                    <select name="selectedNewsId"
+                            class="select-news" id="selectedNewsId">
+                        <g:each in="${news}" var="items">
+                            <option value="${items.id}">${items.title}</option>
+                        </g:each>
+                    </select>
+                </div>
+
+                <div class="news-select-group selection-item">
+                    <select name="selectedNewsId"
+                            class="select-news" id="selectedNewsIds_1">
+                        <g:each in="${news}" var="items">
+                            <option value="${items.id}">${items.title}</option>
                         </g:each>
                     </select>
                 </div>
@@ -134,5 +145,12 @@
 
 </div>
 <asset:javascript src="admin_homepage.js"/>
+<script>
+    $(document).ready(function() {
+        $('#newsSelect').select2({
+            width: '100%'
+        });
+    });
+</script>
 </body>
 </html>

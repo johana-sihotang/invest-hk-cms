@@ -40,7 +40,7 @@ function setupBannerAdd() {
         // Add new remove button
         const removeBtn = document.createElement('button');
         removeBtn.type = 'button';
-        removeBtn.textContent = '×';
+        removeBtn.innerHTML = "<i class=\"bi bi-trash3-fill\"></i>";
         removeBtn.className = 'remove-banner-btn text-red-600 hover:text-red-800 font-bold text-lg ml-2';
         removeBtn.addEventListener('click', function () {
             newSelectGroup.remove();
