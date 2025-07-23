@@ -158,14 +158,19 @@ html,body{
     @apply mb-6 space-y-4
 }
 #newsSelectionContainer{
-    @apply py-4 space-y-4
+    @apply space-y-4
 }
 .selection-item{
-   @apply flex items-center gap-2 w-[95%]
+   @apply flex items-center
 }
 .select-news{
     @apply bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg block w-full p-2.5
 }
+.start__selection-container{
+    @apply grid lg:gap-5;
+    grid-template-columns : repeat(auto-fill, minmax(300px, 1fr));
+}
+
 .start-section-label{
    @apply block mb-2 text-lg font-medium text-gray-900
 }
@@ -197,8 +202,16 @@ html,body{
 }
 
 /*Select2*/
+.news-select-group{
+    @apply w-[97%]
+}
+
 .select2-container--default .select2-selection--single {
     @apply h-fit bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg block w-full p-2.5 flex items-center justify-between rounded-none border border-slate-900 !important
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    @apply w-screen
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow{

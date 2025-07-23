@@ -771,9 +771,9 @@ slick-dots li {
 
 
 @media screen and (max-width: 650px) {
-    .mb-10{
-        margin-top: 118px;
-    }
+    /*.mb-10{*/
+    /*    margin-top: 118px;*/
+    /*}*/
     .panel {
         max-width: 365px;
     }

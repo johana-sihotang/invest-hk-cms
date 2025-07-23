@@ -22,11 +22,17 @@ class AdminHomepageController {
     def update(Long id) {
         def json = request.JSON
         def homepageRequest = new HomepageRequest(
-                bannerSectionRequests: json.bannerSectionRequests.collect { new BannerSectionRequest(it)},
-                startSectionRequestsst: json.startSectionRequestsst.collect { new StartSectionRequest(it)},
-                panelSectionImageRequests: json.panelSectionImageRequests.collect {new PanelSectionImageRequest(it)},
-                panelSectionTextSliderRequests: json.panelSectionTextSliderRequests.collect { new PanelSectionTextSliderRequest(it)}
+                banner: json.banner.collect { new BannerSectionRequest()},
+                start: json.start.collect { new StartSectionRequest()},
+                panelImage: json.panelImage.collect {new PanelSectionImageRequest()},
+                panelTextSlider: json.panelTextSlider.collect { new PanelSectionTextSliderRequest()}
         )
+
+        homepageRequest.start.each { section ->
+            if (section.imageFile) {
+                section.imageUrl = homepageService.handleImageUpload(section.imageFile)
+            }
+        }
 
         try {
             homepageService.saveHomepage(id, homepageRequest)

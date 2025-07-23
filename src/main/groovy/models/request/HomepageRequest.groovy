@@ -1,10 +1,12 @@
 package models.request
 
+import org.springframework.web.multipart.MultipartFile
+
 class HomepageRequest {
-    List<BannerSectionRequest> bannerSectionRequests = []
-    List<StartSectionRequest> startSectionRequestsst = []
-    List<PanelSectionImageRequest> panelSectionImageRequests = []
-    List<PanelSectionTextSliderRequest> panelSectionTextSliderRequests = []
+    List<BannerSectionRequest> banner = []
+    List<StartSectionRequest> start = []
+    List<PanelSectionImageRequest> panelImage = []
+    List<PanelSectionTextSliderRequest> panelTextSlider = []
 }
 
 class BannerSectionRequest {
@@ -16,6 +18,7 @@ class StartSectionRequest {
     String imageUrl
     String caption
     Integer orderIndex
+    MultipartFile imageFile
 }
 
 class PanelSectionImageRequest {

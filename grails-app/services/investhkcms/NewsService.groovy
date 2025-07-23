@@ -165,7 +165,7 @@ class NewsService {
         updateNews(request, imagePath)
     }
 
-    private String saveImage(def imageFile){
+    private static String saveImage(def imageFile){
         if (!imageFile || imageFile.empty) {
             throw new IllegalAccessException("Image file is required")
         }

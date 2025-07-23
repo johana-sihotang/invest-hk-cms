@@ -26,21 +26,18 @@
             <h4 class="section_title">Section Slider Banner</h4>
             <div id="newsSelectionContainer">
                 <div class="news-select-group selection-item">
-                    <select name="selectedNewsId"
-                            class="select-news" id="selectedNewsId">
+                    <label for="banner_newsId"  hidden="hidden" class="select-news-title">News Title</label>
+                    <select name=""
+                            class="select-news" id="banner_newsId">
                         <g:each in="${news}" var="items">
                             <option value="${items.id}">${items.title}</option>
                         </g:each>
                     </select>
-                </div>
 
-                <div class="news-select-group selection-item">
-                    <select name="selectedNewsId"
-                            class="select-news" id="selectedNewsIds_1">
-                        <g:each in="${news}" var="items">
-                            <option value="${items.id}">${items.title}</option>
-                        </g:each>
-                    </select>
+                    <div class="news-order-group selection-item">
+                        <label hidden="hidden" for="banner_orderIndex" class="input-news-title">News Title</label>
+                        <input hidden="hidden" name="" id="banner_orderIndex" value=""/>
+                    </div>
                 </div>
             </div>
             <button type="button" id="addBannerBtn" class="btn-add">
@@ -51,11 +48,7 @@
         <!-- Start Section -->
         <div class="selection-container">
             <h4 class="section_title">Start Section Images & Captions</h4>
-
-            <div id="startSectionContainer" class="grid gap-6 mb-6 md:grid-cols-2">
-            </div>
-
-            <div id="startSectionTemplate" class="hidden">
+            <div id="startSelectionContainer" class="start__selection-container">
                 <div class="start-section-group">
                     <label for="start" class="start-label">Caption</label>
                     <input id="start" name="startCaptions" type="text"
@@ -66,11 +59,9 @@
                               model="[fieldName: 'startImages', label: 'Start Image']"/>
                 </div>
             </div>
-
-            <button type="button" id="addStartSectionBtn"
-                    class="btn-add">
-                + Add Start Section
-            </button>
+            <button type="button" id="addStartSectionBtn" class="btn-add">
+            + Add Start Section
+        </button>
         </div>
 
         <div class="selection-container">
