@@ -47,12 +47,5 @@
 <!--disble continent select-->
 <asset:javascript src="disable_continent_select.js"/>
 <asset:javascript src="slicker.js"/>
-<script>
-    $(document).ready(function () {
-        $('.js-select2').select2({
-            width: 'resolve'
-        });
-    });
-</script>
 </body>
 </html>

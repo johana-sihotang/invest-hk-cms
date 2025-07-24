@@ -827,6 +827,10 @@ a {
     margin-bottom: 20px;
 }
 }
+#heroSliderContent .slick-arrow {
+
+}
+
 @media (min-width: 576px) {
 
 }

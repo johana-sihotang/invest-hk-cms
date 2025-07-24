@@ -691,7 +691,7 @@ slick-dots li {
         height: auto;
     }
     .index__up .index__section__textInner {
-        margin: 60px 40px 70px;
+        margin: 10px 40px 70px;
     }
     .index__up {
         height: auto;
@@ -709,6 +709,7 @@ slick-dots li {
     .index__section__text {
         float: none;
         width: 100%;
+        min-height: 500px;
         margin: 0 auto;
     }
 
@@ -729,6 +730,7 @@ slick-dots li {
     }
     .index__up .index__section__inner {
         float: none;
+        min-height: 300px;
     }
     .index__section__paragraph {
         font-size: 12px;
@@ -741,6 +743,13 @@ slick-dots li {
     }
     .index .slick-next {
         right: 0;
+    }
+
+    .index .slick-dots {
+        left: 40px;
+        width: auto;
+        top: 270px;
+        bottom: 70%;
     }
 }
 
@@ -826,6 +835,13 @@ slick-dots li {
 
     .panel__section__text {
         padding: 15px;
+    }
+
+    .index__section__text {
+        float: none;
+        width: 100%;
+        min-height: 300px;
+        margin: 0 auto;
     }
 }
 

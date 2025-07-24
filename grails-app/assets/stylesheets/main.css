@@ -10354,9 +10354,6 @@ body.no-scroll {
 }
 
 @media(max-width: 991px) {
-    .slider{
-        margin-bottom: 24px;
-    }
     .article__tags__images{
         width: calc(100% + 80px);
         margin-left: -40px;

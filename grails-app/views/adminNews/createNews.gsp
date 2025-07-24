@@ -45,37 +45,34 @@
     </div>
 
     <div class="container-grid-three">
-        <div>
-            <g:render template="/components/input_selected" model="[
-                    label        : 'Location',
-                    name         : 'locationId',
-                    options      : locations,
-                    optionKey    : 'id',
-                    optionValue  : 'name',
-                    selectedValue: news?.location?.id
-            ]"/>
+        <div class="container-column-select">
+            <label for="locations" class="label-title">Location</label>
+            <select name="locations"
+                    class="select-location" id="locations">
+                <g:each in="${locations}" var="items">
+                    <option value="${items.id}">${items.name}</option>
+                </g:each>
+            </select>
         </div>
 
-        <div>
-            <g:render template="/components/input_selected" model="[
-                    label        : 'Content Type',
-                    name         : 'contentTypeId',
-                    options      : contentType,
-                    optionKey    : 'id',
-                    optionValue  : 'name',
-                    selectedValue: news?.contentType?.id
-            ]"/>
+        <div class="container-column-select">
+            <label for="contentType" class="label-title">Content Type</label>
+            <select name="contentTypeId"
+                    class="select-location" id="contentType">
+                <g:each in="${contentType}" var="items">
+                    <option value="${items.id}">${items.name}</option>
+                </g:each>
+            </select>
         </div>
 
-        <div>
-            <g:render template="/components/input_selected" model="[
-                    label        : 'Industry',
-                    name         : 'industryId',
-                    options      : industries,
-                    optionKey    : 'id',
-                    optionValue  : 'name',
-                    selectedValue: news?.industry?.id
-            ]"/>
+        <div class="container-column-select">
+            <label for="industries" class="label-title">Location</label>
+            <select name="industryId"
+                    class="select-location" id="industries">
+                <g:each in="${industries}" var="items">
+                    <option value="${items.id}">${items.name}</option>
+                </g:each>
+            </select>
         </div>
     </div>
 

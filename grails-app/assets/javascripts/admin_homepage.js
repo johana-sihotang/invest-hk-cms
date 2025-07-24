@@ -83,8 +83,8 @@ function setupStartSectionAdd() {
         const newIndex = startIndex++;
 
         const newStartGroup = firstSelect.cloneNode(true);
-        const labelElement = startSelectGroup.querySelector('select');
-        const inputElement = newSelectGroup.querySelector('input');
+        const labelElement = newStartGroup.querySelector('label');
+        const inputElement = newSelectGroup.querySelector('input.start-input');
         const labelSelect = newSelectGroup.querySelector('label.select-news-title');
 
         // Update name dan id

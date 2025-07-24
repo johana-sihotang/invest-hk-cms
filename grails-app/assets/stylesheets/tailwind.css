@@ -119,7 +119,7 @@ html,body{
 }
 
 .input-title{
-   @apply bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+   @apply bg-gray-50 border border-slate-300 text-gray-900 text-lg focus:border-slate-900 block w-full p-2.5
 }
 
 .search {
@@ -153,7 +153,9 @@ html,body{
 .selection-container{
     @apply mb-6 space-y-4 p-4 bg-gray-200
 }
-
+.container-column-select{
+    @apply flex items-start justify-center flex-col
+}
 .start-section-group{
     @apply mb-6 space-y-4
 }
@@ -176,6 +178,25 @@ html,body{
 }
 .start-input{
     @apply bg-gray-50 border border-slate-900 text-gray-900 text-lg block w-full p-2.5
+}
+/*text editor*/
+.tox-tinymce{
+ @apply bg-gray-50 border border-slate-300 text-gray-900 text-lg focus:border-slate-900 rounded-none !important;
+}
+
+.tox .tox-sidebar-wrap{
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2  !important
+}
+
+/*dropbox*/
+.image-dropbox{
+    @apply absolute object-contain w-full h-full
+}
+.text-dropbox{
+    @apply mb-2 text-sm text-gray-500
+}
+.label-dropbox{
+    @apply flex flex-col items-center justify-center w-full h-48 md:h-64 border border-slate-900 cursor-pointer bg-gray-50 hover:bg-gray-100 transition relative overflow-hidden
 }
 
 /*pagination*/
@@ -206,12 +227,16 @@ html,body{
     @apply w-[97%]
 }
 
+.select2-container{
+    @apply w-full !important;
+}
+
 .select2-container--default .select2-selection--single {
     @apply h-fit bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg block w-full p-2.5 flex items-center justify-between rounded-none border border-slate-900 !important
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered{
-    @apply w-screen
+    @apply !important;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow{
