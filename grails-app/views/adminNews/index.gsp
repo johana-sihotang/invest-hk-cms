@@ -111,4 +111,4 @@
         </table>
     </div>
 </g:else>
-<g:render template="/components/pagination"/>
+<g:render template="/components/paginationAdmin"/>

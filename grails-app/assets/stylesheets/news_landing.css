@@ -757,6 +757,20 @@ a {
     text-align: center;
     width: 100%;
 }
+.heroSlider__content--slide{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height:350px;
+    height: 100%;
+}
+
+#heroSliderContent .slick-prev,
+#heroSliderContent .slick-next{
+    position: absolute !important;
+    bottom: 20px !important;
+}
+
 @media (min-width: 1600px) {
     .container_ {
         /*max-width: 1540px;*/
@@ -776,56 +790,58 @@ a {
 }
 @media (min-width: 768px) {
 
-    .panel__section__date{
+    .panel__section__date {
         display: none;
     }
 
-.show {display: block;}
+    .show {
+        display: block;
+    }
 
 
-.custom-dropdown {
-    position: relative;
-    display: inline-block;
-}
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-.custom-dropdown select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding-right: 30px;
-}
+    .custom-dropdown select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 30px;
+    }
 
-.publicationDate{
+    .publicationDate {
 
-}
+    }
 
-.contentType select {
-    padding-right: 170px;
-}
+    .contentType select {
+        padding-right: 170px;
+    }
 
-.location select{
-    padding-right: 110px;
-}
+    .location select {
+        padding-right: 110px;
+    }
 
-.industry{
-    padding-right: 10px;
-}
+    .industry {
+        padding-right: 10px;
+    }
 
 
-.custom-dropdown::after {
-    content: '\25BC';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: red;
-}
+    .custom-dropdown::after {
+        content: '\25BC';
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: red;
+    }
 
-.formFilter__fieldButtom--action{
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
+    .formFilter__fieldButtom--action {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
 }
 #heroSliderContent .slick-prev {
     position: absolute;
