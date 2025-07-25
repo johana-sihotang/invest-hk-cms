@@ -15,36 +15,15 @@
                         <div class="slider heroSlider__content--slide">
                             <div class="heroSlider__content--category">Featured Case Studies</div>
                             <h2 class="heroSlider__content--title"><a href="#">Fuelling Sustainable F&amp;B Packaging Solutions</a></h2>
-                            <div class="heroSlider__content--author">
-                                Cyril Drouet<br> Co-Founder and Managing Director, Choose Planet A
-                            </div>
                         </div>
                         <div class="slider heroSlider__content--slide">
                             <div class="heroSlider__content--category">Featured Case Studies</div>
                             <h2 class="heroSlider__content--title"><a href="#">Compelling Advertising Solutions on the Move</a></h2>
-                            <div class="heroSlider__content--author">
-                                Richard Petignaud<br> Managing Director, Bravo Media
-                            </div>
                         </div>
                         <div class="slider heroSlider__content--slide">
                             <div class="heroSlider__content--category">Featured Case Studies</div>
                             <h2 class="heroSlider__content--title"><a href="#">Safeguarding Lives, Securing Business Operations</a></h2>
-                            <div class="heroSlider__content--author">
-                                Nicolas Sommer<br> Managing Director, Greater China International SOS
-                            </div>
                         </div>
-%{--                        <div class="heroSlider__navigation d-flex">--}%
-%{--                            <div id="heroSliderContent__01-dots" class="heroSlider__navigation--dots flex-fill align-self-center swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>--}%
-%{--                            <div class="heroSlider__navigation--action">--}%
-%{--                                <button id="heroSliderContent__01-prev" type="button" class="heroSlider__navigation--action-button swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-1de1f1fb9797c52b" aria-disabled="true">--}%
-%{--                                    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>--}%
-%{--                                </button>--}%
-%{--                                <button id="heroSliderContent__01-next" type="button" class="heroSlider__navigation--action-button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-1de1f1fb9797c52b" aria-disabled="false">--}%
-%{--                                    <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>--}%
-%{--                                </button>--}%
-%{--                            </div>--}%
-%{--                        </div>--}%
-%{--                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>--}%
                 </div>
             </div>
 
