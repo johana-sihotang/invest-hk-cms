@@ -166,16 +166,6 @@ class NewsService {
     }
 
     private String saveImage(def imageFile){
-        if (!imageFile || imageFile.empty) {
-            throw new IllegalAccessException("Image file is required")
-        }
-        if(!imageFile.contentType?.startsWith("image/")){
-            throw new IllegalArgumentException("Uploaded file must be an image")
-        }
-        final long MAX_IMAGE_SIZE = 5 * 1024 * 1024
-        if (imageFile.size > MAX_IMAGE_SIZE) {
-            throw new IllegalArgumentException("Image file is too large (Max 5MB)")
-        }
         def fileName = UUID.randomUUID().toString() + "_" + imageFile.originalFilename
         def uploadDir = new File("${System.getProperty('user.dir')}/uploads/news")
         if (!uploadDir.exists()) uploadDir.mkdir()
