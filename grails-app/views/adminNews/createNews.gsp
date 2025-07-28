@@ -20,83 +20,79 @@
         </div>
     </g:hasErrors>
 
-<g:form controller="adminNews" action="save" method="POST" enctype="multipart/form-data">
-    <div class="container-grid-two">
-        <div>
-            <label for="article_title" class="label-title">Title</label>
-            <input name="title" type="text" id="article_title"
-                   class="input-title"
-                   placeholder="Title" required/>
+    <g:form controller="adminNews" action="save" method="POST" enctype="multipart/form-data">
+        <div class="container-grid-two">
+            <div>
+                <label for="article_title" class="label-title">Title</label>
+                <input name="title" type="text" id="article_title"
+                       class="input-title"
+                       placeholder="Title" required/>
+            </div>
+
+            <div>
+                <label for="subTitle" class="label-title">Sub Title</label>
+                <input name="subTitle" type="text" id="subTitle"
+                       class="input-title"
+                       placeholder="Sub Title" required/>
+            </div>
         </div>
 
-        <div>
-            <label for="subTitle" class="label-title">Sub Title</label>
-            <input name="subTitle" type="text" id="subTitle"
-                   class="input-title"
-                   placeholder="Sub Title" required/>
-        </div>
-    </div>
-
-    <div class="my-6">
-        <label for="content" class="label-title">Content</label>
-        <textarea name="content" id="content" rows="4"
-                  class="input-title"
-                  placeholder="Content"></textarea>
-    </div>
-
-    <div class="container-grid-three">
-        <div>
-            <g:render template="/components/input_selected" model="[
-                    label        : 'Location',
-                    name         : 'locationId',
-                    options      : locations,
-                    optionKey    : 'id',
-                    optionValue  : 'name',
-                    selectedValue: news?.location?.id
-            ]"/>
+        <div class="my-6">
+            <label for="content" class="label-title">Content</label>
+            <textarea name="content" id="content" rows="4"
+                      class="input-title"
+                      placeholder="Content"></textarea>
         </div>
 
-        <div>
-            <g:render template="/components/input_selected" model="[
-                    label        : 'Content Type',
-                    name         : 'contentTypeId',
-                    options      : contentType,
-                    optionKey    : 'id',
-                    optionValue  : 'name',
-                    selectedValue: news?.contentType?.id
-            ]"/>
+        <div class="container-grid-three">
+            <div class="container-column-select">
+                <label for="locations" class="label-title">Location</label>
+                <select name="locationId"
+                        class="select-location" id="locations">
+                    <g:each in="${locations}" var="items">
+                        <option value="${items.id}">${items.name}</option>
+                    </g:each>
+                </select>
+            </div>
+
+            <div class="container-column-select">
+                <label for="contentType" class="label-title">Content Type</label>
+                <select name="contentTypeId"
+                        class="select-location" id="contentType">
+                    <g:each in="${contentType}" var="items">
+                        <option value="${items.id}">${items.name}</option>
+                    </g:each>
+                </select>
+            </div>
+
+            <div class="container-column-select">
+                <label for="industries" class="label-title">Location</label>
+                <select name="industryId"
+                        class="select-location" id="industries">
+                    <g:each in="${industries}" var="items">
+                        <option value="${items.id}">${items.name}</option>
+                    </g:each>
+                </select>
+            </div>
         </div>
 
-        <div>
-            <g:render template="/components/input_selected" model="[
-                    label        : 'Industry',
-                    name         : 'industryId',
-                    options      : industries,
-                    optionKey    : 'id',
-                    optionValue  : 'name',
-                    selectedValue: news?.industry?.id
-            ]"/>
+        <div class="flex gap-6 flex-col">
+            <g:render template="/components/dropzone"/>
+            <div>
+                <label for="imageCaption" class="label-title">Image Caption</label>
+                <input name="imageCaption" type="text" id="imageCaption"
+                       class="input-title"
+                       placeholder="Image Caption" required/>
+            </div>
         </div>
-    </div>
-
-    <div class="flex gap-6 flex-col">
-        <g:render template="/components/dropzone"/>
-        <div>
-            <label for="imageCaption" class="label-title">Image Caption</label>
-            <input name="imageCaption" type="text" id="imageCaption"
-                   class="input-title"
-                   placeholder="Image Caption" required/>
         </div>
-    </div>
-    </div>
-    <div class="flex gap-5">
-        <button type="submit"
-                class="btn-submit">Submit
-        </button>
-        <g:link controller="adminNews" action="index" class="btn-cancel">
-            Cancel
-        </g:link>
-    </div>
-</g:form>
+        <div class="flex gap-5">
+            <button type="submit"
+                    class="btn-submit">Submit
+            </button>
+            <g:link controller="adminNews" action="index" class="btn-cancel">
+                Cancel
+            </g:link>
+        </div>
+    </g:form>
 </div>
-

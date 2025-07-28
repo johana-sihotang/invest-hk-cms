@@ -2463,6 +2463,95 @@ html,body {
   align-items: center;
 }
 
+/*Select2*/
+
+.news-select-group {
+  width: 97%;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+  display: block !important;
+  display: flex !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  width: 100% !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-radius: 0.5rem !important;
+  border-radius: 0px !important;
+  border-width: 1px !important;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity)) !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(15 23 42 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
+  padding: 0.625rem !important;
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  position: static !important;
+  display: flex !important;
+  height: 2rem !important;
+  width: 2rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  position: static !important;
+  left: 100% !important;
+  height: 2rem !important;
+  width: 2rem !important;
+  border-width: 0px !important;
+  background-color: transparent !important;
+  background-image: url(/assets/down-chevron.png) !important;
+  background-size: cover !important;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  position: static !important;
+  left: 100% !important;
+  height: 2rem !important;
+  width: 2rem !important;
+  border-width: 0px !important;
+  background-color: transparent !important;
+  background-image: url(/assets/up-chevron.png) !important;
+  background-size: cover !important;
+}
+
+.select2-results__option--selectable {
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity)) !important;
+}
+
+.select2-container--default .select2-results__option--selected {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(145 148 151 / var(--tw-text-opacity)) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(215 39 29 / var(--tw-bg-opacity)) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable.select2-results__option--selected {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(215 39 29 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));

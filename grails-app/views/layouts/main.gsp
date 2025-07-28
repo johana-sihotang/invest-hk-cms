@@ -22,7 +22,7 @@
 
     <asset:stylesheet src="main.css"/>
     <asset:stylesheet src="news_landing.css"/>
-    <asset:stylesheet src="con"/>
+    <asset:stylesheet src="pagination.css"/>
     <g:layoutHead/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>

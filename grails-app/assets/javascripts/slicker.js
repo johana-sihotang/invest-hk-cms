@@ -34,7 +34,6 @@ $(function() {
         appendDots: $('.indexCarousellTop'),
         autoplay: false,
         autoplaySpeed: 4000,
-        adaptiveHeight: true,
     });
 
     updateDotsPosition();
@@ -85,8 +84,15 @@ $(function() {
         adaptiveHeight: true,
     });
 
+    $('#heroSliderContent').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        autoplay: false,
+        autoplaySpeed: 4000,
+    });
 
 
-});Ï
 
-
+});

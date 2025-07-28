@@ -34,7 +34,7 @@ class AdminService {
     }
 
     private void applySearch(def query, Map params) {
-        def search = params.search?.trims()
+        def search = params.search
         if (!search) return
         query.or {
             ilike("title", "%${search}%")
@@ -48,29 +48,6 @@ class AdminService {
         def order = params.order ?: "asc"
         query.order(sort, order)
     }
-
-    @Secured(['ROLE_ADMIN'])
-    List<AdminAuthResponse> getAllAdminAuth() {
-        List<AdminRole> adminAuthList = AdminRole.list()
-        def AdminAuthResponse = []
-
-        adminAuthList.each { adminInfo ->
-            def admin = adminInfo.admin
-            def role = adminInfo.role
-
-            def adminData = [
-                    name    : admin.name,
-                    username: admin.username,
-                    password: admin.password,
-                    status  : admin.status,
-                    role    : role.authority
-            ] as LinkedHashMap
-
-            AdminAuthResponse << new AdminAuthResponse(adminData)
-        }
-        return AdminAuthResponse
-    }
-
 
     @Secured(['ROLE_ADMIN'])
     @Transactional

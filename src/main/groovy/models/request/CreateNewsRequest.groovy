@@ -25,3 +25,4 @@ class CreateNewsRequest implements Validateable {
         industryId nullable: false
     }
 }
+

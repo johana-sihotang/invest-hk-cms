@@ -12,93 +12,122 @@
 <div class="index slider-wrapper" role="banner">
     <div class="index__section index__up">
         <div class="indexCarousellTop">
-            <!--Slide 1-->
-            <div class="slider">
-                <div class="index__section__text">
-                    <div class="index__section__inner">
-                        <div class="index__section__textInner index__section__slide">
-                            <div class="index__section__header">Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong</div>
+        <!--Slide 1-->
+            <g:if test="${newsSlider}">
+                <g:each in="${newsSlider}" var="news">
+                    <div class="slider">
+                        <div class="index__section__text">
+                            <div class="index__section__inner">
+                                <div class="index__section__textInner index__section__slide">
+                                    <div class="index__section__header">${news.title}</div>
 
-                            <div class="index__section__paragraph"></div>
-                            <nav class="link">
-                                <a target="_self"
-                                   template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                   href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                   aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                   tabindex="0">Read More
-                                </a>
-                            </nav>
+                                    <div class="index__section__paragraph"></div>
+                                    <nav class="link">
+                                        <a target="_self"
+                                           template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                           href="${createLink(controller: 'news', action: 'show', id: news.id)}"
+                                           aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                           tabindex="0">Read More
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="index__section__image compat-object-fit"
+                             style="background-image: url(${news.image});">
+                        </div>
+
+                    </div>
+                </g:each>
+            </g:if>
+            <g:else>
+                <div class="slider">
+                    <div class="index__section__text">
+                        <div class="index__section__inner">
+                            <div class="index__section__textInner index__section__slide">
+                                <div class="index__section__header">Senior Representatives Joined Our Reception for New Establishments of International and Mainland Business in Hong Kong</div>
+
+                                <div class="index__section__paragraph"></div>
+                                <nav class="link">
+                                    <a target="_self"
+                                       template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                       href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                       aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
+                                       tabindex="0">Read More
+                                    </a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="index__section__image compat-object-fit"
+                         style="background-image: url(${assetPath(src: 'favicon/drone.jpg')});">
+                        <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                           data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                           data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">
+                        </a>
+
+                    </div>
+
                 </div>
+                <!--Slide 2-->
+                <div class="slider">
+                    <div class="index__section__text">
+                        <div class="index__section__inner">
+                            <div class="index__section__textInner index__section__slide">
+                                <div class="index__section__header">Drone Tech Brings New Opportunities</div>
 
-                <div class="index__section__image compat-object-fit"
-                     style="background-image: url(${assetPath(src: 'favicon/drone.jpg')});">
-                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="0">
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!--Slide 2-->
-            <div class="slider">
-                <div class="index__section__text">
-                    <div class="index__section__inner">
-                        <div class="index__section__textInner index__section__slide">
-                            <div class="index__section__header">Drone Tech Brings New Opportunities</div>
-
-                            <div class="index__section__paragraph"></div>
-                            <nav class="link">
-                                <a target="_self"
-                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   tabindex="-1">Read More
-                                </a>
-                            </nav>
+                                <div class="index__section__paragraph"></div>
+                                <nav class="link">
+                                    <a target="_self"
+                                       template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       tabindex="-1">Read More
+                                    </a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="index__section__image compat-object-fit"
-                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
-                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                    </a>
-                </div>
-            </div>
-            <!--Slide 3-->
-            <div class="slider">
-                <div class="index__section__text">
-                    <div class="index__section__inner slider">
-                        <div class="index__section__textInner index__section__slide">
-                            <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
-
-                            <div class="index__section__paragraph"></div>
-                            <nav class="link">
-                                <a target="_self"
-                                   template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
-                                   tabindex="-1">Read More
-                                </a>
-                            </nav>
-                        </div>
+                    <div class="index__section__image compat-object-fit"
+                         style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
+                        <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                           data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                           data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
+                        </a>
                     </div>
                 </div>
+                <!--Slide 3-->
+                <div class="slider">
+                    <div class="index__section__text">
+                        <div class="index__section__inner slider">
+                            <div class="index__section__textInner index__section__slide">
+                                <div class="index__section__header">InvestHK Marks 25 Years as Hong Kong’s Ambassadors to the Global Business Community</div>
 
-                <div class="index__section__image compat-object-fit"
-                     style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
-                    <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
-                       data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
-                       data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
-                    </a>
+                                <div class="index__section__paragraph"></div>
+                                <nav class="link">
+                                    <a target="_self"
+                                       template-href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       href="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       aria-label="/en/why-hong-kong/whats-happening-hong-kong/drone-tech-brings-new-opportunities/"
+                                       tabindex="-1">Read More
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="index__section__image compat-object-fit"
+                         style="background-image: url(${assetPath(src: 'favicon/people.jpg')});">
+                <a role="button" class="slider_video" href="https://www.investhk.gov.hk/en/#"
+                   data-video="https://www.youtube.com/embed/lVYWeeOt8rQ"
+                   data-youku="https://player.youku.com/embed/?rel=0&amp;&amp;autoplay=1" tabindex="-1">
+                </a>
                 </div>
-            </div>
+            </g:else>
+        </div>
         </div>
     </div>
 </div>
@@ -266,83 +295,83 @@
         </div>
     </div>
 
-        <div class="panel__section link">
-            <div class="panel__section__inner panel__section__innerUp startUp">
-                <div class="panel__section__image compat-object-fit"
-                     style="background-image: url(${assetPath(src: 'favicon/2019happening.jpeg')});">
-                    <a template-href="/en/why-hong-kong/whats-happening-hong-kong/"
-                       href="/en/why-hong-kong/whats-happening-hong-kong/" target="_self"></a>
+    <div class="panel__section link">
+        <div class="panel__section__inner panel__section__innerUp startUp">
+            <div class="panel__section__image compat-object-fit"
+                 style="background-image: url(${assetPath(src: 'favicon/2019happening.jpeg')});">
+                <a template-href="/en/why-hong-kong/whats-happening-hong-kong/"
+                   href="/en/why-hong-kong/whats-happening-hong-kong/" target="_self"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel__section events">
+        <div
+                class="panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;" tabindex="0" role="tabpanel">
+            <a template-href="/en/events/the-26th-annual-corporate-and-regulatory-update-acru-2025/"
+               href="/en/events/the-26th-annual-corporate-and-regulatory-update-acru-2025/" target="_self"
+               aria-label="The 26th Annual Corporate and Regulatory Update (ACRU 2025)" tabindex="0"></a>
+
+
+            <div class="panel__section__text">
+                <div class="panel__section__header">Events</div>
+
+                <div class="panel__section__paragraph">The 26th Annual Corporate and Regulatory Update (ACRU 2025)</div>
+
+                <div class="panel__section__date">
+                    06.06.2025
+
                 </div>
             </div>
         </div>
 
-        <div class="panel__section events">
-                <div
-                        class="panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;" tabindex="0" role="tabpanel">
-                    <a template-href="/en/events/the-26th-annual-corporate-and-regulatory-update-acru-2025/"
-                       href="/en/events/the-26th-annual-corporate-and-regulatory-update-acru-2025/" target="_self"
-                       aria-label="The 26th Annual Corporate and Regulatory Update (ACRU 2025)" tabindex="0"></a>
+        <div class="panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;" role="tabpanel">
+            <a template-href="/en/events/start-up-express-2025/" href="/en/events/start-up-express-2025/"
+               target="_self" aria-label="Start-up Express 2025" tabindex="-1"></a>
 
 
-                    <div class="panel__section__text">
-                        <div class="panel__section__header">Events</div>
+            <div class="panel__section__text">
+                <div class="panel__section__header">Events</div>
 
-                        <div class="panel__section__paragraph">The 26th Annual Corporate and Regulatory Update (ACRU 2025)</div>
+                <div class="panel__section__paragraph">Start-up Express 2025</div>
 
-                        <div class="panel__section__date">
-                            06.06.2025
+                <div class="panel__section__date">
+                    11.06.2025
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel__section__inner panel__red panel__section__innerDown startDown" style="width: 355px;" role="tabpanel">
-                    <a template-href="/en/events/start-up-express-2025/" href="/en/events/start-up-express-2025/"
-                       target="_self" aria-label="Start-up Express 2025" tabindex="-1"></a>
-
-
-                    <div class="panel__section__text">
-                        <div class="panel__section__header">Events</div>
-
-                        <div class="panel__section__paragraph">Start-up Express 2025</div>
-
-                        <div class="panel__section__date">
-                            11.06.2025
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel__section__inner panel__red panel__section__innerDown startDown">
-                    <a template-href="/en/events/london-tech-week-2025/" href="/en/events/london-tech-week-2025/"
-                       target="_self" aria-label="London Tech Week 2025" tabindex="-1"></a>
-
-
-                    <div class="panel__section__text">
-                        <div class="panel__section__header">Events</div>
-
-                        <div class="panel__section__paragraph">London Tech Week 2025</div>
-
-                        <div class="panel__section__date">
-
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-            <div class="panel__section FAQ">
-                <div class="panel__section__inner panel__blue panel__section__innerUp startUp">
-                    <div class="panel__section__text">
-                        <div class="panel__section__header">FAQ</div>
-
-                        <div class="panel__section__paragraph2">
-                            Q20. What are the advantages of setting up family offices in Hong Kong?
-                        </div>
-                        <a class="panel__section__button" target="_self" aria-label="/en/faq/?a=20"
-                           template-href="/en/faq/?a=20" href="/en/faq/?a=20">Get the Answer</a>
-                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="panel__section__inner panel__red panel__section__innerDown startDown">
+            <a template-href="/en/events/london-tech-week-2025/" href="/en/events/london-tech-week-2025/"
+               target="_self" aria-label="London Tech Week 2025" tabindex="-1"></a>
+
+
+            <div class="panel__section__text">
+                <div class="panel__section__header">Events</div>
+
+                <div class="panel__section__paragraph">London Tech Week 2025</div>
+
+                <div class="panel__section__date">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel__section FAQ">
+        <div class="panel__section__inner panel__blue panel__section__innerUp startUp">
+            <div class="panel__section__text">
+                <div class="panel__section__header">FAQ</div>
+
+                <div class="panel__section__paragraph2">
+                    Q20. What are the advantages of setting up family offices in Hong Kong?
+                </div>
+                <a class="panel__section__button" target="_self" aria-label="/en/faq/?a=20"
+                   template-href="/en/faq/?a=20" href="/en/faq/?a=20">Get the Answer</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>

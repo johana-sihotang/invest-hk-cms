@@ -24,15 +24,14 @@ class NewsService {
         return results
     }
      private void applyFilterSearch(def query, Map params) {
-         def search = params.search?.trim()
-         if (search) {
+         if (params.search) {
              query.or {
-                 ilike('title', "%${search}%")
+                 ilike('title', "%${params.search}%")
                  location {
-                     ilike('name', "%${search}%")
+                     ilike('name', "%${params.search}%")
                  }
                  author {
-                     ilike('username', "%${search}%")
+                     ilike('username', "%${params.search}%")
                  }
              }
          }
@@ -55,6 +54,24 @@ class NewsService {
                  industry {
                      ilike('name', "%${params.industry}%")
                  }
+             }
+         }
+
+         if(params.dateRange){
+             if (params.dateRange == 'last7days'){
+                 def date = Date.from(LocalDate.now().minusDays(7).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                 ge 'publicationDate', date
+             }
+             else if(params.dateRange == 'past1month'){
+                 def date = Date.from(LocalDate.now().minusMonths(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                 ge 'publicationDate', date
+             }
+             else if(params.dateRange == 'past1year'){
+                 def date = Date.from(LocalDate.now().minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                 ge 'publicationDate', date
+             }else if(params.dateRange == 'past2year'){
+                 def date = Date.from(LocalDate.now().minusYears(2).atStartOfDay(ZoneId.systemDefault()).toInstant())
+                 ge 'publicationDate', past2year
              }
          }
      }

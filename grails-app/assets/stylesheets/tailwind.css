@@ -185,3 +185,45 @@ html,body{
 .prevLink, .nextLink{
     @apply flex items-center
 }
+
+/*Select2*/
+.news-select-group{
+    @apply w-[97%]
+}
+
+.select2-container{
+    @apply w-full !important;
+}
+
+.select2-container--default .select2-selection--single {
+    @apply h-fit bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg block w-full p-2.5 flex items-center justify-between rounded-none border border-slate-900 !important
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    @apply !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    @apply flex w-8 h-8 items-center justify-center static !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+    @apply bg-[url(/assets/down-chevron.png)] left-full  bg-cover bg-transparent static border-0 w-8 h-8 !important
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+    @apply bg-[url(/assets/up-chevron.png)] left-full  bg-cover bg-transparent static border-0 w-8 h-8 !important
+}
+
+.select2-results__option--selectable{
+    @apply border border-gray-300 !important;
+}
+
+.select2-container--default .select2-results__option--selected{
+    @apply bg-[#f6f6f6] text-[#919497] !important;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+    @apply bg-[#d7271d] !important;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable.select2-results__option--selected {
+    @apply bg-[#d7271d] text-white !important;
+}
