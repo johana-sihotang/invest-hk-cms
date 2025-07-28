@@ -12,11 +12,11 @@ class AdminNewsController {
 
     @Secured(['ROLE_ADMIN'])
     def index() {
-        def news = newsService.getAllNews(params)
-        [news: news, search: params.search]
+        def result = newsService.getAllNews(params)
+        def news = result.toList()
+        def total = result.totalCount
+        [news: news, total: total, params: params]
     }
-
-
 
     @Secured(['ROLE_ADMIN'])
     def show(Long id) {
@@ -45,7 +45,7 @@ class AdminNewsController {
         }
 
         try {
-            newsService.handleNewsCreation(request)
+            newsService.handleNewsCreate(request)
             flash.success = "News created successfully"
             redirect(action: 'index')
         } catch (Exception e) {
@@ -74,31 +74,13 @@ class AdminNewsController {
             respond request.errors, view: 'edit', model: [news: news]
             return
         }
-
-        try {
-            def imageFile = request.imageFile
-            def imagePath = null
-
-            if (imageFile && !imageFile.empty) {
-                // lakukan validasi file baru jika diperlukan
-                def fileName = UUID.randomUUID().toString() + "_" + imageFile.originalFilename
-                def uploadDir = new File("${System.getProperty('user.dir')}/uploads/news")
-                if (!uploadDir.exists()) uploadDir.mkdirs()
-
-                def destination = new File(uploadDir, fileName)
-                imageFile.transferTo(destination)
-
-                imagePath = "/uploads/news/${fileName}"
-            }
-
-            News news = newsService.updateNews(request, imagePath)
-            flash.success = "News updated successfully"
-            redirect(action: "show", id: news.id)
-
+         try {
+            newsService.handleNewsUpdate(request)
+            flash.success = "News update successfully"
+            redirect(action: 'index')
         } catch (Exception e) {
-            flash.error = "Error updating news: ${e.message}"
-            News news = newsService.getNewsById(request.id)
-            respond request.errors, view: 'edit', model: [news: news]
+            flash.error = e.message
+            respond request.errors, view: 'createNews', model: [request: request]
         }
     }
 

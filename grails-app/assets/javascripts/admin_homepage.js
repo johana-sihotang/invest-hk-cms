@@ -7,40 +7,58 @@ document.addEventListener('DOMContentLoaded', function () {
 function setupBannerAdd() {
     const addBannerBtn = document.getElementById('addBannerBtn');
     const newsSelectionContainer = document.getElementById('newsSelectionContainer');
+    const selectGroups = newsSelectionContainer.querySelectorAll('.news-select-group');
+    const firstSelect = selectGroups[0];
+
+    if (firstSelect) {
+        firstSelect.style.display = 'none';
+    }
 
     if (!addBannerBtn || !newsSelectionContainer) return;
 
-    addBannerBtn.addEventListener('click', function () {
-        const selectGroups = newsSelectionContainer.querySelectorAll('.news-select-group');
-        const newIndex = selectGroups.length;
+    let bannerIndex = 0;
 
-        const firstSelect = selectGroups[0];
-        if (!firstSelect) return;
+    addBannerBtn.addEventListener('click', function () {
+        const newIndex = bannerIndex++;
 
         const newSelectGroup = firstSelect.cloneNode(true);
         const selectElement = newSelectGroup.querySelector('select');
+        const inputElement = newSelectGroup.querySelector('input');
+        const labelElement = newSelectGroup.querySelector('label.input-news-title');
+        const labelSelect = newSelectGroup.querySelector('label.select-news-title');
 
-        // Update name and id for uniqueness
+        // Update name dan id
         if (selectElement) {
-            selectElement.name = `selectedNewsIds[${newIndex}]`;
-            selectElement.id = `selectedNewsIds_${newIndex}`;
+            if (labelSelect) labelSelect.setAttribute('for', `banner_newsId_${newIndex}`);
+            selectElement.name = `banner[${newIndex}].newsId`;
+            selectElement.id = `banner_newsId_${newIndex}`;
             selectElement.selectedIndex = 0;
+
+            $(document).ready(function () {
+                $(`#banner_newsId_${newIndex}`).select2({
+                    width: '100%'
+                });
+            });
         }
 
-        // Update label if exists
-        const label = newSelectGroup.querySelector('label');
-        if (label && selectElement) {
-            label.setAttribute('for', selectElement.id);
+        if (inputElement) {
+            inputElement.id = `banner_orderIndex_${newIndex}`;
+            inputElement.setAttribute("value", `${newIndex}`);
         }
 
-        // Remove old remove button
+        if (labelElement) {
+            labelElement.setAttribute("for", `banner_orderIndex_${newIndex}`);
+        }
+
+        newSelectGroup.style.display = '';
+
+        //remove old button
         const oldRemoveBtn = newSelectGroup.querySelector('.remove-banner-btn');
         if (oldRemoveBtn) oldRemoveBtn.remove();
 
-        // Add new remove button
         const removeBtn = document.createElement('button');
         removeBtn.type = 'button';
-        removeBtn.textContent = '×';
+        removeBtn.innerHTML = "<i class=\"bi bi-trash3-fill\"></i>";
         removeBtn.className = 'remove-banner-btn text-red-600 hover:text-red-800 font-bold text-lg ml-2';
         removeBtn.addEventListener('click', function () {
             newSelectGroup.remove();
@@ -53,49 +71,109 @@ function setupBannerAdd() {
 
 function setupStartSectionAdd() {
     const addStartBtn = document.getElementById('addStartSectionBtn');
-    const container = document.getElementById('startSectionContainer');
-    const template = document.getElementById('startSectionTemplate');
+    const newsSelectionContainer = document.getElementById('startSelectionContainer');
+    const selectGroups = newsSelectionContainer.querySelectorAll('.start-section-group');
+    const firstSelect = selectGroups[0];
 
-    if (!addStartBtn || !container || !template) return;
+    if (!addStartBtn || !newsSelectionContainer) return;
 
     let startIndex = 0;
 
-    function addStartSection() {
-        const clone = template.cloneNode(true);
-        clone.classList.remove('hidden');
-        clone.removeAttribute('id');
+    addStartBtn.addEventListener('click', function () {
+        const newIndex = startIndex++;
 
-        // Update caption and file input name + id
-        const captionInput = clone.querySelector('input[name="startCaptions"]');
-        const fileInput = clone.querySelector('input[type="file"]');
+        const newStartGroup = firstSelect.cloneNode(true);
+        const labelElement = newStartGroup.querySelector('label');
+        const inputElement = newSelectGroup.querySelector('input.start-input');
+        const labelSelect = newSelectGroup.querySelector('label.select-news-title');
 
-        if (captionInput) {
-            captionInput.name = `startCaptions[${startIndex}]`;
-            captionInput.id = `startCaption_${startIndex}`;
+        // Update name dan id
+        if (selectElement) {
+            if (labelSelect) labelSelect.setAttribute('for', `banner_newsId_${newIndex}`);
+            selectElement.name = `banner[${newIndex}].newsId`;
+            selectElement.id = `banner_newsId_${newIndex}`;
+            selectElement.selectedIndex = 0;
+
+            $(document).ready(function () {
+                $(`#banner_newsId_${newIndex}`).select2({
+                    width: '100%'
+                });
+            });
         }
 
-        if (fileInput) {
-            fileInput.name = `startImages[${startIndex}]`;
-            fileInput.id = `startImage_${startIndex}`;
+        if (inputElement) {
+            inputElement.id = `banner_orderIndex_${newIndex}`;
+            inputElement.setAttribute("value", `${newIndex}`);
         }
 
-        // Update label 'for' attribute
-        const label = clone.querySelector('label');
-        if (label && captionInput) {
-            label.setAttribute('for', captionInput.id);
+        if (labelElement) {
+            labelElement.setAttribute("for", `banner_orderIndex_${newIndex}`);
         }
 
-        // Trigger any preview/file input JS needed here
-        // Example: reinitialize dropzone or file preview, if needed
-        // initDropzone(fileInput); <-- if you're using a custom dropzone
+        newSelectGroup.style.display = '';
 
-        container.appendChild(clone);
-        startIndex++;
-    }
+        //remove old button
+        const oldRemoveBtn = newSelectGroup.querySelector('.remove-banner-btn');
+        if (oldRemoveBtn) oldRemoveBtn.remove();
 
-    addStartBtn.addEventListener('click', addStartSection);
-    addStartSection(); // default satu input muncul
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.innerHTML = "<i class=\"bi bi-trash3-fill\"></i>";
+        removeBtn.className = 'remove-banner-btn text-red-600 hover:text-red-800 font-bold text-lg ml-2';
+        removeBtn.addEventListener('click', function () {
+            newSelectGroup.remove();
+        });
+
+        newSelectGroup.appendChild(removeBtn);
+        newsSelectionContainer.appendChild(newSelectGroup);
+    });
 }
+
+// function setupStartSectionAdd() {
+//     const addStartBtn = document.getElementById('addStartSectionBtn');
+//     const container = document.getElementById('startSectionContainer');
+//     const template = document.getElementById('startSectionTemplate');
+//
+//     if (!addStartBtn || !container || !template) return;
+//
+//     let startIndex = 0;
+//
+//     function addStartSection() {
+//         const clone = template.cloneNode(true);
+//         clone.classList.remove('hidden');
+//         clone.removeAttribute('id');
+//
+//         // Update caption and file input name + id
+//         const captionInput = clone.querySelector('input[name="startCaptions"]');
+//         const fileInput = clone.querySelector('input[type="file"]');
+//
+//         if (captionInput) {
+//             captionInput.name = `startCaptions[${startIndex}]`;
+//             captionInput.id = `startCaption_${startIndex}`;
+//         }
+//
+//         if (fileInput) {
+//             fileInput.name = `startImages[${startIndex}]`;
+//             fileInput.id = `startImage_${startIndex}`;
+//         }
+//
+//         // Update label 'for' attribute
+//         const label = clone.querySelector('label');
+//         if (label && captionInput) {
+//             label.setAttribute('for', captionInput.id);
+//         }
+//
+//         // Trigger any preview/file input JS needed here
+//         // Example: reinitialize dropzone or file preview, if needed
+//         // initDropzone(fileInput); <-- if you're using a custom dropzone
+//
+//         container.appendChild(clone);
+//         startIndex++;
+//     }
+//
+//     addStartBtn.addEventListener('click', addStartSection);
+//     addStartSection(); // default satu input muncul
+// }
 
 function setupSliderAddButton() {
     const addSliderBtn = document.getElementById('addSliderBtn');

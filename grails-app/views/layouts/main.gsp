@@ -22,6 +22,7 @@
 
     <asset:stylesheet src="main.css"/>
     <asset:stylesheet src="news_landing.css"/>
+    <asset:stylesheet src="pagination.css"/>
     <g:layoutHead/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -44,7 +45,7 @@
 <asset:javascript src="humburger_menu.js"/>
 <asset:javascript src="alert.js"/>
 <!--disble continent select-->
-<asset:javascript src="continent_select.js"/>
+<asset:javascript src="disable_continent_select.js"/>
 <asset:javascript src="slicker.js"/>
 </body>
 </html>

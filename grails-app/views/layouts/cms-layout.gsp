@@ -18,6 +18,11 @@
     <!--SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!--Select2-->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     %{--Text Editor Tiny--}%
     <script src="https://cdn.tiny.cloud/1/efa5um0ipuy2f437nmvmq6gfsdax3f439y8h3ncxee6zc1ud/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
@@ -25,7 +30,7 @@
 <g:render template="/components/navbar"/>
 <g:render template="/components/sidebar"/>
 <g:render template="/components/alert"/>
-<div class="pt-32 ml-0 lg:ml-64 px-4">
+<div class="container-layout">
     <g:layoutBody/>
 </div>
 
@@ -33,6 +38,7 @@
 <asset:javascript src="alert.js"/>
 <asset:javascript src="image_preview.js"/>
 <asset:javascript src="confirm_delete.js"/>
+<asset:javascript src="select2.js"/>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 <script>
     tinymce.init({

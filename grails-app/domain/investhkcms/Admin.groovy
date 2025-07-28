@@ -1,6 +1,5 @@
 package investhkcms
 
-import ch.qos.logback.core.status.Status
 import grails.compiler.GrailsCompileStatic
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString

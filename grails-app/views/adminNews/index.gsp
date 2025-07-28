@@ -11,7 +11,7 @@
     </g:link>
         <g:form controller="adminNews" action="index" method="get" class="search">
             <label for="search" class="sr-only">Search News</label>
-            <input type="text" name="search" id="search" value="${ search ?: ''}" placeholder="Search"
+            <input type="text" name="search" id="search" value="${ params.search ?: ''}" placeholder="Search"
                    class="input-search">
             <button type="submit"
                     class="btn-search">
@@ -30,15 +30,15 @@
                 <ui:sortableColumn label="Title" sort="title" />
             </th>
             <th class="table-head-cell">
-                <ui:sortableColumn label="Location" sort="location" />
+                <ui:sortableColumn label="Location" sort="location.name" />
             </th>
-            <th class="table-head-cell">
-                <ui:sortableColumn label="Content Type" sort="contentType" />
+            <th class="table-head-cell-name">
+                <ui:sortableColumn label="Content Type" sort="contentType.name" />
             </th>
             <th class="table-head-cell">
                 <ui:sortableColumn label="Author" sort="author" />
             </th>
-            <th class="table-head-cell">
+            <th class="table-head-cell-name">
                 <ui:sortableColumn label="Date Published" sort="publicationDate" />
             </th>
             <th class="table-head-cell"><span class="sr-only">Action</span></th>
@@ -99,7 +99,7 @@
                 <th class="table-head-cell-name">Title</th>
                 <th class="table-head-cell">Location</th>
                 <th class="table-head-cell">Content Type</th>
-                <th class="table-head-cell">Date Published</th>
+                <th class="table-head-cell-name">Date Published</th>
                 <th class="table-head-cell"><span class="sr-only">Action</span></th>
             </tr>
             </thead>
@@ -111,8 +111,4 @@
         </table>
     </div>
 </g:else>
-%{--<g:if test="${total > 0}">--}%
-%{--    <div class="pagination">--}%
-%{--        <g:paginate controller="adminNews" action="index" total="${total}" params="${params}" maxsteps="5" max="5" />--}%
-%{--    </div>--}%
-%{--</g:if>--}%
+<g:render template="/components/paginationAdmin"/>

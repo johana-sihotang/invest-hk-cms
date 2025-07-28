@@ -17,16 +17,16 @@ environments:
       dbCreate: update
       driverClassName: com.mysql.cj.jdbc.Driver
       dialect: org.hibernate.dialect.MySQL8Dialect
-      username: admin
-      password: admin123
+      username: root
+      password: ""
       url: jdbc:mysql://localhost:3306/investhk_database?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Jakarta
   test:
     dataSource:
       dbCreate: update
       driverClassName: com.mysql.cj.jdbc.Driver
       dialect: org.hibernate.dialect.MySQL8Dialect
-      username: admin
-      password: admin123
+      username: root
+      password: ""
       url: jdbc:mysql://localhost:3306/investhk_database?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Jakarta
   production:
     dataSource:

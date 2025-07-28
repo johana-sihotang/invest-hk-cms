@@ -14,7 +14,7 @@ $('#continent-select').on('change', function() {
             method: 'GET',
             data: { continentId: continentId },
             success: function(data) {
-                locationSelect.prop('disabled', false); // enable setelah data didapat
+                locationSelect.prop('disabled', false);
                 data.forEach(function(location) {
                     locationSelect.append(
                         $('<option></option>').val(location.id).text(location.name)
@@ -23,7 +23,7 @@ $('#continent-select').on('change', function() {
             },
             error: function() {
                 alert('Failed to load locations.');
-                locationSelect.prop('disabled', true); // tetap disable kalau error
+                locationSelect.prop('disabled', true);
             }
         });
     } else {

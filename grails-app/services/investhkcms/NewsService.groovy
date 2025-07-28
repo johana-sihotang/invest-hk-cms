@@ -15,30 +15,68 @@ class NewsService {
 
     List<News> getAllNews(Map params) {
         def criteria = News.createCriteria()
-        return criteria.list {
-            applySearch(delegate, params)
-            applySorting(delegate,params)
-        }
+        def max = params.int('max') ?: 10
+        def offset = params.int('offset') ?: 0
+        def results = criteria.list (max: max, offset: offset) {
+            applyFilterSearch(delegate, params)
+            applySorting(delegate, params)
+        } as List<News>
+        return results
     }
-     private void applySearch(def query, Map params) {
+     private void applyFilterSearch(def query, Map params) {
          def search = params.search?.trim()
-         if (!search) return
-         query.or {
-             ilike('title', "%${search}%")
-             location{
-                 ilike('name', "%${search}%")
+         if (search) {
+             query.or {
+                 ilike('title', "%${search}%")
+                 location {
+                     ilike('name', "%${search}%")
+                 }
+                 author {
+                     ilike('username', "%${search}%")
+                 }
              }
-             author{
-                 ilike('username', "%${search}%")
+         }
+         if (params.contentType) {
+             query.or {
+                 contentType {
+                     ilike('name', "%${params.contentType}%")
+                 }
+             }
+         }
+         if (params.location) {
+             query.or {
+                 location {
+                     ilike('name', "%${params.location}%")
+                 }
+             }
+         }
+         if (params.industry) {
+             query.or {
+                 industry {
+                     ilike('name', "%${params.industry}%")
+                 }
              }
          }
      }
 
-     private void applySorting(def query, Map params) {
+     static void applySorting(def query, Map params) {
         def sort = params.sort ?: 'id'
         def order = params.order ?: 'asc'
-        query.order(sort,order)
+
+         if (sort == 'location.name'){
+             query.createAlias('location', 'loc')
+             query.order('loc.name', order)
+         } else if (sort == 'contentType.name'){
+             query.createAlias('contentType', 'ct')
+             query.order('ct.name', order)
+         } else if (sort == 'industry.name'){
+             query.createAlias('industry', 'i')
+             query.order('i.name', order)
+         } else {
+             query.order(sort, order)
+         }
     }
+
 
     News getNewsById(Long id){
         return News.get(id)
@@ -116,73 +154,36 @@ class NewsService {
     }
 
     @Transactional
-    def handleNewsCreation(CreateNewsRequest request) {
-        def imageFile = request.imageFile
+    def handleNewsCreate(CreateNewsRequest request) {
+        def imagePath = saveImage(request.imageFile)
+        createNews(request, imagePath)
+    }
 
+    @Transactional
+    def handleNewsUpdate(UpdateNewsRequest request) {
+        def imagePath = saveImage(request.imageFile)
+        updateNews(request, imagePath)
+    }
+
+    private static String saveImage(def imageFile){
         if (!imageFile || imageFile.empty) {
-            throw new IllegalArgumentException("Image file is required.")
+            throw new IllegalAccessException("Image file is required")
         }
-
-        if (!imageFile.contentType?.startsWith("image/")) {
-            throw new IllegalArgumentException("Uploaded file must be an image.")
+        if(!imageFile.contentType?.startsWith("image/")){
+            throw new IllegalArgumentException("Uploaded file must be an image")
         }
-
-        if (imageFile.size > 5 * 1024 * 1024) {
-            throw new IllegalArgumentException("Image file is too large (max 2MB).")
+        final long MAX_IMAGE_SIZE = 5 * 1024 * 1024
+        if (imageFile.size > MAX_IMAGE_SIZE) {
+            throw new IllegalArgumentException("Image file is too large (Max 5MB)")
         }
-
         def fileName = UUID.randomUUID().toString() + "_" + imageFile.originalFilename
         def uploadDir = new File("${System.getProperty('user.dir')}/uploads/news")
-        if (!uploadDir.exists()) uploadDir.mkdirs()
+        if (!uploadDir.exists()) uploadDir.mkdir()
 
         def destination = new File(uploadDir, fileName)
         imageFile.transferTo(destination)
 
-        def imagePath = "/uploads/news/${fileName}"
-        createNews(request, imagePath)
+        return "/uploads/news/${fileName}"
     }
 
-
-    @Transactional
-    List<News> getFilteredNews(Map params) {
-        def criteria = News.createCriteria()
-
-        List<News> newsList = (List<News>) criteria.list {
-            if (params.contentType) {
-                eq 'contentType', ContentType.get(params.contentType as Long)
-            }
-            if (params.industry) {
-                eq 'industry', Industry.get(params.industry as Long)
-            }
-            if (params.location) {
-                eq 'location', Location.get(params.location as Long)
-            }
-
-            if (params.dateRange) {
-                Date startDate
-                switch (params.dateRange) {
-                    case 'latest':
-                        startDate = Date.from(LocalDate.now().minusDays(7).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                    case 'past1month':
-                        startDate = Date.from(LocalDate.now().minusMonths(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                    case 'past1year':
-                        startDate = Date.from(LocalDate.now().minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                    case 'past2year':
-                        startDate = Date.from(LocalDate.now().minusYears(2).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                        break
-                }
-
-                if (startDate) {
-                    ge 'publicationDate', startDate
-                }
-            }
-
-            order 'publicationDate', 'desc'
-        }
-
-        return newsList
-    }
 }
