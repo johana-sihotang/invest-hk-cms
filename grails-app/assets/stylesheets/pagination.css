@@ -3,9 +3,20 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 0 80px;
 }
 
-.prevLink, .nextLink, .currentStep, .step {
+.prevLink, .nextLink{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.currentStep, .step {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
@@ -50,8 +61,8 @@
     align-items: center;
 }
 .total-count{
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 80px;
+    padding-right: 80px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }

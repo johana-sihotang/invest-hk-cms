@@ -87,10 +87,19 @@ $(function() {
     $('#heroSliderContent').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        prevArrow: $('#heroSliderContent__01-prev'),
+        nextArrow: $('#heroSliderContent__01-next'),
+        fade: true,
+        asNavFor: '#heroSliderImage',
         dots: true,
-        autoplay: false,
-        autoplaySpeed: 4000,
+        appendDots: $('.heroSlider__navigation--dots')
+    });
+
+    $('#heroSliderImage').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '#heroSliderContent',
+        arrows: false,
     });
 
 

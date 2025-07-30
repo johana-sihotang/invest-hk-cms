@@ -1,46 +1,88 @@
 <%@ page import="investhkcms.News" %>
+
 <div class =container>
     <div class="flex-item">
         <div class="borderinfo ">
             <div class="heroSlider__content">
                 <div class="heroSlider__content--body">
-                    <div id="heroSliderContent">
-                        <div class="slider">
-                            <div class="heroSlider__content--slide">
-                                <div class="heroSlider__content--category">News</div>
-                                <div class="heroSlider__content--date">11.03.2025</div>
-                                <h2 class="heroSlider__content--title">
-                                    <a href="#">Mutat luptatum mnesarchum te nam, vix in postea graeco, duis accumsan ea pro. Te debet invidunt atomorum eum, no nec probo molestie verterem. Cu ius saperet luptatum facilisi. Zril verterem ei per, hinc tempor propriae duo id, mel vide officiis ne.</a>
-                                </h2>
+                    <div id="heroSliderImage">
+                        <g:if test="${newsSlider}">
+                            <g:each in="${newsSlider}" var="item">
+                                <div class="slider">
+                                    <div class="heroSlider__thumbnails--image" style="background-image: url('${item.image}');">
+                                        <a href="#" class="heroSlider__thumbnails--link" aria-label="Pleas place your title here"></a>
+                                    </div>
+                                </div>
+                            </g:each>
+                        </g:if>
+                        <g:else>
+                            <div class="slider">
+                                <div class="heroSlider__thumbnails--image" style="background-image: url(${assetPath(src: 'favicon/main_img01.jpg')});">
+                                    <a href="#" class="heroSlider__thumbnails--link" aria-label="Pleas place your title here"></a>
+                                </div>
+                            </div>
+                            <div class="slider">
+                                <div class="heroSlider__thumbnails--image" style="background-image: url(${assetPath(src: 'favicon/main_img01.jpg')});">
+                                    <a href="#" class="heroSlider__thumbnails--link" aria-label="Pleas place your title here"></a>
+                                </div>
+                            </div>
+                        </g:else>
+                    </div>
+                    <div class="heroSlider__content__inner">
+                        <div id="heroSliderContent">
+                            <g:if test="${newsSlider}">
+                                <g:each in="${newsSlider}" var="item">
+                                    <div class="slider">
+                                        <div class="heroSlider__content--slide">
+                                            <div class="heroSlider__content--category">News</div>
+                                            <h2 class="heroSlider__content--title">
+                                                <g:link controller="news" action="show" id="${item.id}">${item.title}</g:link>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </g:each>
+                            </g:if>
+                            <g:else>
+                                <div class="slider">
+                                    <div class="heroSlider__content--slide">
+                                        <div class="heroSlider__content--category">News</div>
+                                        <div class="heroSlider__content--date">11.03.2025</div>
+                                        <h2 class="heroSlider__content--title">
+                                            <a href="#">Mutat luptatum mnesarchum te nam, vix in postea graeco, duis accumsan ea pro. Te debet invidunt atomorum eum, no nec probo molestie verterem. Cu ius saperet luptatum facilisi. Zril verterem ei per, hinc tempor propriae duo id, mel vide officiis ne.</a>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="heroSlider__content--slide">
+                                        <div class="heroSlider__content--category">Featured Case Studies</div>
+                                        <h2 class="heroSlider__content--title"><a href="#">Fuelling Sustainable F&amp;B Packaging Solutions</a></h2>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="heroSlider__content--slide">
+                                        <div class="heroSlider__content--category">Featured Case Studies</div>
+                                        <h2 class="heroSlider__content--title"><a href="#">Safeguarding Lives, Securing Business Operations</a></h2>
+                                    </div>
+                                </div>
+                            </g:else>
+                        </div>
+                        <div class="heroSlider__navigation">
+                            <div class="heroSlider__navigation--dots"></div>
+                            <div class="heroSlider__navigation--action">
+                                <button id="heroSliderContent__01-prev" type="button" class="heroSlider__navigation--action-button" aria-label="Previous slide">
+                                    <i class="bi bi-arrow-left-circle"></i>
+                                </button>
+                                <button id="heroSliderContent__01-next" type="button" class="heroSlider__navigation--action-button" aria-label="Next slide">
+                                    <i class="bi bi-arrow-right-circle"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="slider">
-                            <div class="heroSlider__content--slide">
-                            <div class="heroSlider__content--category">Featured Case Studies</div>
-                            <h2 class="heroSlider__content--title"><a href="#">Fuelling Sustainable F&amp;B Packaging Solutions</a></h2>
-                            </div>
-                        </div>
-
-                        <div class="slider">
-                        <div class="heroSlider__content--slide">
-                            <div class="heroSlider__content--category">Featured Case Studies</div>
-                            <h2 class="heroSlider__content--title"><a href="#">Safeguarding Lives, Securing Business Operations</a></h2>
-                            </div>
-                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <div class="borderimage">
-            <div class="heroSlider__thumbnails--image" style="background-image: url(${assetPath(src: 'favicon/main_img01.jpg')});">
-<a href="#" class="heroSlider__thumbnails--link" aria-label="Pleas place your title here"></a>
-</div>
-</div>
-
-</div>
-
-</div>
-
+    </div>
 
 <!--Show All News and Filter-->
 <g:form controller="news" action="index" method="GET">
@@ -72,7 +114,7 @@
             <div class="formFilter__fieldButtom " id="collapseOne">
                 <div class="formFilter__fieldButtom--row d-flex">
                     <div class="formFilter__fieldButtom--left flex-fill">
-                        <div class="row">
+                        <div class="row mobile-row">
                             <div class="col-lg-3">
                                 <div class="text-xl">
                                     <label class="label-field">Publication Date</label>

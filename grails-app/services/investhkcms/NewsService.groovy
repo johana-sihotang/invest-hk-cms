@@ -57,23 +57,23 @@ class NewsService {
              }
          }
 
-         if(params.dateRange){
-             if (params.dateRange == 'last7days'){
-                 def date = Date.from(LocalDate.now().minusDays(7).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                 ge 'publicationDate', date
+         if (params.dateRange) {
+             def date
+             if (params.dateRange == 'last7days') {
+                 date = Date.from(LocalDate.now().minusDays(7).atStartOfDay(ZoneId.systemDefault()).toInstant())
+             } else if (params.dateRange == 'past1month') {
+                 date = Date.from(LocalDate.now().minusMonths(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
+             } else if (params.dateRange == 'past1year') {
+                 date = Date.from(LocalDate.now().minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
+             } else if (params.dateRange == 'past2year') {
+                 date = Date.from(LocalDate.now().minusYears(2).atStartOfDay(ZoneId.systemDefault()).toInstant())
              }
-             else if(params.dateRange == 'past1month'){
-                 def date = Date.from(LocalDate.now().minusMonths(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                 ge 'publicationDate', date
-             }
-             else if(params.dateRange == 'past1year'){
-                 def date = Date.from(LocalDate.now().minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                 ge 'publicationDate', date
-             }else if(params.dateRange == 'past2year'){
-                 def date = Date.from(LocalDate.now().minusYears(2).atStartOfDay(ZoneId.systemDefault()).toInstant())
-                 ge 'publicationDate', past2year
+
+             if (date) {
+                 query.ge('publicationDate', date)
              }
          }
+
      }
 
      static void applySorting(def query, Map params) {

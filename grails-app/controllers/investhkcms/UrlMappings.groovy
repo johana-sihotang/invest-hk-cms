@@ -54,7 +54,6 @@ class UrlMappings {
         }
 
         "/contact_us"(controller: "contactUs", action: 'index')
-        "/news_landing"(controller: "news", action: 'index')
         "/"(controller: "homepage", action: 'index')
 
         "500"(view: '/error')

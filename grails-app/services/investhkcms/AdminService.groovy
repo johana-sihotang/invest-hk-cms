@@ -26,9 +26,8 @@ class AdminService {
                     username: adminInfo.username,
                     email   : adminInfo.email,
                     status  : adminInfo.status
-            ] as LinkedHashMap
-
-            adminResponse << new AdminResponse(adminData)
+            ]
+            adminResponse.add(new AdminResponse(adminData))
         }
         return adminResponse
     }

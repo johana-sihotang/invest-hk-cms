@@ -8,10 +8,11 @@ class NewsController {
     def index(){ def result = newsService.getAllNews(params)
         def news = result.toList()
         def total = result.totalCount
+        def newsSlider = News.list( sort: "publicationDate",order: "asc", max: 5)
         def location = Location.list(sort: "name", order: "asc")
         def contentType = ContentType.list(sort: "name", order: "asc")
         def industry = Industry.list(sort: "name", order: "asc")
-        [news: news, locations: location, industries: industry, contentTypes: contentType, total: total, params: params]
+        [news: news, newsSlider: newsSlider, locations: location, industries: industry, contentTypes: contentType, total: total, params: params]
     }
 
     def show(Long id) {

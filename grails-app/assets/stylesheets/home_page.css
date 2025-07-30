@@ -578,7 +578,7 @@ a.start__icons__section {
     align-items: flex-end;
 }
 
-slick-dots li {
+.slick-dots li {
     position: relative;
     display: inline-block;
     height: 20px;
