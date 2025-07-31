@@ -24,9 +24,6 @@ class News {
         contentType nullable: true
         industry nullable: true
         content nullable: false, maxSize: 10000
-
-
-
     }
 
     static mapping = {

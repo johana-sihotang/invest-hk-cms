@@ -36,7 +36,7 @@
                                         <div class="heroSlider__content--slide">
                                             <div class="heroSlider__content--category">News</div>
                                             <h2 class="heroSlider__content--title">
-                                                <g:link controller="news" action="show" id="${item.id}">${item.title}</g:link>
+                                                <g:link controller="news" action="show" id="${item.id}-${util.toSlug(input: item.title)}">${item.title}</g:link>
                                             </h2>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="cardNews">
                         <div class="cardNews__thumbnail" style="background-image: url('${items.image}');">
-                            <g:link controller="news" action="show" id="${items.id}">
+                            <g:link controller="news" action="show" id="${items.id}-${util.toSlug(input: items.title)}">
                                 <span class="cardNews__thumbnail--link"
                                       aria-label="${items.title.encodeAsHTML()}"></span>
                             </g:link>
@@ -229,21 +229,21 @@
 
                                 <div class="cardNews__tags">
                                     <g:if test="${items.contentType?.name == 'News'}">
-                                        <g:link controller="news" action="show" id="${items.id}"
+                                        <g:link controller="news" action="show" id="${items.id}-${util.toSlug(input: items.title)}"
                                                 class="tag tag__blue">${items.contentType?.name?.toUpperCase()}</g:link>
                                     </g:if>
                                     <g:if test="${items.contentType?.name == 'Press Release'}">
-                                        <g:link controller="news" action="show" id="${items.id}"
+                                        <g:link controller="news" action="show" id="${items.id}-${util.toSlug(input: items.title)}"
                                                 class="tag tag__red">${items.contentType?.name?.toUpperCase()}</g:link>
                                     </g:if>
                                     <g:if test="${items.contentType?.name == 'Industry Insight'}">
-                                        <g:link controller="news" action="show" id="${items.id}"
+                                        <g:link controller="news" action="show" id="${items.id}-${util.toSlug(input: items.title)}"
                                                 class="tag tag__yellow">${items.contentType?.name?.toUpperCase()}</g:link>
                                     </g:if>
                                 </div>
                             </div>
                             <h4 class="cardNews__title"><g:link controller="news" action="show"
-                                                                id="${items.id}">${items.title.encodeAsHTML()}</g:link></h4>
+                                                                id="${items.id}-${util.toSlug(input: items.title)}">${items.title.encodeAsHTML()}</g:link></h4>
                         </div>
                     </div>
                 </div>

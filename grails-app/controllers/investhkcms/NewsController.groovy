@@ -15,16 +15,15 @@ class NewsController {
         [news: news, newsSlider: newsSlider, locations: location, industries: industry, contentTypes: contentType, total: total, params: params]
     }
 
-    def show(Long id) {
+    def show(String id) {
         try {
-            News news = newsService.getNewsById(id)
+            Long realId = id.tokenize('-')[0] as Long
+            News news = newsService.getNewsById(realId)
             if (!news) {
                 redirect(controller: 'error', action: 'notFound')
                 return
             }
-
-            render view: "/news/show", model: [news: news]
-
+            [news: news]
         } catch (Exception e) {
             log.error("Error fetching news with ID ${id}: ${e.message}", e)
             flash.error = "An error occurred while trying to display the news."

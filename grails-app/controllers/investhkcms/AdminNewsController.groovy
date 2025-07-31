@@ -19,8 +19,9 @@ class AdminNewsController {
     }
 
     @Secured(['ROLE_ADMIN'])
-    def show(Long id) {
-        News news = newsService.getNewsById(id)
+    def show(String id) {
+        Long realId = id.tokenize('-')[0] as Long
+        News news = newsService.getNewsById(realId)
         if (!news){
             flash.error = "News with ID ${id} not found"
             redirect(controller: 'error', action: 'notFound')

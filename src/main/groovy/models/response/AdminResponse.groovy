@@ -7,9 +7,9 @@ class AdminResponse {
     String status
 
     AdminResponse(LinkedHashMap<String, Object> data){
-        this.name = data.name as String
-        this.username = data.username as String
-        this.email = data.email as String
-        this.status = data.status as String
+        name = data.name
+        username = data.username
+        email = data.email
+        status = data.status
     }
 }

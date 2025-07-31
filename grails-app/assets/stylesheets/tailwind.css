@@ -28,11 +28,11 @@ html,body{
     @apply w-20 px-6 py-3 text-xl
 }
 .table-head-cell-name {
-    @apply w-3/6 max-w-xs px-6 py-3 whitespace-nowrap overflow-hidden text-ellipsis;
+    @apply w-3/6 max-w-xs px-6 py-3 whitespace-nowrap overflow-hidden text-ellipsis text-xl;
 }
 
 .table-head-cell{
-    @apply w-1/6 px-6 py-3
+    @apply w-1/6 px-6 py-3 text-xl
 }
 .table-head-cell-not-found{
     @apply w-10 px-6 py-4

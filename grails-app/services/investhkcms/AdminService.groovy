@@ -16,7 +16,7 @@ import models.enums.Status
 class AdminService {
 
     @Secured(['ROLE_ADMIN'])
-    List<AdminResponse> getAllAdmins(Map params) {
+    List<AdminResponse> getAllAdmins() {
         List<Admin> adminList = Admin.list()
         def adminResponse = []
 
@@ -29,29 +29,13 @@ class AdminService {
             ]
             adminResponse.add(new AdminResponse(adminData))
         }
+
         return adminResponse
-    }
-
-    private void applySearch(def query, Map params) {
-        def search = params.search
-        if (!search) return
-        query.or {
-            ilike("title", "%${search}%")
-            ilike("username", "%${search}")
-            ilike("email", "%${search}%")
-        }
-    }
-
-    private void applySort(def query, Map params) {
-        def sort = params.sort ?: "id"
-        def order = params.order ?: "asc"
-        query.order(sort, order)
     }
 
     @Secured(['ROLE_ADMIN'])
     @Transactional
     def registerAdmin(AdminRegisterRequest request) {
-        log.debug("Registering admin with status: '${request.status}'")
         Status adminStatus = Status.fromValue(request.status as String)
         if (adminStatus == null) {
             throw new InvalidDataException("Invalid status value provided")

@@ -22,7 +22,7 @@ class UrlMappings {
             "/article/create"(controller: 'adminNews', action: 'createNews')
             "/article/$id"(controller: 'adminNews', action: 'show') {
                 constraints {
-                    id(matches: /\d+/)
+                    id(matches: /\d+(-.*)?/)
                 }
             }
             "/article/$id/edit"(controller: 'adminNews', action: 'edit') {
@@ -48,7 +48,7 @@ class UrlMappings {
             "/"(controller: "news", action: 'index')
             "/$id"(controller: "news", action: 'show') {
                 constraints {
-                    id(matches: /\d+/)
+                    id(matches: /\d+(-.*)?/)
                 }
             }
         }

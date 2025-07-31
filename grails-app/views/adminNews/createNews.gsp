@@ -82,7 +82,7 @@
                 <label for="imageCaption" class="label-title">Image Caption</label>
                 <input name="imageCaption" type="text" id="imageCaption"
                        class="input-title"
-                       placeholder="Image Caption" required/>
+                       placeholder="Image Caption"/>
             </div>
         </div>
         </div>

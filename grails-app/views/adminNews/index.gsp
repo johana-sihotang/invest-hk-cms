@@ -69,7 +69,7 @@
                     <ui:actionButton
                             icon="bi bi-eye-fill"
                             type="show"
-                            href="${createLink(controller: 'adminNews', action: 'show', id: item.id)}"
+                            href="${createLink(controller: 'adminNews', action: 'show', id: "${item.id}-${util.toSlug(input: item.title)}" )}"
                             title="View"
                             ariaLabel="View news" />
 

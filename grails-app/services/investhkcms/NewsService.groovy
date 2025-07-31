@@ -120,6 +120,7 @@ class NewsService {
         }
 
         if (!news.save(flush:true)){
+            log.error("Validation errors: ${news.errors.allErrors}")
             throw new RuntimeException("Failed to save data")
         }
 
@@ -143,6 +144,12 @@ class NewsService {
         news.publicationDate = new Date()
 
         if (imagePath) {
+            if (news.image) {
+                def oldFile = new File("${System.getProperty('user.dir')}${news.image}")
+                if (oldFile.exists()) {
+                    oldFile.delete()
+                }
+            }
             news.image = imagePath
         }
 
@@ -183,6 +190,10 @@ class NewsService {
     }
 
     private String saveImage(def imageFile){
+        if (!imageFile || imageFile.empty || !imageFile.originalFilename) {
+            return null
+        }
+
         def fileName = UUID.randomUUID().toString() + "_" + imageFile.originalFilename
         def uploadDir = new File("${System.getProperty('user.dir')}/uploads/news")
         if (!uploadDir.exists()) uploadDir.mkdir()

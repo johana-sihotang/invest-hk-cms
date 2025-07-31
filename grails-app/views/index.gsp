@@ -23,12 +23,10 @@
 
                                     <div class="index__section__paragraph"></div>
                                     <nav class="link">
-                                        <a target="_self"
-                                           template-href="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                           href="${createLink(controller: 'news', action: 'show', id: news.id)}"
-                                           aria-label="https://www.investhk.gov.hk/en/news/investhk-holds-reception-to-welcome-new-companies-in-hong-kong-and-celebrate-25-years-of-impact/"
-                                           tabindex="0">Read More
+                                        <a target="_self" href="${createLink(controller: 'news', action: 'show', id: "${news.id}-${util.toSlug(input: news.title)}")}">
+                                            Read More
                                         </a>
+
                                     </nav>
                                 </div>
                             </div>

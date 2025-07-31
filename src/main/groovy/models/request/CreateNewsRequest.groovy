@@ -16,13 +16,13 @@ class CreateNewsRequest implements Validateable {
     MultipartFile imageFile
 
     static constraints = {
-        title blank: false
-        content blank: false
-        imageCaption nullable: false
-        subTitle nullable: false
-        locationId nullable: false
+        title nullable: false
+        imageCaption nullable: true
+        subTitle nullable: true
+        locationId nullable: true
         contentTypeId nullable: true
-        industryId nullable: false
+        industryId nullable: true
+        content nullable: false
     }
 }
 

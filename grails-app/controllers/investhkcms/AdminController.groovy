@@ -17,9 +17,9 @@ class AdminController {
 
     @Secured(['ROLE_ADMIN'])
     def getAllAdmins() {
-        List<AdminResponse> adminList = adminService.getAllAdmins(params)
+        List<AdminResponse> adminList = adminService.getAllAdmins()
         def currentAdmin = springSecurityService.currentUser
-        render(view: 'getAllAdmins', model: [adminList: adminList, currentAdmin: currentAdmin])
+        [adminList: adminList, currentAdmin: currentAdmin]
     }
 
     @Secured(['ROLE_ADMIN'])
