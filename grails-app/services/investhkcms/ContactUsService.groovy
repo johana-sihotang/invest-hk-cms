@@ -6,12 +6,15 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class ContactUsService {
 
+    @Transactional(readOnly = true)
     List<ContactUs> getAllContactUs(Map params){
        return ContactUs.createCriteria().list {
            applySearch(delegate, params)
            applySort(delegate, params)
        }
     }
+
+    @Transactional(readOnly = true)
     ContactUs getContactUsById(Long id){
         return ContactUs.get(id)
     }
@@ -23,7 +26,6 @@ class ContactUsService {
             ilike("firstName","%${search}%")
             ilike("email","%${search}%")
             ilike("tel","%${search}%")
-            ilike("dateCreated","%${search}%")
         }
     }
 
@@ -52,7 +54,7 @@ class ContactUsService {
         contactUs.location = Location.get(request.locationId)
         contactUs.dateCreated = new Date()
 
-        if (!contactUs.save(flus: true)) {
+        if (!contactUs.save(flush: true)) {
             throw new RuntimeException("Failed to save data")
         }
         return contactUs

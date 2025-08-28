@@ -15,7 +15,6 @@ import models.enums.Status
 @Transactional
 class AdminService {
 
-    @Secured(['ROLE_ADMIN'])
     List<AdminResponse> getAllAdmins() {
         List<Admin> adminList = Admin.list()
         def adminResponse = []
@@ -33,7 +32,6 @@ class AdminService {
         return adminResponse
     }
 
-    @Secured(['ROLE_ADMIN'])
     @Transactional
     def registerAdmin(AdminRegisterRequest request) {
         Status adminStatus = Status.fromValue(request.status as String)
@@ -53,7 +51,7 @@ class AdminService {
                 status: adminStatus
         )
 
-        if (!admin.save(flus: true)) {
+        if (!admin.save(flush: true)) {
             throw new InvalidDataException("Failed to save user: ${admin.errors}")
         }
         def role = Role.findByAuthority("ROLE_ADMIN")
@@ -67,7 +65,6 @@ class AdminService {
         }
     }
 
-    @Secured(['ROLE_ADMIN'])
     void deleteAdminByUsername(String username) {
         Admin admin
 
